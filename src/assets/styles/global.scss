@@ -1,0 +1,248 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&family=Press+Start+2P&family=Space+Grotesk:wght@400;600&display=swap');
+
+
+/***********************
+ *      Variables      *
+ ***********************/
+
+/* Colors */
+$palette-color-dark: rgb(11, 13, 23);       // #0B0D17
+$palette-color-accent: rgb(208, 214, 249);  // #D0D6F9
+$palette-color-light: rgb(255, 255, 255);   // #FFFFFF
+
+
+/* Main/light theme */
+$palette-color-01: #ffd6dd;  // light pink
+$palette-color-02: #FBFBDB;  // creamy light yellow
+$palette-color-03: #cdaaf1;  // lilac
+$palette-color-04: #403F4C;  // dark grey
+$palette-color-05: #595959;  // grey
+
+/* Dark theme */
+
+
+/* Colors */
+$font-color-01: $palette-color-04;
+$font-color-02: #FFF;
+
+$accent-color-01: #41B883;
+$accent-color-02: #ffb310;
+$accent-color-03: #8484ff;
+$accent-color-04: #38bdf8;
+
+
+/* Fonts */
+$font-family-01: 'Noto Sans', sans-serif;
+$font-family-02: 'Press Start 2P', cursive;
+$font-family-03: 'Space Grotesk', sans-serif;
+
+$font-size-08px:  0.5rem;     // 8px
+$font-size-09px:  0.563rem;   // 9px
+$font-size-10px:  0.625rem;   // 10px
+$font-size-12px:  0.75rem;    // 12px
+$font-size-14px:  0.875rem;   // 14px
+$font-size-16px:  1rem;       // 16px
+$font-size-18px:  1.125rem;   // 18px
+$font-size-28px:  1.75rem;    // 28px
+$font-size-32px:  2rem;       // 32px
+$font-size-56px:  3.5rem;     // 56px
+$font-size-80px:  5rem;       // 80px
+$font-size-100px: 6.25rem;    // 100px
+$font-size-150px: 9.375rem;   // 150px
+
+
+/* Breakpoints */
+$breakpoint-max-mobile:  480px;
+$breakpoint-min-tablet:  481px;
+$breakpoint-max-tablet:  768px;
+$breakpoint-min-desktop: 769px;
+
+
+/***********************************************************
+*   Resets (https://andy-bell.co.uk/a-modern-css-reset/)  *
+***********************************************************/
+
+/* Box sizing rules */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd, picture {
+    margin: 0;
+}
+
+/* Font weight */
+h1, h2, h3, h4, h5, h6, p {
+    font-weight: 400;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'], ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+/* Set core body defaults */
+body {
+    //background-color: $palette-color-02;
+    font-family: $font-family-03;
+    font-size: $font-size-16px;
+    min-height: 100vh;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    width: 100%;
+
+    //@media (min-width: $breakpoint-min-desktop) { font-size: $font-size-18px; }
+
+    #app {
+    
+    }
+}
+
+
+/* A elements that don't have a class get default styles */
+/*
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+*/
+
+/* Make images easier to work with */
+img, picture {
+    display: block;
+    max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within { scroll-behavior: auto; }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+
+/**********************************
+*   Utility Classes and Styles   *
+**********************************/
+
+/* Accessibility screen readers (TailwindCSS) */
+.sr-only {
+    border-width: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+ /* Pages */
+.page-container {
+    
+}
+ 
+main {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+ 
+ /* Colors */
+.bg-dark { background-color: $palette-color-dark; }
+.bg-accent { background-color: $palette-color-accent; }
+.bg-light { background-color: $palette-color-light; }
+
+.text-dark { color: $palette-color-dark; }
+.text-accent { color: $palette-color-accent; }
+.text-light { color: $palette-color-light; }
+
+/* Fonts */
+// .ff-serif { font-family: $font-family-serif; }
+// .ff-sans { font-family: $font-family-sans; }
+// .ff-sans-cond { font-family: $font-family-sans-cond; }
+
+.fs-14 { font-size: $font-size-14px; }   //200
+.fs-16 { font-size: $font-size-16px; }   //300
+.fs-18 { font-size: $font-size-18px; }   //400
+.fs-28 { font-size: $font-size-28px; }   //500
+.fs-32 { font-size: $font-size-32px; }   //600
+.fs-56 { font-size: $font-size-56px; }   //700
+.fs-100 { font-size: $font-size-100px; } //800
+.fs-150 { font-size: $font-size-150px; } //900
+
+.uppercase { text-transform: uppercase; }
+
+/* Headings */
+h1 {
+
+}
+ 
+ 
+.desktop {
+    @media (max-width: $breakpoint-max-tablet) { display: none; }
+    @media (min-width: $breakpoint-min-desktop) { display: block; }
+}
+.mobile {
+    @media (max-width: $breakpoint-max-tablet) { display: block; }
+    @media (min-width: $breakpoint-min-desktop) { display: none; }
+}
+ 
+ 
+ 
+ /*************************
+  *       Animations      *
+  *************************/
+// Animate element scaling up while rotating 
+.fade-up-rotate-enter-from, .fade-up-rotate-leave-to {
+    transform: scale(0) rotate(180deg);
+    opacity: 0;
+}
+.fade-up-rotate-enter-active, .fade-up-rotate-leave-active {
+    transition: all 900ms ease-in;
+    transition-delay: 500ms;
+}
+
+// Animate text from top to bottom
+.text-to-bottom-enter-from, .text-to-bottom-leave-to {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.text-to-bottom-enter-active, .text-to-bottom-leave-active {
+    transition: all 800ms ease-in;
+    transition-delay: 500ms;
+}
+
+// Animate element scaling up
+.scale-up-enter-from, .scale-up-leave-to {
+    opacity: 0;
+    transform: scale(0);
+}
+.scale-up-enter-active, .scale-up-leave-active {
+    transition: all 850ms ease-in;
+    transition-delay: 500ms;
+}
