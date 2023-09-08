@@ -30,6 +30,8 @@ $accent-color-01: #41B883;
 $accent-color-02: #ffb310;
 $accent-color-03: #8484ff;
 $accent-color-04: #38bdf8;
+$accent-color-05: #e560b2;
+$accent-color-06: #0868ac;
 
 
 /* Fonts */
@@ -164,7 +166,7 @@ input, button, textarea, select {
 
  /* Pages */
 .page-container {
-    
+    padding: 0 1rem;
 }
  
 main {
@@ -198,10 +200,10 @@ main {
 .uppercase { text-transform: uppercase; }
 
 /* Headings */
-h1 {
-
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
 }
- 
+
  
 .desktop {
     @media (max-width: $breakpoint-max-tablet) { display: none; }

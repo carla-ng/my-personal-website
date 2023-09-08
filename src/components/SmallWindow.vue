@@ -29,7 +29,7 @@
                 </div>
             </div>
             
-            <div class="window__buttons" v-if="urls">
+            <div class="window__buttons" :class="{ 'multiple' : (visibleButtonsCount > 1) }" v-if="urls">
                 <a :href="urls[0].code" target="_blank" v-if="urls[0].code">
                     <button class="window__buttons-code">
                         <span>Código</span>
@@ -39,6 +39,18 @@
                 <a :href="urls[0].demo" target="_blank" v-if="urls[0].demo">
                     <button class="window__buttons-demo">
                         <span>Demo</span>
+                    </button>
+                </a>
+
+                <a :href="urls[0].example" target="_blank" v-if="urls[0].example">
+                    <button class="window__buttons-example">
+                        <span>Ejemplo</span>
+                    </button>
+                </a>
+
+                <a :href="urls[0].comingsoon" target="_blank" v-if="urls[0].comingsoon" class="disabled-button">
+                    <button class="window__buttons-comingsoon">
+                        <span>Próximamente</span>
                     </button>
                 </a>
             </div>
@@ -51,6 +63,8 @@
 
 
 <script>
+import { computed } from 'vue';
+
 export default {
     props: {
         title: String,
@@ -60,7 +74,15 @@ export default {
         urls: Array
     },
 
-    setup ( ) {
+    setup ( props ) {
+
+        // Calculate how many buttons a window has
+        const visibleButtonsCount = computed(() =>
+            Object.keys(props.urls[0]).filter(( key ) => {
+                return props.urls[0][key]
+            }).length
+        )
+
 
         // Generate image url using the title of the project
         function generateImageUrl( title ) {
@@ -68,6 +90,7 @@ export default {
             const cleanTitle = title
                                 .toLowerCase()
                                 .replace(/é/g, 'e')
+                                .replace(/\?/g, '')                         
                                 .replace(/[^a-zA-Z0-9]+/g, "-")
 
             // Return the dynamically generated image URL
@@ -80,14 +103,16 @@ export default {
             const tagClass = tag
                                 .toLowerCase()
                                 .replace(/é/g, 'e')
+                                .replace(/\?/g, '')
                                 .replace(/[^a-zA-Z0-9]/g, '-')
             return tagClass
         }
 
-
+        
         return {
             generateImageUrl,
-            getTagClass
+            getTagClass,
+            visibleButtonsCount
         }
     }
 }
@@ -96,6 +121,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/styles/global.scss';
+
 .window {
     background-color: $palette-color-01;
     border: 1px solid $palette-color-04;
@@ -103,7 +129,9 @@ export default {
     box-shadow: 8px 9px 5px #DBD9D9;
     padding: 0.2rem;
 
-    margin: 2rem 0;  // TEMP
+    @media (max-width: $breakpoint-max-mobile) {
+        margin: 2rem 0;
+    }
 
     .window__inner-container {
         height: 100%;
@@ -130,7 +158,10 @@ export default {
                     font-size: $font-size-14px;
                     letter-spacing: 0.1rem;
                     line-height: 1.8;
+                    overflow: hidden;
                     padding: 0 0.2rem;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
 
                 .window__main__bar-buttons {
@@ -153,10 +184,13 @@ export default {
                 margin: 0.7rem 0.5rem;
                 overflow: hidden;
 
+                display: flex;
+                align-items: flex-start;
+
                 img {
-                    background-position: center center;
-                    background-size: cover;
-                    min-height: 200px;
+                   min-width: 100%;
+                   min-height: 100%;
+                   object-fit: cover;
                 }
             }
 
@@ -178,13 +212,20 @@ export default {
                     margin: 0.2rem;
                     padding: 0.3rem 0.5rem;
 
-                    &:first-child { margin-inline-start: 0; }
-                    &:last-child { margin-inline-end: 0; }
+                    //&:first-child { margin-inline-start: 0; }
+                    //&:last-child { margin-inline-end: 0; }
                     
                     &.vue { background-color: $accent-color-01; }
                     &.javascript { background-color: $accent-color-02; }
-                    &.scss { background-color: $accent-color-03; }
+                    &.css { background-color: $accent-color-03; }
                     &.tailwindcss { background-color: $accent-color-04; }
+                    &.scss { background-color: $accent-color-05; }
+                    &.jquery { background-color: $accent-color-06; }
+                    &.bootstrap { background-color: #553c7b; }
+                    //&.mysql { background-color: #f29111; }
+                    //&.wordpress { background-color: #00749c; }
+                    //&.gsap { background-color: #88ce02; }
+                   
                 }
             }
 
@@ -203,7 +244,7 @@ export default {
             padding-bottom: 1rem;
             
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
 
             a {
                 border: 1px solid $palette-color-04;
@@ -213,23 +254,36 @@ export default {
                 display: block;
                 margin: 0 1rem;
                 padding: 0.2rem;
-                width: 50%;
 
                 button {
                     background-color: #ffd6dd;
                     border: 1px dashed $palette-color-04;
                     cursor: pointer;
                     height: 100%;
+                    padding: 0 2rem;
                     width: 100%;
-
-                    // &.window__buttons-code {}
-                    // &.window__buttons-demo {}
 
                     span {
                         display: block;
 
                         &:first-letter { text-decoration:underline; }
                     }
+                }
+
+                &.disabled-button {
+                    box-shadow: none;
+                    opacity: 0.5;
+                    pointer-events: none;
+                }
+            }
+
+            &.multiple {
+                justify-content: space-between;
+
+                a {
+                    width: 50%;
+
+                    button { padding: 0; }
                 }
             }
         }
