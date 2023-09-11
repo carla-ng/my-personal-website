@@ -3,7 +3,7 @@
     <h1>Proyectos</h1>
 
     <p>
-        Et irure id nisi consectetur incididunt. Et cupidatat quis cillum reprehenderit nisi anim id magna officia proident tempor velit non.
+        Los proyectos personales se encuentran en progreso. Et irure id nisi consectetur incididunt. Et cupidatat quis cillum reprehenderit nisi anim id magna officia proident tempor velit non.
         Commodo incididunt velit est ullamco exercitation deserunt magna eiusmod occaecat Lorem. Tempor fugiat ea adipisicing mollit aliquip ad aute ea.
     </p>
 
@@ -18,6 +18,7 @@
                         :description="project.description"
                         :tags="project.tags"
                         :urls="project.urls"
+                        :repo="project.repo"
             ></SmallWindow>
         </div>
 
@@ -30,6 +31,7 @@
                         :description="project.description"
                         :tags="project.tags"
                         :urls="project.urls"
+                        :repo="project.repo"
             ></SmallWindow>
         </div>
 
@@ -45,9 +47,11 @@ import { ref } from 'vue';
 
 export default {
     name: 'Projects',
+
     components: {
         SmallWindow
     },
+
     setup() {
 
         // Personal projects list
@@ -59,7 +63,8 @@ export default {
                 tags: ['Vue','JavaScript','API','PokéAPI','SCSS','TailwindCSS'],
                 urls: [
                     { code: 'https://github.com/carla-ng/my-pokemon-project/', demo: 'https://carla-ng-my-pokemon-project.netlify.app/' }
-                ]
+                ],
+                repo: 'my-pokemon-project'
             },
             {
                 title: 'Space Tourism',
@@ -68,7 +73,8 @@ export default {
                 tags: ['Vue','JavaScript','SCSS'],
                 urls: [
                     { code: 'https://github.com/carla-ng/web-development-practice/', demo: 'https://carla-ng-space-tourism.netlify.app/' }
-                ]
+                ],
+                repo: 'web-development-practice'
             },
             {
                 title: '50 JS Projects',
@@ -77,7 +83,8 @@ export default {
                 tags: ['JavaScript','SCSS','API'],
                 urls: [
                     { code: 'https://github.com/carla-ng/50-javascript-projects/', demo: 'https://carla-ng.github.io/50-javascript-projects/' }
-                ]
+                ],
+                repo: '50-javascript-projects'
             },
             {
                 title: 'CSS Animations',
@@ -86,7 +93,8 @@ export default {
                 tags: ['SCSS'],
                 urls: [
                     { code: 'https://github.com/carla-ng/css-animations/', demo: 'https://carla-ng.github.io/css-animations/' }
-                ]
+                ],
+                repo: 'css-animations'
             },
             {
                 title: 'Rock Paper Scissors',
@@ -95,7 +103,8 @@ export default {
                 tags: ['Vue','JavaScript','SCSS','TailwindCSS'],
                 urls: [
                     { code: 'https://github.com/carla-ng/vue-rock-paper-scissors/', demo: 'https://carla-ng.github.io/vue-rock-paper-scissors/' }
-                ]
+                ],
+                repo: 'vue-rock-paper-scissors'
             },
             {
                 title: 'Dungeon Mini Game',
@@ -104,7 +113,8 @@ export default {
                 tags: ['JavaScript','SCSS'],
                 urls: [
                     { code: 'https://github.com/carla-ng/dungeon-mini-game-js/', demo: 'https://carla-ng.github.io/dungeon-mini-game-js/' }
-                ]
+                ],
+                repo: 'dungeon-mini-game-js'
             },
             {
                 title: 'Who is that Pokémon?',
@@ -113,7 +123,8 @@ export default {
                 tags: ['Vue','JavaScript','CSS','API', 'PokéAPI','Jest'],
                 urls: [
                     { code: 'https://github.com/carla-ng/who-is-that-pokemon/', demo: 'https://carla-ng.github.io/who-is-that-pokemon/' }
-                ]
+                ],
+                repo: 'who-is-that-pokemon'
             },
             {
                 title: 'Tic Tac Toe',
@@ -122,7 +133,8 @@ export default {
                 tags: ['Vue','JavaScript','TailwindCSS'],
                 urls: [
                     { code: 'https://github.com/carla-ng/vue-tic-tac-toe/', demo: 'https://carla-ng-vue-tic-tac-toe.netlify.app/' }
-                ]
+                ],
+                repo: 'vue-tic-tac-toe'
             }
         ])
 
@@ -136,7 +148,8 @@ export default {
                 tags: ['jQuery','JavaScript','SCSS','PHP','MySQL'],
                 urls: [
                     { example: 'https://carla-ng.github.io/my-portfolio/' }
-                ]
+                ],
+                repo: 'my-portfolio'
             },
             {
                 title: 'Sitio Web Apensar',
@@ -145,7 +158,8 @@ export default {
                 tags: ['JavaScript','CSS','Bootstrap','Wordpress','PHP','MySQL'],
                 urls: [
                     { comingsoon: '#' }
-                ]
+                ],
+                repo: 'my-portfolio'
             },
             {
                 title: 'Demo Juego Apensar',
@@ -154,7 +168,8 @@ export default {
                 tags: ['jQuery','CSS','Bootstrap','GSAP','PHP','MySQL'],
                 urls: [
                     { comingsoon: '#' }
-                ]
+                ],
+                repo: 'my-portfolio'
             },
         ])
 
@@ -171,17 +186,34 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/styles/global.scss';
 
+h1 {
+    margin-bottom: 2rem;
+}
+
+p {
+    margin: 0 auto 2rem auto;
+    text-align: center;
+
+    @media (min-width: $breakpoint-min-tablet) { max-width: 600px; }
+    @media (min-width: $breakpoint-min-desktop) { max-width: 900px; }
+}
+
 .projects {
+
+    h2 {
+        line-height: 1.2;
+        margin: 4rem 0 2rem 0;
+    }
+
     .projects__list {
         @media (min-width: $breakpoint-min-tablet) {
             display: grid;
             gap: 1.5rem;
             grid-template-columns: repeat(2, 1fr);
+            max-width: 100%;
         }
 
         @media (min-width: $breakpoint-min-desktop) { grid-template-columns: repeat(3, 1fr); }
-
-        margin-bottom: 3rem; //TEMP
     }
 }
 </style>

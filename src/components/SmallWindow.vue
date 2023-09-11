@@ -9,7 +9,8 @@
                     <span class="window__main__bar-title"> {{ title }} </span>
 
                     <div class="window__main__bar-buttons">
-                        <span>?</span>
+                        <span @click="toggleReadme">?</span>
+                        <div ref="readmeContainer" class="window__main__bar-buttons__readme" v-show="showReadme" v-html="readmeHtml"></div>
                     </div>
                 </div>
 
@@ -63,7 +64,12 @@
 
 
 <script>
-import { computed } from 'vue';
+import axios from 'axios';
+import MarkdownIt from 'markdown-it';
+import emoji from 'markdown-it-emoji';
+
+import { computed, onMounted, ref } from 'vue';
+
 
 export default {
     props: {
@@ -71,10 +77,18 @@ export default {
         intro: String,
         description: String,
         tags: Array,
-        urls: Array
+        urls: Array,
+        repo: String
     },
 
     setup ( props ) {
+        const readmeContainer = ref(null)
+        const readmeHtml = ref('')
+        const showReadme = ref(false)
+
+        const markdown = new MarkdownIt({ html: true })
+        markdown.use(emoji)
+
 
         // Calculate how many buttons a window has
         const visibleButtonsCount = computed(() =>
@@ -83,9 +97,8 @@ export default {
             }).length
         )
 
-
         // Generate image url using the title of the project
-        function generateImageUrl( title ) {
+        const generateImageUrl = ( title ) => {
             // Remove spaces and special characters from the title and make it lowercase
             const cleanTitle = title
                                 .toLowerCase()
@@ -99,7 +112,7 @@ export default {
 
 
         // Get class from a tag
-        function getTagClass( tag ) {
+        const getTagClass = ( tag ) => {
             const tagClass = tag
                                 .toLowerCase()
                                 .replace(/é/g, 'e')
@@ -108,11 +121,82 @@ export default {
             return tagClass
         }
 
+
+        // Open and fetch the README content (from github project)
+        const openReadme = async () => {
+            try {
+                // We have to check both main and master branches
+                const branchesToCheck = ['master', 'main']
+                
+                // Loop through the branch names and try fetching README content
+                let readmeContent = null
+                for ( const branch of branchesToCheck ) {
+                    readmeContent = await fetchReadmeContent(`https://raw.githubusercontent.com/carla-ng/${props.repo}/${branch}`)
+                    
+                    if ( readmeContent ) {
+                        break;  // If content is found, exit the loop
+                    }
+                }
+
+                // Add the README content to the DOM as Markdown
+                if ( readmeContent && readmeContainer.value ) {
+                    const markdownContent = markdown.render(readmeContent)
+                    readmeContainer.value.innerHTML = markdownContent
+                }
+
+                // Using v-html to render any HTML tags contained within the rendered Markdown
+                if ( readmeContainer.value ) {
+                    readmeHtml.value = readmeContainer.value.innerHTML
+                }
+
+            } catch ( error ) {
+                console.error('Error fetching README:', error)
+            }
+        }
+
+
+        // Fetch the README content (from github project)
+        const fetchReadmeContent = async ( repoUrl ) => {
+            try {
+                const response = await axios.get(`${repoUrl}/README.md`,
+                    {
+                        headers: {
+                            Accept: 'application/vnd.github.v3.raw', // Request raw content
+                        },
+                    }
+                )
+
+                return response.data
+
+            } catch ( error ) {
+                return null
+            }
+        }
+
+
+        // Mostrar README del proyecto
+        const toggleReadme = () => {
+            showReadme.value = !showReadme.value
+            // if (showReadme.value) {
+            //     openReadme(); // Fetch the README content when shown
+            // }
+        }
+
+
+        onMounted(() => {
+            openReadme()
+        })
+
         
         return {
             generateImageUrl,
             getTagClass,
-            visibleButtonsCount
+            openReadme,
+            readmeContainer,
+            readmeHtml,
+            showReadme,
+            toggleReadme,
+            visibleButtonsCount,
         }
     }
 }
@@ -127,6 +211,7 @@ export default {
     border: 1px solid $palette-color-04;
     border-radius: 5px;
     box-shadow: 8px 9px 5px #DBD9D9;
+    min-width: 0;
     padding: 0.2rem;
 
     @media (max-width: $breakpoint-max-mobile) {
@@ -166,6 +251,7 @@ export default {
 
                 .window__main__bar-buttons {
                     cursor: pointer;
+                    position: relative;
                     
                     span {
                         background-color: $palette-color-01;
@@ -174,6 +260,20 @@ export default {
                         box-shadow: 2px 2px 0px #919191;
                         color: $font-color-01;
                         padding: 0 0.3rem;
+                        user-select: none;
+                    }
+
+                    &:active {
+                        transform: translateY(2px);
+
+                        span { box-shadow: none; }
+                    }
+
+                    .window__main__bar-buttons__readme {
+                        //display: none;
+
+                        background-color: pink;  //TEMP
+                        position: absolute;
                     }
                 }
             }
@@ -274,6 +374,11 @@ export default {
                     box-shadow: none;
                     opacity: 0.5;
                     pointer-events: none;
+                }
+
+                &:active {
+                    box-shadow: none;
+                    transform: translateY(2px);
                 }
             }
 
