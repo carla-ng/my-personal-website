@@ -298,7 +298,8 @@ export default {
                 flex-direction: row;
                 flex-wrap: wrap;
                 margin: 0.7rem 0.5rem;
-                min-height: 3.7rem;
+
+                @media (min-width: $breakpoint-min-tablet) { min-height: 3.7rem; }
 
                 span {
                     background-color: $palette-color-04;
