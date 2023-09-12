@@ -44,7 +44,7 @@
 
                 <a :href="urls[0].example" target="_blank" v-if="urls[0].example">
                     <button class="window__buttons-example">
-                        <span>Ejemplo</span>
+                        <span>Ejemplos</span>
                     </button>
                 </a>
 
@@ -178,9 +178,6 @@ export default {
         // Show project README file info
         const toggleReadme = () => {
             showReadme.value = !showReadme.value
-            // if (showReadme.value) {
-            //     openReadme(); // Fetch the README content when shown
-            // }
         }
 
 
@@ -196,15 +193,16 @@ export default {
 
         
         return {
+            readmeContainer,
+            readmeHtml,
+            showReadme,
+            visibleButtonsCount,
+
             closePopup,
             generateImageUrl,
             getTagClass,
             openReadme,
-            readmeContainer,
-            readmeHtml,
-            showReadme,
-            toggleReadme,
-            visibleButtonsCount,
+            toggleReadme,   
         }
     }
 }
@@ -249,7 +247,7 @@ export default {
                     color: $font-color-02;
                     font-family: $font-family-02;
                     font-size: $font-size-14px;
-                    letter-spacing: 0.1rem;
+                    letter-spacing: 0.05rem;
                     line-height: 1.8;
                     overflow: hidden;
                     padding: 0 0.2rem;
@@ -275,13 +273,6 @@ export default {
                         transform: translateY(2px);
 
                         span { box-shadow: none; }
-                    }
-
-                    .window__main__bar-buttons__readme {
-                        //display: none;
-
-                        background-color: pink;  //TEMP
-                        position: absolute;
                     }
                 }
             }
@@ -320,9 +311,6 @@ export default {
                     margin: 0.2rem;
                     padding: 0.3rem 0.5rem;
 
-                    //&:first-child { margin-inline-start: 0; }
-                    //&:last-child { margin-inline-end: 0; }
-                    
                     &.vue { background-color: $accent-color-01; }
                     &.javascript { background-color: $accent-color-02; }
                     &.css { background-color: $accent-color-03; }

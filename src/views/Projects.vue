@@ -3,7 +3,11 @@
     <h1>Proyectos</h1>
 
     <p>
-        Los proyectos personales se encuentran en progreso. Et irure id nisi consectetur incididunt. Et cupidatat quis cillum reprehenderit nisi anim id magna officia proident tempor velit non.
+        Los proyectos personales se encuentran en progreso.
+        
+        <br>
+
+        Et irure id nisi consectetur incididunt. Et cupidatat quis cillum reprehenderit nisi anim id magna officia proident tempor velit non.
         Commodo incididunt velit est ullamco exercitation deserunt magna eiusmod occaecat Lorem. Tempor fugiat ea adipisicing mollit aliquip ad aute ea.
     </p>
 

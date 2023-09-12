@@ -166,12 +166,13 @@ input, button, textarea, select {
 
  /* Pages */
 .page-container {
+    margin: 2rem auto 4rem auto;
+    max-width: 1140px;
     padding: 0 1rem;
 }
  
-main {
-    margin: 2rem auto 4rem auto;
-    max-width: 1140px;
+.no-scroll {
+    overflow: hidden;
 }
  
  /* Colors */
