@@ -199,7 +199,7 @@ p {
 }
 
 .projects {
-
+    
     h2 {
         line-height: 1.2;
         margin: 4rem 0 2rem 0;

@@ -10,7 +10,6 @@
 
                     <div class="window__main__bar-buttons">
                         <span @click="toggleReadme">?</span>
-                        <div ref="readmeContainer" class="window__main__bar-buttons__readme" v-show="showReadme" v-html="readmeHtml"></div>
                     </div>
                 </div>
 
@@ -60,6 +59,8 @@
 
     </div>
 
+    <Popup :is-visible="showReadme" :readme-html="readmeHtml" :closePopup="closePopup" />
+
 </template>
 
 
@@ -69,6 +70,7 @@ import MarkdownIt from 'markdown-it';
 import emoji from 'markdown-it-emoji';
 
 import { computed, onMounted, ref } from 'vue';
+import Popup from './Popup.vue';
 
 
 export default {
@@ -79,6 +81,10 @@ export default {
         tags: Array,
         urls: Array,
         repo: String
+    },
+
+    components: {
+        Popup
     },
 
     setup ( props ) {
@@ -132,21 +138,16 @@ export default {
                 let readmeContent = null
                 for ( const branch of branchesToCheck ) {
                     readmeContent = await fetchReadmeContent(`https://raw.githubusercontent.com/carla-ng/${props.repo}/${branch}`)
-                    
+
                     if ( readmeContent ) {
-                        break;  // If content is found, exit the loop
+                        break;  // if content is found, exit the loop
                     }
                 }
 
                 // Add the README content to the DOM as Markdown
-                if ( readmeContent && readmeContainer.value ) {
+                if ( readmeContent ) {
                     const markdownContent = markdown.render(readmeContent)
-                    readmeContainer.value.innerHTML = markdownContent
-                }
-
-                // Using v-html to render any HTML tags contained within the rendered Markdown
-                if ( readmeContainer.value ) {
-                    readmeHtml.value = readmeContainer.value.innerHTML
+                    readmeHtml.value = markdownContent
                 }
 
             } catch ( error ) {
@@ -174,12 +175,18 @@ export default {
         }
 
 
-        // Mostrar README del proyecto
+        // Show project README file info
         const toggleReadme = () => {
             showReadme.value = !showReadme.value
             // if (showReadme.value) {
             //     openReadme(); // Fetch the README content when shown
             // }
+        }
+
+
+        // Close popup with README file info
+        const closePopup = () => {
+            showReadme.value = false
         }
 
 
@@ -189,6 +196,7 @@ export default {
 
         
         return {
+            closePopup,
             generateImageUrl,
             getTagClass,
             openReadme,
