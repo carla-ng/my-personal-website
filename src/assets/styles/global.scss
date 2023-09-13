@@ -23,8 +23,11 @@ $palette-color-05: #595959;  // grey
 
 
 /* Colors */
-$font-color-01: $palette-color-04;
+$font-color-01: #303031;
 $font-color-02: #FFF;
+
+$headline-h1-color: #161616;
+$headline-h2-color: $headline-h1-color;
 
 $accent-color-01: #41B883;
 $accent-color-02: #ffb310;
@@ -100,18 +103,13 @@ html, body {
 /* Set core body defaults */
 body {
     //background-color: $palette-color-02;
+    color: $font-color-01;
     font-family: $font-family-03;
     font-size: $font-size-16px;
     min-height: 100vh;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     width: 100%;
-
-    //@media (min-width: $breakpoint-min-desktop) { font-size: $font-size-18px; }
-
-    #app {
-    
-    }
 }
 
 
@@ -184,7 +182,9 @@ input, button, textarea, select {
 .text-accent { color: $palette-color-accent; }
 .text-light { color: $palette-color-light; }
 
-/* Fonts */
+
+/* Headings, Texts */
+
 // .ff-serif { font-family: $font-family-serif; }
 // .ff-sans { font-family: $font-family-sans; }
 // .ff-sans-cond { font-family: $font-family-sans-cond; }
@@ -198,12 +198,53 @@ input, button, textarea, select {
 .fs-100 { font-size: $font-size-100px; } //800
 .fs-150 { font-size: $font-size-150px; } //900
 
-.uppercase { text-transform: uppercase; }
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1 {
+    color: $headline-h1-color;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
+
+h2 {
+    color: $headline-h2-color;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+
+    @media (max-width: $breakpoint-max-tablet) { text-align: center; }
+}
+
+p {
+    color: $font-color-01;
+
+    &.primary-text {
+        margin: 0 auto 4rem auto;
+        text-align: center;
+
+        @media (min-width: $breakpoint-min-tablet) { max-width: 600px; }
+    }
+
+    &.secondary-text {
+        margin-bottom: 3rem;
+
+        @media (min-width: $breakpoint-min-tablet) { max-width: 700px; }
+
+        @media (max-width: $breakpoint-max-tablet) {
+            margin: 0 auto 1rem auto;
+            max-width: 600px;
+            text-align: center;
+        }
+    }
+}
+
+span {
+    color: $font-color-01;
+}
+
+.text-bold { font-weight: 600; }
+
+.text-underlined { text-decoration: underline; }
+
+.uppercase { text-transform: uppercase; }
+
 
  
 .desktop {

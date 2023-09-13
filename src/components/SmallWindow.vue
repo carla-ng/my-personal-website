@@ -9,7 +9,7 @@
                     <span class="window__main__bar-title"> {{ title }} </span>
 
                     <div class="window__main__bar-buttons">
-                        <span @click="toggleReadme">?</span>
+                        <span v-show="readmeHtml" @click="toggleReadme">?</span>
                     </div>
                 </div>
 

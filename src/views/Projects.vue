@@ -2,18 +2,18 @@
   <main class="projects-page page-container">
     <h1>Proyectos</h1>
 
-    <p>
-        Los proyectos personales se encuentran en progreso.
-        
-        <br>
-
-        Et irure id nisi consectetur incididunt. Et cupidatat quis cillum reprehenderit nisi anim id magna officia proident tempor velit non.
-        Commodo incididunt velit est ullamco exercitation deserunt magna eiusmod occaecat Lorem. Tempor fugiat ea adipisicing mollit aliquip ad aute ea.
+    <p class="primary-text">
+        En esta página se encuentran algunos de los proyectos en los que me encuentro trabajando actualmente o en los que he trabajado en el pasado.
     </p>
 
     <div class="projects">
 
-        <h2>Proyectos personales y de aprendizaje</h2>
+        <h2 class="projects__heading-personal">Proyectos personales y de aprendizaje</h2>
+
+        <p class="secondary-text">
+            Desarrollados en mi tiempo libre para crecer como programadora. La mayoría de estos proyectos se encuentran <span class="text-bold text-underlined">en progreso</span>,
+            ya que los utilizo para aprender y practicar en mi tiempo libre.
+        </p>
 
         <div class="projects__list">
             <SmallWindow v-for="(project, index) in personal_projects" :key="index"
@@ -26,7 +26,11 @@
             ></SmallWindow>
         </div>
 
-        <h2>Proyectos a nivel profesional</h2>
+        <h2 class="projects__heading-professional">Proyectos a nivel profesional</h2>
+
+        <p class="secondary-text">
+            Algunos desarrollos destacados de las empresas donde he trabajado.
+        </p>
 
         <div class="projects__list">
             <SmallWindow v-for="(project, index) in professional_projects" :key="index"
@@ -146,7 +150,7 @@ export default {
         // Professional projects list
         const professional_projects = ref([
             {
-                title: 'Components',
+                title: 'Componentes',
                 intro: 'Repertorio de componentes reutilizables.',
                 description: 'Componentes desarrollados a nivel profesional para la creación de múltiples sitios web.',
                 tags: ['jQuery','JavaScript','SCSS','PHP','MySQL'],
@@ -190,23 +194,10 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/styles/global.scss';
 
-h1 {
-    margin-bottom: 2rem;
-}
-
-p {
-    margin: 0 auto 2rem auto;
-    text-align: center;
-
-    @media (min-width: $breakpoint-min-tablet) { max-width: 600px; }
-    @media (min-width: $breakpoint-min-desktop) { max-width: 900px; }
-}
-
 .projects {
-    
-    h2 {
-        line-height: 1.2;
-        margin: 4rem 0 2rem 0;
+
+    h2.projects__heading-professional {
+        margin-top: 5rem;
     }
 
     .projects__list {
@@ -214,6 +205,7 @@ p {
             display: grid;
             gap: 1.5rem;
             grid-template-columns: repeat(2, 1fr);
+            margin-top: 3rem;
             max-width: 100%;
         }
 
