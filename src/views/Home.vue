@@ -1,6 +1,6 @@
 <template>
   <div class="home page-container">
-    <h1 style="text-align: center; margin-top: 2rem;">This is the homepage <br> This website is under construction!</h1>
+    <h2 style="margin-top: 2rem;">This is the homepage <br> This website is under construction!</h2>
   </div>
 </template>
 

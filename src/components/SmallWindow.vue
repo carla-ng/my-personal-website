@@ -216,7 +216,7 @@ export default {
     background-color: $palette-color-01;
     border: 1px solid $palette-color-04;
     border-radius: 5px;
-    box-shadow: 8px 9px 5px #DBD9D9;
+    box-shadow: 8px 9px 4px #bdbbbb;
     min-width: 0;
     padding: 0.2rem;
 
@@ -252,6 +252,7 @@ export default {
                     overflow: hidden;
                     padding: 0 0.2rem;
                     text-overflow: ellipsis;
+                    text-shadow: 1px 1px 3px #4d4d4d;
                     white-space: nowrap;
                 }
 
@@ -311,6 +312,7 @@ export default {
                     letter-spacing: 0.05rem;
                     margin: 0.2rem;
                     padding: 0.3rem 0.5rem;
+                    text-shadow: 1px 1px 5px #4d4d4d;
 
                     &.vue { background-color: $accent-color-01; }
                     &.javascript { background-color: $accent-color-02; }

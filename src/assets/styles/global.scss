@@ -1,5 +1,7 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&family=Press+Start+2P&family=Space+Grotesk:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Press+Start+2P&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&family=Noto+Sans:wght@300;400;600&family=Press+Start+2P&family=Space+Grotesk:wght@400;600&display=swap');
+
 
 
 /***********************
@@ -14,22 +16,30 @@ $palette-color-light: rgb(255, 255, 255);   // #FFFFFF
 
 /* Main/light theme */
 $palette-color-01: #ffd6dd;  // light pink
-$palette-color-02: #FBFBDB;  // creamy light yellow
-$palette-color-03: #cdaaf1;  // lilac
-$palette-color-04: #403F4C;  // dark grey
+$palette-color-02: #fbfbdb;  // creamy light yellow
+$palette-color-03: #cdaaf1;  // purple
+$palette-color-04: #403f4c;  // dark grey
 $palette-color-05: #595959;  // grey
+
+$palette-color-06: #ffa3b2;  // darker pink
+$palette-color-07: #f0e088;  // darker creamy light yellow
+$palette-color-08: #b680ec;  // darker purple
+
+$white: #fbfaf4;
+
 
 /* Dark theme */
 
 
 /* Colors */
-$font-color-01: #303031;
-$font-color-02: #FFF;
+$font-color-01: #000000;
+$font-color-02: #fff;
 
 $headline-h1-color: #161616;
 $headline-h2-color: $headline-h1-color;
+$headline-h3-color: $headline-h1-color;
 
-$accent-color-01: #41B883;
+$accent-color-01: #41b883;
 $accent-color-02: #ffb310;
 $accent-color-03: #8484ff;
 $accent-color-04: #38bdf8;
@@ -38,9 +48,8 @@ $accent-color-06: #0868ac;
 
 
 /* Fonts */
-$font-family-01: 'Noto Sans', sans-serif;
+$font-family-01: 'Montserrat', sans-serif;
 $font-family-02: 'Press Start 2P', cursive;
-$font-family-03: 'Space Grotesk', sans-serif;
 
 $font-size-08px:  0.5rem;     // 8px
 $font-size-09px:  0.563rem;   // 9px
@@ -49,6 +58,8 @@ $font-size-12px:  0.75rem;    // 12px
 $font-size-14px:  0.875rem;   // 14px
 $font-size-16px:  1rem;       // 16px
 $font-size-18px:  1.125rem;   // 18px
+$font-size-21px:  1.3125rem;  // 21px
+$font-size-26px:  1.625rem;    // 26px
 $font-size-28px:  1.75rem;    // 28px
 $font-size-32px:  2rem;       // 32px
 $font-size-56px:  3.5rem;     // 56px
@@ -102,9 +113,9 @@ html, body {
 
 /* Set core body defaults */
 body {
-    //background-color: $palette-color-02;
+    background-color: $white;
     color: $font-color-01;
-    font-family: $font-family-03;
+    font-family: $font-family-01;
     font-size: $font-size-16px;
     min-height: 100vh;
     line-height: 1.5;
@@ -198,24 +209,48 @@ input, button, textarea, select {
 .fs-100 { font-size: $font-size-100px; } //800
 .fs-150 { font-size: $font-size-150px; } //900
 
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-02;
+    letter-spacing: 2px;
+    width: fit-content;
+}
+
 h1 {
     color: $headline-h1-color;
+    font-size: $font-size-26px;
     margin-bottom: 1.5rem;
     text-align: center;
+    text-shadow: 5px 5px 2px $palette-color-06;
+
+    @media (min-width: $breakpoint-min-tablet) { font-size: $font-size-28px; }
 }
 
 h2 {
     color: $headline-h2-color;
-    line-height: 1.2;
+    font-size: $font-size-18px;
+    line-height: 1.7;
     margin-bottom: 1rem;
+    text-shadow: 5px 5px 2px $palette-color-07;
 
+    @media (min-width: $breakpoint-min-tablet) { font-size: $font-size-21px; }
     @media (max-width: $breakpoint-max-tablet) { text-align: center; }
+}
+
+h3 {
+    color: $headline-h3-color;
+    font-size: $font-size-16px;
+    line-height: 1.7;
+    text-shadow: 5px 5px 2px $palette-color-08;
+
+    @media (min-width: $breakpoint-min-tablet) { font-size: $font-size-18px; }
 }
 
 p {
     color: $font-color-01;
 
     &.primary-text {
+        font-size: $font-size-18px;
         margin: 0 auto 4rem auto;
         text-align: center;
 
@@ -223,7 +258,9 @@ p {
     }
 
     &.secondary-text {
+        font-size: $font-size-18px;
         margin-bottom: 3rem;
+        padding: 0 12px;
 
         @media (min-width: $breakpoint-min-tablet) { max-width: 700px; }
 
@@ -254,8 +291,7 @@ span {
 .mobile {
     @media (max-width: $breakpoint-max-tablet) { display: block; }
     @media (min-width: $breakpoint-min-desktop) { display: none; }
-}
- 
+} 
  
  
  /*************************
@@ -290,3 +326,30 @@ span {
     transition: all 850ms ease-in;
     transition-delay: 500ms;
 }
+
+.typewriter-effect {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    // border-right: .15em solid orange;
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin-inline-start: auto; /* Gives that scrolling effect as the typing happens */
+    margin-inline-end: auto; /* Gives that scrolling effect as the typing happens */
+    animation: typing 1.2s steps(50, end);
+            //    blink-caret .75s step-end infinite;
+
+    @media (min-width: $breakpoint-min-tablet) { animation: typing 3s steps(50, end); }
+}
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+/* The typewriter cursor effect */
+// @keyframes blink-caret {
+//     from, to { border-color: transparent }
+//     50% { border-color: orange; }
+// }
+
+
+ /*************************
+  *       Pixel Art       *
+  *************************/

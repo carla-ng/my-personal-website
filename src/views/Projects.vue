@@ -1,6 +1,7 @@
 <template>
   <main class="projects-page page-container">
-    <h1>Proyectos</h1>
+    
+    <h1 class="typewriter-effect">Proyectos</h1>
 
     <p class="primary-text">
         En esta página se encuentran algunos de los proyectos en los que me encuentro trabajando actualmente o en los que he trabajado en el pasado.

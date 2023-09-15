@@ -93,7 +93,7 @@ export default {
     z-index: 999;
 
     .popup {    
-        background-color: $palette-color-01;
+        background-color: $white;
         border-radius: 5px;
         border: 1px solid $palette-color-04;
         box-shadow: 6px 6px 5px #3b3b3b;
@@ -179,7 +179,16 @@ export default {
                 }
 
                 h1, h2, h3, h4, h5, h6 {
-                    margin: 0.5rem 0;
+                    margin: 1rem 0;
+                    word-wrap:break-word;
+                }
+
+                h1 {
+                    margin: 0.5rem 0 1.5rem 0;
+                }
+
+                h3 {
+                    margin: 1.5rem 0 1.5rem 0;
                 }
             }
         }
