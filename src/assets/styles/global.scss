@@ -177,7 +177,9 @@ input, button, textarea, select {
 .page-container {
     margin: 2rem auto 4rem auto;
     max-width: 1140px;
-    padding: 0 1rem;
+    padding: 0 1.2rem;
+
+    @media (min-width: $breakpoint-min-tablet) { padding: 0 1rem; }
 }
  
 .no-scroll {
@@ -282,6 +284,10 @@ span {
 
 .uppercase { text-transform: uppercase; }
 
+
+::selection {
+    background-color: $palette-color-06;
+}
 
  
 .desktop {
