@@ -59,7 +59,8 @@ $font-size-14px:  0.875rem;   // 14px
 $font-size-16px:  1rem;       // 16px
 $font-size-18px:  1.125rem;   // 18px
 $font-size-21px:  1.3125rem;  // 21px
-$font-size-26px:  1.625rem;    // 26px
+$font-size-24px:  1.5rem;     // 24px
+$font-size-26px:  1.625rem;   // 26px
 $font-size-28px:  1.75rem;    // 28px
 $font-size-32px:  2rem;       // 32px
 $font-size-56px:  3.5rem;     // 56px
@@ -202,14 +203,15 @@ input, button, textarea, select {
 // .ff-sans { font-family: $font-family-sans; }
 // .ff-sans-cond { font-family: $font-family-sans-cond; }
 
-.fs-14 { font-size: $font-size-14px; }   //200
-.fs-16 { font-size: $font-size-16px; }   //300
-.fs-18 { font-size: $font-size-18px; }   //400
-.fs-28 { font-size: $font-size-28px; }   //500
-.fs-32 { font-size: $font-size-32px; }   //600
-.fs-56 { font-size: $font-size-56px; }   //700
-.fs-100 { font-size: $font-size-100px; } //800
-.fs-150 { font-size: $font-size-150px; } //900
+.fs-14 { font-size: $font-size-14px; }   
+.fs-16 { font-size: $font-size-16px; }   
+.fs-18 { font-size: $font-size-18px; }
+.fs-24 { font-size: $font-size-24px; }
+.fs-28 { font-size: $font-size-28px; }   
+.fs-32 { font-size: $font-size-32px; }   
+.fs-56 { font-size: $font-size-56px; }   
+.fs-100 { font-size: $font-size-100px; } 
+.fs-150 { font-size: $font-size-150px; } 
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -274,20 +276,20 @@ p {
     }
 }
 
-span {
-    color: $font-color-01;
-}
+span { color: $font-color-01; }
+
+b, strong { font-weight: 600; }
 
 .text-bold { font-weight: 600; }
 
 .text-underlined { text-decoration: underline; }
 
+.font-family-02 { font-family: $font-family-02; }
+
 .uppercase { text-transform: uppercase; }
 
 
-::selection {
-    background-color: $palette-color-06;
-}
+::selection { background-color: $palette-color-06; }
 
  
 .desktop {

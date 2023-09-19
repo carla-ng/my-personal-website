@@ -4,14 +4,14 @@
     <h1 class="typewriter-effect">Acerca de mí</h1>
 
     <p class="primary-text">
-        Pariatur labore cillum commodo ad fugiat quis pariatur labore sunt ad in anim est enim. Commodo laborum irure et ipsum. Labore adipisicing officia excepteur magna laboris voluptate ut ex veniam ea cupidatat sunt. Mollit pariatur quis irure et exercitation dolore. Ipsum id anim est aliqua est excepteur.
+        Conoce un poco más sobre las tecnologías con las que trabajo, mis gustos y mis pasatiempos. 
     </p>
 
     <div class="about__window">
 
         <div class="about__window__inner-container">
             <div class="about__window__bar">
-                <span class="about__window__bar-title"> Aqui va titulo ventana </span>
+                <span class="about__window__bar-title"> Carla Nardone ({{ currentIndex + 1 }}/2) </span>
 
                 <div class="about__window__bar-buttons disabled-button">
                     <span>?</span>
@@ -46,6 +46,8 @@
 
     </div>
 
+    <div style="margin: 3rem 0; text-align: center;">AQUI VOY A PONER ALGUNOS DIBUJOS MIOS</div>
+
 
   </main>
 </template>
@@ -60,15 +62,25 @@ export default {
 
         const content = [
             {
-                text: `<p>Aute consectetur officia mollit anim sit et proident irure. Cillum magna nisi cupidatat est nulla. Aliquip irure nisi culpa elit nostrud in dolor consequat. Consectetur excepteur est commodo excepteur aliqua elit amet tempor veniam voluptate ea mollit. Nulla fugiat sit et nostrud sit laborum dolore aute quis. Ea laboris dolore aliqua aliqua et elit qui sit excepteur.</p>
-                       <br>
-                       <p>Eiusmod qui dolor occaecat laboris duis voluptate adipisicing quis. Cillum esse ipsum aliqua do esse. Nulla in pariatur laboris magna pariatur exercitation culpa labore labore cillum nisi veniam.</p>
-                       <br>
-                       <p>Velit ea laborum laboris deserunt mollit do. Reprehenderit ad ea anim ipsum reprehenderit consequat laboris. Ex aliqua ad excepteur adipisicing laborum laborum ullamco qui cillum in velit. Sunt mollit anim irure reprehenderit irure tempor occaecat id et labore amet amet.</p>`,
+                text: `
+                        <p class="font-family-02 fs-24">¡Hola!</p>
+                        <br>
+                        <p>Mi nombre es <strong>Carla</strong>, y soy <strong>Ingeniera de Software especializada en desarrollo Front-end</strong>. Las tecnologías que suelo utilizar son <strong>JavaScript, Vue, jQuery, CSS/SCSS</strong> y <strong>TailwindCSS</strong>. También tengo un poco de experiencia trabajando con Back-end y BBDD, especialmente con <strong>PHP</strong> y <strong>MySQL</strong>.</p>
+                        <br>
+                        <p>Además de la programación, me interesa mucho la <strong>gestión de proyectos</strong>, soy una persona muy <strong>organizada</strong> y <strong>atenta</strong>. Estoy acostumbrada a trabajar con la metodología agile de <strong>Scrum</strong>.</p>
+                      `,
                 imageSrc: 'assets/images/about/setup.jpg',
             },
             {
-                text: `More about me here!`,
+                text: `
+                        <p>En mi tiempo libre, si no me encuentro programando o siguiendo algún live stream de programación en <i>Twitch</i>, lo más probable es que me encuentre <b>leyendo, dibujando</b> o <b>jugando videojuegos</b>.</p>
+                        <br>
+                        <p>Gracias al <strong>dibujo</strong> y la <strong>pintura</strong>, he tenido la oportunidad de hacer un montón de nuevos amigos, y he podido participar en <strong>concursos de pintura rápida</strong> y hacer <strong>exposiciones colectivas</strong> en centros culturales.</p>
+                        <br>
+                        <p>En cuanto a los <strong>videojuegos</strong> que me gusta jugar, soy fan de los <strong>RPG</strong> estilo <i>Final Fantasy</i> y <i>Persona</i>, aunque últimamente he estado disfrutando más de los conocidos <strong>cozy games</strong>. Podrás encontrarme jugando principalmente en <strong>Nintendo Switch</strong> y <strong>Steam</strong>.</p>
+                        <br>
+                        <p>También me interesaría aprender en un futuro sobre <strong>desarrollo de videojuegos</strong>.</p>
+                        `,
                 imageSrc: 'assets/images/about/art_contest.jpg',
             },
         ]
@@ -94,6 +106,7 @@ export default {
 
 
         return {
+            currentIndex,
             getCurrentContent,
             isPrevButtonDisabled,
             isNextButtonDisabled,
@@ -116,6 +129,8 @@ export default {
         border: 1px solid $palette-color-04;
         border-radius: 5px;
         box-shadow: 8px 9px 4px #bdbbbb;
+        margin: 0 auto;
+        max-width: 950px;
         min-width: 0;
         padding: 0.2rem;
 
@@ -200,7 +215,7 @@ export default {
                     align-items: center;
 
                     @media (min-width: $breakpoint-min-tablet) {
-                        height: 500px;
+                        height: 525px;
                         margin: 0 2rem;
                         width: 45%;
                     }
@@ -220,7 +235,10 @@ export default {
                     //align-items: flex-end;
                     justify-content: space-between;
 
-                    @media (min-width: $breakpoint-min-tablet) { width: 55%; }
+                    @media (min-width: $breakpoint-min-tablet) {
+                        margin: 1rem 2rem 1rem 1rem;
+                        width: 55%;
+                    }
 
                     // .about__window__text-info {
                     //     p {}
