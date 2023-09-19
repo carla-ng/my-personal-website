@@ -130,9 +130,16 @@ export default {
         border-radius: 5px;
         box-shadow: 8px 9px 4px #bdbbbb;
         margin: 0 auto;
-        max-width: 950px;
+        max-width: 1024px;
         min-width: 0;
         padding: 0.2rem;
+
+        @media (min-width: $breakpoint-min-tablet) {
+            min-height: 750px;
+            position: relative;
+        }
+
+        @media (min-width: $breakpoint-min-desktop) { min-height: 620px; }
 
         .about__window__inner-container {
             height: 100%;
@@ -140,6 +147,11 @@ export default {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            @media (min-width: $breakpoint-min-tablet) {
+                position: absolute;
+                top: 0;
+            }
 
             .about__window__bar {
                 background-color: $palette-color-03;
@@ -154,7 +166,7 @@ export default {
                 .about__window__bar-title {
                     color: $font-color-02;
                     font-family: $font-family-02;
-                    font-size: $font-size-14px;
+                    font-size: $font-size-12px;
                     letter-spacing: 0.05rem;
                     line-height: 1.8;
                     overflow: hidden;
@@ -162,6 +174,8 @@ export default {
                     text-overflow: ellipsis;
                     text-shadow: 1px 1px 3px #4d4d4d;
                     white-space: nowrap;
+
+                    @media (min-width: $breakpoint-min-tablet) { font-size: $font-size-14px; }
                 }
                 .about__window__bar-buttons {
                     cursor: pointer;
@@ -200,13 +214,14 @@ export default {
                 @media (min-width: $breakpoint-min-tablet) {
                     flex-direction: row;
 
+                    height: -webkit-fill-available;
                     margin-top: 2rem;
                     margin-bottom: 2rem;
                 }
 
                 .about__window__image {
                     border-style: inset;
-                    height: 400px;
+                    height: 350px;
                     margin: 1rem;
                     overflow: hidden;
                     user-select: none;
@@ -215,7 +230,7 @@ export default {
                     align-items: center;
 
                     @media (min-width: $breakpoint-min-tablet) {
-                        height: 525px;
+                        height: 450px;
                         margin: 0 2rem;
                         width: 45%;
                     }
@@ -249,21 +264,33 @@ export default {
                         flex-direction: row;
                         justify-content: flex-end;
 
+                        margin-top: 2rem;
+
+                        @media (min-width: $breakpoint-min-desktop) { margin-top: 1rem; }
+
                         & > div {
                             border: 1px solid $palette-color-04;
                             border-radius: 2px;
                             box-shadow: 2px 2px 0px #919191;
                             color: $palette-color-04;
-                            margin: 0 1rem;
+                            margin: 0 0.5rem;
                             padding: 0.2rem;
-                            width: fit-content;
+                            width: 50%;
+
+                            @media (min-width: $breakpoint-min-tablet) {
+                                margin: 0 1rem;
+                                width: fit-content;
+                            }
 
                             button {
                                 background-color: #ffd6dd;
                                 border: 1px dashed $palette-color-04;
                                 cursor: pointer;
                                 height: 100%;
-                                padding: 0 2rem;
+                                padding: 0 1rem;
+                                width: 100%;
+
+                                @media (min-width: $breakpoint-min-tablet) { padding: 0 2rem; }
                                 
                                 span {
                                     display: block;

@@ -59,6 +59,7 @@ $font-size-14px:  0.875rem;   // 14px
 $font-size-16px:  1rem;       // 16px
 $font-size-18px:  1.125rem;   // 18px
 $font-size-21px:  1.3125rem;  // 21px
+$font-size-23px:  1.4375rem;  // 23px
 $font-size-24px:  1.5rem;     // 24px
 $font-size-26px:  1.625rem;   // 26px
 $font-size-28px:  1.75rem;    // 28px
@@ -222,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     color: $headline-h1-color;
-    font-size: $font-size-26px;
+    font-size: $font-size-23px;
     margin-bottom: 1.5rem;
     text-align: center;
     text-shadow: 5px 5px 2px $palette-color-06;
