@@ -1,27 +1,18 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/resume">Resume</router-link> |
-    <router-link to="/projects">Projects</router-link> |
-    <router-link to="/contact">Contact</router-link>
-  </div>
-  <router-view />
+    <!-- <div id="app"> -->
+        <Header />
+        <router-view />
+    <!-- </div> -->
 </template>
 
-<style lang="scss">
 
+<script>
+import Header from './components/Header.vue';
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+    components: {
+        Header
     }
-  }
 }
-</style>
+</script>
+  

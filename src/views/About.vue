@@ -132,7 +132,7 @@ export default {
         margin: 0 auto;
         max-width: 1024px;
         min-width: 0;
-        padding: 0.2rem;
+        //padding: 0.2rem;
 
         @media (min-width: $breakpoint-min-tablet) {
             min-height: 750px;
@@ -158,6 +158,7 @@ export default {
                 border-top-left-radius: 5px;
                 border-top-right-radius: 5px;
                 padding: 0.2rem 0.3rem;
+                margin: 0.2rem;
                 
                 display: flex;
                 flex-direction: row;
