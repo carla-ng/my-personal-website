@@ -26,6 +26,7 @@ $palette-color-07: #f0e088;  // darker creamy light yellow
 $palette-color-08: #b680ec;  // darker purple
 
 $white: #fbfaf4;
+$black: #3d3d3d;
 
 
 /* Dark theme */
@@ -55,6 +56,7 @@ $font-size-08px:  0.5rem;     // 8px
 $font-size-09px:  0.563rem;   // 9px
 $font-size-10px:  0.625rem;   // 10px
 $font-size-12px:  0.75rem;    // 12px
+$font-size-13px:  0.8125rem;  // 13px
 $font-size-14px:  0.875rem;   // 14px
 $font-size-16px:  1rem;       // 16px
 $font-size-18px:  1.125rem;   // 18px
@@ -292,6 +294,8 @@ b, strong { font-weight: 600; }
 .font-family-02 { font-family: $font-family-02; }
 
 .uppercase { text-transform: uppercase; }
+
+a { color: $accent-color-05;}
 
 
 ::selection { background-color: $palette-color-06; }

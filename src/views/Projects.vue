@@ -13,7 +13,7 @@
 
         <p class="secondary-text">
             Desarrollados en mi tiempo libre para crecer como programadora. La mayoría de estos proyectos se encuentran <span class="text-bold text-underlined">en progreso</span>,
-            ya que los utilizo para aprender y practicar en mi tiempo libre.
+            ya que los utilizo para aprender y practicar cuando puedo.
         </p>
 
         <div class="projects__list">
@@ -26,6 +26,10 @@
                         :repo="project.repo"
             ></SmallWindow>
         </div>
+
+        <p class="projects__github-profile">
+            <AlertBox alert_text='También podrás encontrar más proyectos en <a href="https://github.com/carla-ng" target="_blank">mi perfil de Github</a>.' />
+        </p>
 
         <h2 class="projects__heading-professional">Proyectos a nivel profesional</h2>
 
@@ -44,12 +48,34 @@
             ></SmallWindow>
         </div>
 
+        <h2 class="projects__heading-latest">Actualizaciones recientes</h2>
+
+        <p class="secondary-text">
+            Mis últimos repositorios actualizados.
+        </p>
+
+        <div class="projects__github-list">
+            <ul>
+                <li v-for="(project, index) in recent_projects" :key="index">
+                    <a :href="project.html_url" target="_blank">
+                        <div class="projects__github-list__title">
+                            {{ project.full_name }}
+                            <span v-if="project.fork" class="projects__github-list__fork">  ( Fork ): </span>
+                        </div>
+                        <span class="projects__github-list__description">{{ project.description }}</span>
+                        
+                    </a>
+                </li>
+            </ul>
+        </div>
+
     </div>
   </main>
 </template>
 
 
 <script>
+import AlertBox from '@/components/AlertBox.vue';
 import SmallWindow from '@/components/SmallWindow.vue';
 
 import { ref } from 'vue';
@@ -58,6 +84,7 @@ export default {
     name: 'Projects',
 
     components: {
+        AlertBox,
         SmallWindow
     },
 
@@ -135,6 +162,7 @@ export default {
                 ],
                 repo: 'who-is-that-pokemon'
             },
+            /*
             {
                 title: 'Tic Tac Toe',
                 intro: 'Mini juego de tres en raya.',
@@ -145,6 +173,7 @@ export default {
                 ],
                 repo: 'vue-tic-tac-toe'
             }
+            */
         ])
 
 
@@ -183,9 +212,31 @@ export default {
         ])
 
 
+        // Recent projects list
+        const recent_projects = ref([])
+
+        const fetch_recent_projects = async() => {
+            try {
+                const response = await fetch('https://api.github.com/users/carla-ng/repos?sort=updated&per_page=5')
+                if ( !response.ok ) {
+                    throw new Error('Recent projects response was not ok')
+                }
+
+                const data = await response.json()
+                recent_projects.value = data
+            } catch (error) {
+                console.error(error.message)
+                throw new Error('Error fetching recent projects')
+            }
+        }
+
+        fetch_recent_projects()
+
+
         return {
             personal_projects,
-            professional_projects
+            professional_projects,
+            recent_projects
         }
     },
 };
@@ -197,8 +248,9 @@ export default {
 
 .projects {
 
-    h2.projects__heading-professional {
-        margin-top: 5rem;
+    h2.projects__heading-professional,
+    h2.projects__heading-latest {
+        margin-top: 6rem;
     }
 
     .projects__list {
@@ -211,6 +263,63 @@ export default {
         }
 
         @media (min-width: $breakpoint-min-desktop) { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .projects__github-profile {
+        margin-top: 4rem;
+    }
+
+    .projects__github-list {
+       ul {
+            list-style: none;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 0 1rem;
+        
+            li {
+                margin-bottom: 1.5rem;
+                line-height: 1rem;
+
+                a {
+                    text-decoration: none;
+
+                    div {
+                        &:before {
+                            content: "\2665";
+                            color: $accent-color-03;
+                            font-size: $font-size-21px;
+                            margin-inline-end: 1rem;
+                        }
+
+                        &.projects__github-list__title {
+                            color: $accent-color-05;
+                            font-family: $font-family-02;
+                            font-size: $font-size-14px;
+                            letter-spacing: 0.1rem;
+
+                            @media (max-width: $breakpoint-max-mobile) {
+                                margin-bottom: 0.7rem;
+                            }
+
+                            .projects__github-list__fork {
+                                color: $accent-color-05;
+                                font-size: $font-size-13px;
+                                font-style: italic;
+                            }
+                        }
+                    }
+
+                    span {
+                        &.projects__github-list__description {
+                            color: $font-color-01;
+                            font-family: $font-family-02;
+                            font-size: $font-size-13px;
+                            letter-spacing: 0.1rem;
+                        }
+                    }
+                }
+            }
+       }
     }
 }
 </style>

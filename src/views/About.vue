@@ -46,7 +46,59 @@
 
     </div>
 
-    <div style="margin: 3rem 0; text-align: center;">AQUI VOY A PONER ALGUNOS DIBUJOS MIOS</div>
+    <p class="secondary-text">Aquí puedes ver algunos de mis dibujos:</p>
+
+    <div class="about__drawings">
+        
+        <div>
+            <img src="/assets/images/about/drawing_witch2.jpg" alt="Drawing of a Witch">
+        </div>
+
+        <div>
+            <img src="/assets/images/about/drawing_peach.jpg" alt="Drawing of Peach">
+        </div>
+
+        <div>
+            <img src="/assets/images/about/drawing_billie.jpg" alt="Drawing of Billie Eilish">
+        </div>
+
+        <div>
+            <img src="/assets/images/about/drawing_elf1.jpg" alt="Drawing of an Elf">
+        </div>
+
+        <div>
+            <img src="/assets/images/about/drawing_wednesday.jpg" alt="Drawing of Wednesday Addams">
+        </div>
+
+        <div>
+            <img src="/assets/images/about/drawing_elf3.jpg" alt="Drawing of an Elf">
+        </div>
+
+        <div>
+            <img src="/assets/images/about/drawing_fairy1.jpg" alt="Drawing of a Fairy">
+        </div>
+
+        <div>
+            <img src="/assets/images/about/drawing_jonghyun.jpg" alt="Drawing of Jonghyun">
+        </div>
+
+        <div>
+            <img src="/assets/images/about/drawing_fairy2.jpg" alt="Drawing of a Fairy">
+        </div>
+
+        <div>
+            <img src="/assets/images/about/drawing_elf2.jpg" alt="Drawing of an Elf">
+        </div>
+
+        <div>
+            <img src="/assets/images/about/drawing_seungyeon.jpg" alt="Drawing of Seungyeon">
+        </div>
+
+        <div>
+            <img src="/assets/images/about/drawing_witch1.jpg" alt="Drawing of a Witch">
+        </div>
+
+    </div>
 
 
   </main>
@@ -179,7 +231,7 @@ export default {
                     @media (min-width: $breakpoint-min-tablet) { font-size: $font-size-14px; }
                 }
                 .about__window__bar-buttons {
-                    cursor: pointer;
+                    //cursor: pointer;
                     position: relative;
                     
                     span {
@@ -318,6 +370,36 @@ export default {
       
         }
 
+    }
+
+    .secondary-text {
+        margin-top: 4rem;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .about__drawings {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+
+        @media (min-width: $breakpoint-min-tablet) { grid-template-columns: repeat(4, 1fr); }
+        @media (min-width: $breakpoint-min-tablet) { grid-template-columns: repeat(6, 1fr); }
+
+        div {
+            height: 160px;
+            overflow: hidden;
+
+            display: flex;
+            align-items: flex-start;
+
+            img {
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+                scale: 1.1;
+            }
+        }
     }
 }
 

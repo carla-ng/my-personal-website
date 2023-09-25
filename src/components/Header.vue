@@ -8,19 +8,19 @@
         <div class="nav__container">
             <div>
                 <span class="nav__divider">&#10084;</span>
-                <router-link to="/about">About</router-link>
+                <router-link to="/about">Acerca de mí</router-link>
             </div>
             <div>
                 <span class="nav__divider">&#10084;</span>
-                <router-link to="/resume">Resume</router-link>
+                <router-link to="/resume">Currículum</router-link>
             </div>
             <div>
                 <span class="nav__divider">&#10084;</span>
-                <router-link to="/projects">Projects</router-link>
+                <router-link to="/projects">Proyectos</router-link>
             </div>
             <div>
                 <span class="nav__divider">&#10084;</span>
-                <router-link to="/contact">Contact</router-link>
+                <router-link to="/contact">Contacto</router-link>
             </div>
         </div>
 

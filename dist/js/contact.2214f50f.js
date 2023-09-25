@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["contact"],{b8fa:function(n,c,t){"use strict";t.r(c);var a=t("7a23");const e={class:"contact page-container"},o=Object(a["g"])("h2",null,"This is a contact page",-1),s=[o];function i(n,c){return Object(a["v"])(),Object(a["f"])("div",e,s)}var r=t("6b0d"),b=t.n(r);const p={},u=b()(p,[["render",i]]);c["default"]=u}}]);
-//# sourceMappingURL=contact.2214f50f.js.map
