@@ -7,7 +7,7 @@
         Conoce un poco más sobre las tecnologías con las que trabajo, mis gustos y mis pasatiempos. 
     </p>
 
-    <div class="about__window">
+    <div class="about__window" ref="mySection">
 
         <div class="about__window__inner-container">
             <div class="about__window__bar">
@@ -49,55 +49,16 @@
     <p class="secondary-text">Aquí puedes ver algunos de mis dibujos:</p>
 
     <div class="about__drawings">
-        
-        <div>
-            <img src="/assets/images/about/drawing_witch2.jpg" alt="Drawing of a Witch">
+
+        <div v-for="(drawing, index) in drawings" :key="index">
+            <img :src="drawing.url" :alt="drawing.alt" @click="openModal(drawing.url)">
         </div>
 
-        <div>
-            <img src="/assets/images/about/drawing_peach.jpg" alt="Drawing of Peach">
-        </div>
+    </div>
 
-        <div>
-            <img src="/assets/images/about/drawing_billie.jpg" alt="Drawing of Billie Eilish">
-        </div>
-
-        <div>
-            <img src="/assets/images/about/drawing_elf1.jpg" alt="Drawing of an Elf">
-        </div>
-
-        <div>
-            <img src="/assets/images/about/drawing_wednesday.jpg" alt="Drawing of Wednesday Addams">
-        </div>
-
-        <div>
-            <img src="/assets/images/about/drawing_elf3.jpg" alt="Drawing of an Elf">
-        </div>
-
-        <div>
-            <img src="/assets/images/about/drawing_fairy1.jpg" alt="Drawing of a Fairy">
-        </div>
-
-        <div>
-            <img src="/assets/images/about/drawing_jonghyun.jpg" alt="Drawing of Jonghyun">
-        </div>
-
-        <div>
-            <img src="/assets/images/about/drawing_fairy2.jpg" alt="Drawing of a Fairy">
-        </div>
-
-        <div>
-            <img src="/assets/images/about/drawing_elf2.jpg" alt="Drawing of an Elf">
-        </div>
-
-        <div>
-            <img src="/assets/images/about/drawing_seungyeon.jpg" alt="Drawing of Seungyeon">
-        </div>
-
-        <div>
-            <img src="/assets/images/about/drawing_witch1.jpg" alt="Drawing of a Witch">
-        </div>
-
+    <div id="myModal" class="about__modal" @click="closeModal()">
+        <span class="about__modal--close" @click="closeModal()">&times;</span>
+        <img src="" alt="Enlarged Image" id="enlargedImg" class="about__modal--content">
     </div>
 
 
@@ -110,8 +71,12 @@ import { ref, computed } from 'vue';
 
 export default {
     setup() {
-        const currentIndex = ref(0)
+        const currentIndex = ref(0)                 // current window page
+        const mySection = ref(null)                 // window to scroll up to
+        //const isMobile = window.innerWidth < 481   // detect if user is on a mobile device
 
+        
+        // Information to be shown
         const content = [
             {
                 text: `
@@ -137,33 +102,119 @@ export default {
             },
         ]
 
+        // Drawings
+        const drawings = [
+            {
+                url: '/assets/images/about/drawing_witch2.jpg',
+                alt: 'Drawing of a witch'
+            },
+            {
+                url: '/assets/images/about/drawing_peach.jpg',
+                alt: 'Drawing of Peach'
+            },
+            {
+                url: '/assets/images/about/drawing_billie.jpg',
+                alt: 'Drawing of Billie Eilish'
+            },
+            {
+                url: '/assets/images/about/drawing_elf1.jpg',
+                alt: 'Drawing of an Elf'
+            },
+            {
+                url: '/assets/images/about/drawing_wednesday.jpg',
+                alt: 'Drawing of Wednesday Addams'
+            },
+            {
+                url: '/assets/images/about/drawing_elf3.jpg',
+                alt: 'Drawing of an Elf'
+            },
+            {
+                url: '/assets/images/about/drawing_fairy1.jpg',
+                alt: 'Drawing of a Fairy'
+            },
+            {
+                url: '/assets/images/about/drawing_jonghyun.jpg',
+                alt: 'Drawing of Jonghyun'
+            },
+            {
+                url: '/assets/images/about/drawing_fairy2.jpg',
+                alt: 'Drawing of a Fairy'
+            },
+            {
+                url: '/assets/images/about/drawing_elf2.jpg',
+                alt: 'Drawing of an Elf'
+            },
+            {
+                url: '/assets/images/about/drawing_seungyeon.jpg',
+                alt: 'Drawing of Seungyeon'
+            },
+            {
+                url: '/assets/images/about/drawing_witch1.jpg',
+                alt: 'Drawing of a Witch'
+            }
+        ]
 
+        // Current information shown on the window
         const getCurrentContent = computed(() => content[currentIndex.value])
 
+        // Disable previous/next button according to current content
         const isPrevButtonDisabled = computed(() => currentIndex.value === 0)
         const isNextButtonDisabled = computed(() => currentIndex.value === content.length - 1)
 
 
+        // Select next content
         const nextStep = () => {
             if ( currentIndex.value < content.length - 1 ) {
                 currentIndex.value++
+                scrollToSection()
             }
         }
 
+        // Select previous content
         const previousStep = () => {
             if ( currentIndex.value > 0 ) {
                 currentIndex.value--
+                scrollToSection()
             }
         }
+        
+
+        // Scroll up to the top of the window (ref="mySection")
+        const scrollToSection = () => {
+            mySection.value.scrollIntoView({ behavior: 'smooth' })
+        }
+
+        // Open and close modal to show the enlarged drawing selected by user
+        const openModal = ( imagePath ) => {
+            const modal = document.getElementById('myModal')
+            const img = document.getElementById('enlargedImg')
+            img.src = imagePath
+            modal.style.display = 'block'
+
+            document.getElementsByTagName( 'html' )[0].classList.add('scroll-blocked')
+        }
+        const closeModal = () => {
+            const modal = document.getElementById('myModal')
+            modal.style.display = 'none'
+
+            document.getElementsByTagName( 'html' )[0].classList.remove('scroll-blocked')
+        }
+
 
 
         return {
             currentIndex,
             getCurrentContent,
+
             isPrevButtonDisabled,
             isNextButtonDisabled,
+            mySection,
             nextStep,
-            previousStep
+            previousStep,
+
+            drawings,
+            openModal,
+            closeModal,
         }
     }
 }
@@ -394,6 +445,7 @@ export default {
             align-items: flex-start;
 
             img {
+                cursor: pointer;
                 min-width: 100%;
                 min-height: 100%;
                 object-fit: cover;
@@ -401,6 +453,59 @@ export default {
             }
         }
     }
+
+    .about__modal {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+
+        height: 100%;
+        overflow: auto;
+        width: 100%;
+        z-index: 1;
+
+        background-color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.75);
+
+        .about__modal--content {
+            box-shadow: 0 0 5px $black;
+            display: block;
+            margin: auto;
+            max-height: 90%;
+            max-width: 90%;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+
+            @media (min-width: $breakpoint-min-desktop) {
+                max-height: 80%;
+                max-width: 80%;
+            }
+        }
+
+        .about__modal--close {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+
+            color: $black;
+            font-size: $font-size-56px;
+            font-weight: bold;
+            line-height: 1;
+            transition: 0.3s;
+
+            &:hover, &:focus {
+                cursor: pointer;
+                opacity: 0.6;
+                text-decoration: none;
+            }
+        }
+    }
+
+    
 }
 
 </style>

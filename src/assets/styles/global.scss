@@ -300,6 +300,8 @@ a { color: $accent-color-05;}
 
 ::selection { background-color: $palette-color-06; }
 
+.scroll-blocked { overflow: hidden; }
+
  
 .desktop {
     @media (max-width: $breakpoint-max-tablet) { display: none; }
