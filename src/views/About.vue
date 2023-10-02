@@ -14,7 +14,7 @@
                 <span class="about__window__bar-title"> Carla Nardone ({{ currentIndex + 1 }}/2) </span>
 
                 <div class="about__window__bar-buttons disabled-button">
-                    <span>?</span>
+                    <span>X</span>
                 </div>
             </div>
 
@@ -82,7 +82,7 @@ export default {
                 text: `
                         <p class="font-family-02 fs-24">¡Hola!</p>
                         <br>
-                        <p>Mi nombre es <strong>Carla</strong>, y soy <strong>Ingeniera de Software especializada en desarrollo Front-end</strong>. Las tecnologías que suelo utilizar son <strong>JavaScript, Vue, jQuery, CSS/SCSS</strong> y <strong>TailwindCSS</strong>. También tengo un poco de experiencia trabajando con Back-end y BBDD, especialmente con <strong>PHP</strong> y <strong>MySQL</strong>.</p>
+                        <p>Mi nombre es <strong>Carla</strong>, y soy <strong>Ingeniera de Software especializada en desarrollo Front-end</strong>. Las tecnologías que suelo utilizar son <strong>JavaScript, Vue, jQuery, CSS/SCSS</strong> y <strong>TailwindCSS</strong>. También tengo un poco de experiencia trabajando con Back-end y BBDD, especialmente con <strong>PHP</strong> y <strong>MySQL</strong>. Tengo mucho interés en aprender nuevas tecnologías.</p>
                         <br>
                         <p>Además de la programación, me interesa mucho la <strong>gestión de proyectos</strong>, soy una persona muy <strong>organizada</strong> y <strong>atenta</strong>. Estoy acostumbrada a trabajar con la metodología agile de <strong>Scrum</strong>.</p>
                       `,
@@ -473,7 +473,7 @@ export default {
             display: block;
             margin: auto;
             max-height: 90%;
-            max-width: 90%;
+            max-width: 85%;
 
             position: absolute;
             left: 50%;

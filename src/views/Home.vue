@@ -61,7 +61,7 @@ export default {
                 padding: 1rem 2rem;
             }
     
-            .home__intro--welcome {}
+            //.home__intro--welcome {}
 
             p {
                 span { font-family: $font-family-02; }

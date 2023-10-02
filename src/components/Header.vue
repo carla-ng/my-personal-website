@@ -17,19 +17,19 @@
         <nav class="nav__container">
             <div>
                 <span class="nav__container--divider"></span>
-                <router-link to="/about">Acerca de mi</router-link>
+                <router-link  @click="toggleNavVisibility" to="/about">Acerca de mi</router-link>
             </div>
             <div>
                 <span class="nav__container--divider"></span>
-                <router-link to="/resume">Curriculum</router-link>
+                <router-link  @click="toggleNavVisibility" to="/resume">Curriculum</router-link>
             </div>
             <div>
                 <span class="nav__container--divider"></span>
-                <router-link to="/projects">Proyectos</router-link>
+                <router-link  @click="toggleNavVisibility" to="/projects">Proyectos</router-link>
             </div>
             <div>
                 <span class="nav__container--divider"></span>
-                <router-link to="/contact">Contacto</router-link>
+                <router-link  @click="toggleNavVisibility" to="/contact">Contacto</router-link>
             </div>
         </nav>
 
@@ -45,10 +45,14 @@ import { ref } from 'vue';
 
 export default {
     setup() {
-        let showingNav = ref(false);
+        let showingNav = ref(false)
+        const isMobileOrTablet = window.innerWidth < 769   // detect if user is on a mobile or tablet
 
         const toggleNavVisibility = () => {
-            showingNav.value = !showingNav.value
+            if ( isMobileOrTablet ) {
+                showingNav.value = !showingNav.value
+            }
+            
         }
 
         return {
@@ -145,6 +149,7 @@ export default {
         @media (min-width: $breakpoint-min-desktop) {
             display: flex;
             flex-direction: row;
+            justify-content: center;
         }
 
         & > div {
@@ -248,7 +253,7 @@ export default {
             .nav__veil { display: block; }
         }
 
-        @media (min-width: $breakpoint-min-tablet) {
+        @media (min-width: $breakpoint-min-tablet) and (max-width: $breakpoint-max-tablet) {
             .nav__container {
                 width: 70%;
             }
