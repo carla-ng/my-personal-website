@@ -1,5 +1,6 @@
 <template>
-    <div id="nav" :class="showingNav ? 'show-nav' : ''">
+
+    <header id="nav" :class="showingNav ? 'show-nav' : ''">
 
         <div class="nav__top">
             <div class="nav__top--logo">
@@ -13,7 +14,7 @@
             </div>
         </div>
         
-        <div class="nav__container">
+        <nav class="nav__container">
             <div>
                 <span class="nav__container--divider"></span>
                 <router-link to="/about">Acerca de mi</router-link>
@@ -30,11 +31,12 @@
                 <span class="nav__container--divider"></span>
                 <router-link to="/contact">Contacto</router-link>
             </div>
-        </div>
+        </nav>
 
         <div class="nav__veil" v-if="showingNav"></div>
 
-    </div>
+    </header>
+
 </template>
 
 
@@ -56,7 +58,6 @@ export default {
         }
     }
 }
-
 </script>
 
 

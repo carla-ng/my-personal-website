@@ -465,8 +465,8 @@ export default {
         width: 100%;
         z-index: 1;
 
-        background-color: rgb(255, 255, 255);
-        background-color: rgba(255, 255, 255, 0.75);
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.5);
 
         .about__modal--content {
             box-shadow: 0 0 5px $black;
@@ -491,7 +491,7 @@ export default {
             top: 1rem;
             right: 2rem;
 
-            color: $black;
+            color: $white;
             font-size: $font-size-56px;
             font-weight: bold;
             line-height: 1;

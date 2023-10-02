@@ -36,6 +36,8 @@ export default {
             veil.className = 'popup__veil'
             document.body.appendChild(veil)
 
+            veil.addEventListener('click', () => props.closePopup())
+
             var root = document.getElementsByTagName('html')[0]
             root.classList.add('no-scroll')
         }
@@ -86,11 +88,16 @@ export default {
     justify-content: center;
 
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 999;
+
+    height: 90vh;
+    //margin: 0 auto;
+    width: 90vw;
+    @media (min-width: $breakpoint-min-tablet) { width: 80vw; }
+    @media (min-width: $breakpoint-min-desktop) { width: 70vw; }
 
     .popup {    
         background-color: $white;
@@ -101,17 +108,14 @@ export default {
         min-width: 0;
         padding: 0.2rem;
         position: relative;
-        width: 90vw;
-
-        @media (min-width: $breakpoint-min-tablet) { width: 80vw; }
-        @media (min-width: $breakpoint-min-desktop) { width: 70vw; }
+        width: 100%;
 
         .popup__bar {
             background-color: $palette-color-03;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
             padding: 0.3rem;
-            position: absolute;
+            //position: absolute;
             
             display: flex;
             flex-direction: row;
