@@ -41,19 +41,44 @@
 
 
 <script>
-import { ref } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 export default {
     setup() {
         let showingNav = ref(false)
-        const isMobileOrTablet = window.innerWidth < 769   // detect if user is on a mobile or tablet
+        let isMobileOrTablet = ref(window.innerWidth < 769)   // detect if user is on a mobile or tablet
 
+
+        // Toggle visibility of Nav for mobile devices
         const toggleNavVisibility = () => {
-            if ( isMobileOrTablet ) {
+            if ( isMobileOrTablet.value ) {
                 showingNav.value = !showingNav.value
+
+                var root = document.getElementsByTagName('html')[0]
+                if (  root.classList.contains('no-scroll') ) {
+                    root.classList.remove('no-scroll')
+                } else {
+                    root.classList.add('no-scroll')
+                }
             }
             
         }
+
+
+        // Handle resize of screen
+        const handleResize = () => {
+            isMobileOrTablet.value = window.innerWidth < 769
+        }
+
+
+        onMounted(() => {
+            window.addEventListener('resize', handleResize)
+        })
+
+        onBeforeUnmount(() => {
+            window.removeEventListener('resize', handleResize)
+        })
+
 
         return {
             showingNav,
