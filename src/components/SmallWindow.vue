@@ -5,27 +5,27 @@
         <div class="window__inner-container">
 
             <div class="window__main">
-                <div class="window__main__bar">
-                    <span class="window__main__bar-title"> {{ title }} </span>
+                <div class="window__bar">
+                    <span class="window__bar-title"> {{ title }} </span>
 
-                    <div class="window__main__bar-buttons">
+                    <div class="window__bar-buttons">
                         <span v-show="readmeHtml" @click="toggleReadme">?</span>
                     </div>
                 </div>
 
-                <div class="window__main__image">
+                <div class="window__image">
                     <img :src="generateImageUrl(title)" :alt="title">
                 </div>
 
-                <div class="window__main__tags" v-if="tags">
+                <div class="window__tags" v-if="tags">
                     <span v-for="tag in tags" :key="tag" :class="getTagClass(tag)">
                         {{ tag }}
                     </span>
                 </div>
 
                 <div>
-                    <p class="window__main__intro"> {{ intro }} </p>
-                    <p class="window__main__description"> {{ description }} </p>
+                    <p class="window__intro"> {{ intro }} </p>
+                    <p class="window__description"> {{ description }} </p>
                 </div>
             </div>
             
@@ -213,11 +213,6 @@ export default {
 @import '@/assets/styles/global.scss';
 
 .window {
-    background-color: $palette-color-01;
-    border: 1px solid $palette-color-04;
-    border-radius: 5px;
-    box-shadow: 8px 9px 4px #bdbbbb;
-    min-width: 0;
     padding: 0.2rem;
 
     @media (max-width: $breakpoint-max-mobile) {
@@ -225,76 +220,26 @@ export default {
     }
 
     .window__inner-container {
-        height: 100%;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
 
         .window__main {
 
-            .window__main__bar {
-                background-color: $palette-color-03;
-                border-top-left-radius: 5px;
-                border-top-right-radius: 5px;
-                padding: 0.2rem 0.3rem;
-                
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+            // .window__bar {
 
-                .window__main__bar-title {
-                    color: $font-color-02;
-                    font-family: $font-family-02;
-                    font-size: $font-size-14px;
-                    letter-spacing: 0.05rem;
-                    line-height: 1.8;
-                    overflow: hidden;
-                    padding: 0 0.2rem;
-                    text-overflow: ellipsis;
-                    text-shadow: 1px 1px 3px #4d4d4d;
-                    white-space: nowrap;
-                }
+                // .window__bar-title {}
 
-                .window__main__bar-buttons {
-                    cursor: pointer;
-                    position: relative;
-                    
-                    span {
-                        background-color: $palette-color-01;
-                        border: 1px solid $palette-color-04;
-                        border-radius: 2px;
-                        box-shadow: 2px 2px 0px #919191;
-                        color: $font-color-01;
-                        padding: 0 0.3rem;
-                        user-select: none;
-                    }
+                // .window__bar-buttons {
+                    // span {}
+                // }
+            // }
 
-                    &:active {
-                        transform: translateY(2px);
-
-                        span { box-shadow: none; }
-                    }
-                }
-            }
-
-            .window__main__image {
-                border-style: inset;
+            .window__image {
                 height: 200px;
                 margin: 0.7rem 0.5rem;
-                overflow: hidden;
 
-                display: flex;
-                align-items: flex-start;
-
-                img {
-                   min-width: 100%;
-                   min-height: 100%;
-                   object-fit: cover;
-                }
+                // img {}
             }
 
-            .window__main__tags {
+            .window__tags {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
@@ -321,19 +266,16 @@ export default {
                     &.scss { background-color: $accent-color-05; }
                     &.jquery { background-color: $accent-color-06; }
                     &.bootstrap { background-color: #553c7b; }
-                    //&.mysql { background-color: #f29111; }
-                    //&.wordpress { background-color: #00749c; }
-                    //&.gsap { background-color: #88ce02; }
                    
                 }
             }
 
-            .window__main__intro {
+            .window__intro {
                 font-weight: bold;
                 padding: 0 0.5rem;
             }
 
-            .window__main__description {
+            .window__description {
                 padding: 0 0.5rem 0.7rem 0.5rem;
             }
         }

@@ -319,6 +319,97 @@ a { color: $accent-color-05;}
     @media (max-width: $breakpoint-max-tablet) { display: block; }
     @media (min-width: $breakpoint-min-desktop) { display: none; }
 } 
+
+
+
+/*************************
+ *     Windows Base      *
+ *************************/
+.window {
+    background-color: $palette-color-01;
+    border: 1px solid $palette-color-04;
+    border-radius: 5px;
+    box-shadow: 8px 9px 4px #bdbbbb;
+    min-width: 0;
+}
+
+.window__inner-container {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.window__bar {
+    background-color: $palette-color-03;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 0.2rem 0.3rem;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .window__bar-title {
+        color: $font-color-02;
+        font-family: $font-family-02;
+        font-size: $font-size-14px;
+        letter-spacing: 0.05rem;
+        line-height: 1.8;
+        overflow: hidden;
+        padding: 0 0.2rem;
+        text-overflow: ellipsis;
+        text-shadow: 1px 1px 3px #4d4d4d;
+        white-space: nowrap;
+    }
+
+    .window__bar-buttons {
+        cursor: pointer;
+        position: relative;
+        
+        &:active:not(.disabled-button) {
+            transform: translateY(2px);
+
+            span { box-shadow: none; }
+        }
+
+        &.disabled-button {
+            span {
+                box-shadow: none;
+                opacity: 0.5;
+                pointer-events: none;
+            }  
+        }
+    }
+
+    .window__bar-buttons span, .window__bar-button {
+        background-color: $palette-color-01;
+        border: 1px solid $palette-color-04;
+        border-radius: 2px;
+        box-shadow: 2px 2px 0px #919191;
+        color: $font-color-01;
+        padding: 0 0.3rem;
+        user-select: none;
+    }
+}
+
+.window__image {
+    border-style: inset;
+    overflow: hidden;
+    user-select: none;
+
+    display: flex;
+    align-items: flex-start;
+
+    img {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+}
+
+  
  
  
  /*************************

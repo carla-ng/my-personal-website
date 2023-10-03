@@ -3,9 +3,9 @@
     <div class="popup__container" v-if="isVisible">
 
         <div class="popup">
-            <div class="popup__bar">
+            <div class="popup__bar window__bar">
                 <span>Github > README.md</span>
-                <button @click="closePopup">X</button>
+                <button @click="closePopup" class="window__bar-button">X</button>
             </div>
 
             <div class="popup__content">
@@ -111,15 +111,8 @@ export default {
         width: 100%;
 
         .popup__bar {
-            background-color: $palette-color-03;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
             padding: 0.3rem;
             //position: absolute;
-            
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
 
             width: -moz-available;          /* WebKit-based browsers will ignore this. */
             width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
@@ -138,16 +131,9 @@ export default {
             }
 
             button {
-                background-color: $palette-color-01;
-                border-radius: 2px;
-                border: 1px solid $palette-color-04;
-                box-shadow: 2px 2px 0px #919191;
-                color: $font-color-01;
                 cursor: pointer;
                 height: 24px;
-                padding: 0 0.3rem;
                 position: relative;
-                user-select: none;
 
                 &:active {
                     box-shadow: none;

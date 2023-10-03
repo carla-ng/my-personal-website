@@ -7,27 +7,27 @@
         Conoce un poco más sobre las tecnologías con las que trabajo, mis gustos y mis pasatiempos. 
     </p>
 
-    <div class="about__window" ref="mySection">
+    <div class="window" ref="mySection">
 
-        <div class="about__window__inner-container">
-            <div class="about__window__bar">
-                <span class="about__window__bar-title"> Carla Nardone ({{ currentIndex + 1 }}/2) </span>
+        <div class="window__inner-container">
+            <div class="window__bar">
+                <span class="window__bar-title"> Carla Nardone ({{ currentIndex + 1 }}/2) </span>
 
-                <div class="about__window__bar-buttons disabled-button">
+                <div class="window__bar-buttons disabled-button">
                     <span>X</span>
                 </div>
             </div>
 
-            <div class="about__window__main">
-                <div class="about__window__image">
+            <div class="window-about">
+                <div class="window__image">
                     <img :src="getCurrentContent.imageSrc" alt="Mi setup">
                 </div>
                 
-                <div class="about__window__text">
+                <div class="window__text">
 
-                    <div class="about__window__text-info" v-html="getCurrentContent.text"></div>
+                    <div class="window__text-info" v-html="getCurrentContent.text"></div>
 
-                    <div class="about__window__text-buttons">
+                    <div class="window__text-buttons">
                         <div :class="{ 'disabled-button': isPrevButtonDisabled }">
                             <button class="prev" @click="previousStep">
                                 <span>Anterior</span>
@@ -73,7 +73,6 @@ export default {
     setup() {
         const currentIndex = ref(0)                 // current window page
         const mySection = ref(null)                 // window to scroll up to
-        //const isMobile = window.innerWidth < 481   // detect if user is on a mobile device
 
         
         // Information to be shown
@@ -224,17 +223,10 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/styles/global.scss';
 
-// TODO: unificar estilos para ventanas, ya que se repiten en mas de una pagina
-
 .about {
-    .about__window {
-        background-color: $palette-color-01;
-        border: 1px solid $palette-color-04;
-        border-radius: 5px;
-        box-shadow: 8px 9px 4px #bdbbbb;
+    .window {
         margin: 0 auto;
         max-width: 1024px;
-        min-width: 0;
         //padding: 0.2rem;
 
         @media (min-width: $breakpoint-min-tablet) {
@@ -244,74 +236,27 @@ export default {
 
         @media (min-width: $breakpoint-min-desktop) { min-height: 620px; }
 
-        .about__window__inner-container {
-            height: 100%;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        .window__inner-container {
 
             @media (min-width: $breakpoint-min-tablet) {
                 position: absolute;
                 top: 0;
             }
 
-            .about__window__bar {
-                background-color: $palette-color-03;
-                border-top-left-radius: 5px;
-                border-top-right-radius: 5px;
-                padding: 0.2rem 0.3rem;
+            .window__bar {
                 margin: 0.2rem;
-                
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
 
-                .about__window__bar-title {
-                    color: $font-color-02;
-                    font-family: $font-family-02;
-                    font-size: $font-size-12px;
-                    letter-spacing: 0.05rem;
-                    line-height: 1.8;
-                    overflow: hidden;
-                    padding: 0 0.2rem;
-                    text-overflow: ellipsis;
-                    text-shadow: 1px 1px 3px #4d4d4d;
-                    white-space: nowrap;
-
-                    @media (min-width: $breakpoint-min-tablet) { font-size: $font-size-14px; }
+                .window__bar-title {
+                    @media (max-width: $breakpoint-max-mobile) { font-size: $font-size-12px; }
                 }
-                .about__window__bar-buttons {
-                    //cursor: pointer;
-                    position: relative;
+                .window__bar-buttons {
+                    cursor: auto;
                     
-                    span {
-                        background-color: $palette-color-01;
-                        border: 1px solid $palette-color-04;
-                        border-radius: 2px;
-                        box-shadow: 2px 2px 0px #919191;
-                        color: $font-color-01;
-                        padding: 0 0.3rem;
-                        user-select: none;
-                    }
-
-                    &:active:not(.disabled-button) {
-                        transform: translateY(2px);
-
-                        span { box-shadow: none; }
-                    }
-
-                    &.disabled-button {
-                        span {
-                            box-shadow: none;
-                            opacity: 0.5;
-                            pointer-events: none;
-                        }  
-                    }
+                    // span {}
                 }
             }
 
-            .about__window__main {
+            .window-about {
                 display: flex;
                 flex-direction: column;
 
@@ -323,14 +268,10 @@ export default {
                     margin-bottom: 2rem;
                 }
 
-                .about__window__image {
-                    border-style: inset;
+                .window__image {
                     height: 350px;
                     margin: 1rem;
-                    overflow: hidden;
-                    user-select: none;
 
-                    display: flex;
                     align-items: center;
 
                     @media (min-width: $breakpoint-min-tablet) {
@@ -339,14 +280,10 @@ export default {
                         width: 45%;
                     }
 
-                    img {
-                        min-width: 100%;
-                        min-height: 100%;
-                        object-fit: cover;
-                    }
+                    // img {}
                 }
 
-                .about__window__text {
+                .window__text {
                     margin: 1rem;
 
                     display: flex;
@@ -359,11 +296,11 @@ export default {
                         width: 55%;
                     }
 
-                    // .about__window__text-info {
+                    // .window__text-info {
                     //     p {}
                     // }
 
-                    .about__window__text-buttons {
+                    .window__text-buttons {
                         display: flex;
                         flex-direction: row;
                         justify-content: flex-end;
