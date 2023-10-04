@@ -5,16 +5,12 @@
         <h1 class="typewriter-effect">Currículum</h1>
 
         <p class="primary-text">
-            Página en construcción
+            Información sobre mi trayectoria laboral y mis estudios.
         </p>
 
         <div class="resume">
 
-            <div>
-                <p>- Sección trayectoria profesional -</p>
-                <p>Aqui irían dos ventanitas tipo Windows con la info de las empresas en las que he estado</p>
-                <p>Ver si puedo poner referencia de Linkedin para cada una (y si quedan bien)</p>
-            </div>
+            <h2>Experiencia</h2>
 
             <div class="resume__job-history">
 
@@ -29,19 +25,22 @@
                         </div>
 
                         <div class="window__main">
-                            <div class="window__image">
-                                <img :src="job.logo" :alt="job.company">
+                            <div class="window__image-container">
+                                <div class="window__image">
+                                    <img :src="job.logo" :alt="job.company">
+                                </div>
+                                <p class="window__place">{{ job.place }}</p>
                             </div>
 
                             <div class="window__text">
-                                <p>{{ job.place }}</p>
-
                                 <div>
                                     <p class="window__text-title">{{ job.positions[0].title }}</p>
                                     <p class="window__text-time">{{ job.positions[0].time }}</p>
                                     <div class="window__text-description" v-html="job.positions[0].description"></div>
                                     <p class="window__text-languages">{{ job.positions[0].languages }}</p>
                                 </div>
+
+                                <div class="window__text-divider"></div>
 
                                 <div>
                                     <p class="window__text-title">{{ job.positions[1].title }}</p>
@@ -61,7 +60,9 @@
 
             <br>
 
-            <div>- Sección estudios -</div>
+            <h2>Estudios</h2>
+
+            <div class="resume__studies-history"></div>
 
             <br>
 
@@ -107,7 +108,7 @@ export default {
                                             <li>Validación de diseños y flujos proporcionados por equipo de UX.</li>
                                         </ul>
                                     `,
-                        languages: 'HTML, CSS, SCSS, JavaScript, jQuery, Vue, Smarty, PHP, MySQL',
+                        languages: 'HTML . CSS . SCSS . JavaScript . jQuery . Vue . Smarty . PHP . MySQL',
                     },
                     {
                         title: 'Front-end Development Intern',
@@ -119,7 +120,7 @@ export default {
                                             <li>Creación de nuevos componentes y plantillas para los portales.</li>
                                         </ul>
                                     `,
-                        languages: 'HTML, CSS, SCSS, Less, JavaScript, jQuery, Smarty',
+                        languages: 'HTML . CSS . SCSS . Less . JavaScript . jQuery . Smarty',
                     }
                 ],
             },
@@ -137,7 +138,7 @@ export default {
                                             Desarrollo web responsive para el Departamento de Marketing de la empresa. Creación del sitio web del famoso juego <i>Apensar</i>
                                         </p>
                                     `,
-                        languages: 'HTML, CSS, JavaScript, jQuery, GSAP, Wordpress, PHP, MySQL',
+                        languages: 'HTML . CSS . JavaScript . jQuery . GSAP . Wordpress . PHP . MySQL',
                     },
                     {
                         title: 'Pasante de Development',
@@ -148,7 +149,7 @@ export default {
                                             tecnologías de desarrollo web
                                         </p>
                                     `,
-                        languages: 'HTML, CSS, JavaScript, jQuery, GSAP, Wordpress, PHP, MySQL',
+                        languages: 'HTML . CSS . JavaScript . jQuery . GSAP . Wordpress . PHP . MySQL',
                     }
                 ]
             }
@@ -179,32 +180,83 @@ export default {
 
 .resume {
     .resume__job-history {
+        margin-top: 3rem;
+
         .window {
+            margin-bottom: 2rem;
+
             .window__inner-container {
-                // .window__bar {
-                //     .window__bar-title {}
-                //     .window__bar-buttons {}
-                // }
+                .window__bar {
+                    .window__bar-title {
+                        font-size: $font-size-16px;
+                    }
+
+                    // .window__bar-buttons {}
+                }
 
                 .window__main {
+                    padding: 1.5rem 1rem;
+
                     display: flex;
                     flex-direction: column;
 
                     @media (min-width: $breakpoint-min-desktop) { flex-direction: row; }
 
-                    .window__image {
-                        img {}
+                    .window__image-container {
+                        // display: flex;
+                        // flex-direction: column;
+
+                        .window__image {
+                            height: 150px;
+
+                            img {}
+                        }
+
+                        .window__place {
+                            font-style: italic;
+                            margin-top: 0.4rem;
+                        }
                     }
-
+                    
                     .window__text {
+                        padding: 2rem 0 1rem 0;
+
+                        @media (min-width: $breakpoint-min-desktop) { padding: 0 1rem; }
+
                         & > div {
-                            .window__text-title {}
+                            .window__text-title {
+                                font-size: $font-size-18px;
+                                font-weight: bold;
+                                margin-bottom: 0.2rem;
+                            }
 
-                            .window__text-time {}
+                            .window__text-time {
+                                font-style: italic;
+                            }
 
-                            .window__text-description {}
+                            .window__text-description ::v-deep {
 
-                            .window__text-languages {}
+                                ul {
+                                    li {
+                                        margin-top: 0.5rem;
+                                    }
+                                }
+
+                                p {
+                                    margin: 1rem 1.5rem;
+                                }
+                            }
+
+                            .window__text-languages {
+                                text-align: center;
+                            }
+                        }
+
+                        .window__text-divider {
+                            // border-style: inset;
+                            border: 1px solid #b1b1b1;
+                            margin: 1.2rem auto;
+                            width: 50%;
                         }
                     }
                 }
