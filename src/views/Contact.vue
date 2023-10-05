@@ -57,10 +57,12 @@ export default {
 .contact-page {
     // h1 {}
 
-    // .primary-text {}
+    .primary-text {
+        @media (max-width: $breakpoint-max-mobile) { margin-bottom: 1rem; }
+    }
 
     .contact {
-        @media (max-width: $breakpoint-max-mobile) { margin-bottom: 3rem; }
+        // @media (max-width: $breakpoint-max-mobile) { margin-bottom: 3rem; }
 
         ul.contact__list {
             list-style: none;

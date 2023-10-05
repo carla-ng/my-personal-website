@@ -304,6 +304,9 @@ export default {
 @import '@/assets/styles/global.scss';
 
 .resume {
+
+    h2 { text-align: left; }
+
     .resume__job-history, .resume__studies-history {
         margin-top: 3rem;
 
@@ -415,7 +418,7 @@ export default {
 
             .alertbox {
                 margin: 1rem;
-                @media (min-width: $breakpoint-min-desktop) { margin: 0.5rem 0.7rem; }
+                @media (min-width: $breakpoint-min-desktop) { margin: 0.7rem; }
 
                 .alertbox__text {
                     display: flex;

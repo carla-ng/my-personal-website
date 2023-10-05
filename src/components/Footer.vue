@@ -35,18 +35,26 @@ export default {
 
     .footer__text {
         color: $font-color-02;
-        display: block;
         font-size: $font-size-14px;
         padding: 0.8rem;
         text-decoration: none;
         width: 100%;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
         span.footer__text--heart {
+            margin: 0 0.3rem;
+
             &::before {
-                content: '\2764';
-                color: $palette-color-06;
-                font-size: $font-size-18px;
-                line-height: 1.125;
+                content: '';
+                background-image: url('/assets/images/heart.svg');
+                background-size: contain;
+                display: inline-block;
+                height: 18px;
+                width: 18px;
             }
         }
     }

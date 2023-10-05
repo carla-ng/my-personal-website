@@ -25,7 +25,7 @@ $palette-color-06: #ffa3b2;  // darker pink
 $palette-color-07: #f0e088;  // darker creamy light yellow
 $palette-color-08: #b680ec;  // darker purple
 
-$white: #fbfaf4;
+$white: rgba(255, 252, 236, 0.45);
 $black: #3d3d3d;
 
 
@@ -104,6 +104,7 @@ ul[role='list'], ol[role='list'] {
 }
 
 html {
+    overflow-x: auto;
     overflow-y: scroll;
 }
 
@@ -115,7 +116,7 @@ html:focus-within {
 html, body {
     margin: 0;
     min-height: 100%;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     padding: 0;
 }
 
@@ -197,10 +198,7 @@ input, button, textarea, select {
 
     @media (min-width: $breakpoint-min-tablet) { padding: 0 1rem 10rem 1rem; }
 }
- 
-.no-scroll {
-    overflow: hidden;
-}
+
  
  /* Colors */
 .bg-dark { background-color: $palette-color-dark; }
@@ -308,6 +306,8 @@ a { color: $accent-color-05;}
 
 ::selection { background-color: $palette-color-06; }
 
+// TODO: unify
+.no-scroll { overflow: hidden; }
 .scroll-blocked { overflow: hidden; }
 
  

@@ -158,7 +158,7 @@ export default {
     }
 
     .nav__container {
-        background-color: $white;
+        background-color: #fff;
         border-radius: 17px;
         border: 2px solid #353535;
         box-shadow: 3px 3px 7px #5b5b5b;
@@ -190,10 +190,12 @@ export default {
 
             .nav__container--divider {
                 &::before {
-                    content: '\2764';
-                    color: $palette-color-06;
-                    font-size: $font-size-18px;
-                    line-height: 1;
+                    content: '';
+                    background-image: url('/assets/images/heart.svg');
+                    background-size: contain;
+                    display: inline-block;
+                    height: 18px;
+                    width: 18px;
                 }
             }
 

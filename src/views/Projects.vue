@@ -285,10 +285,15 @@ export default {
 
                     div {
                         &:before {
-                            content: "\2665";
+                            content: '';
+                            background-image: url('/assets/images/heart.svg');
+                            background-size: contain;
                             color: $accent-color-03;
+                            display: inline-block;
                             font-size: $font-size-21px;
+                            height: 18px;
                             margin-inline-end: 1rem;
+                            width: 18px;
                         }
 
                         &.projects__github-list__title {
