@@ -179,6 +179,10 @@ export default {
 
         & > div {
             @media (min-width: $breakpoint-min-desktop) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
                 &:first-child {
                     .nav__container--divider { display: none; }
                 }

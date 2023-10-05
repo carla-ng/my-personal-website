@@ -1,7 +1,7 @@
 <template>
 
     <div class="alertbox">
-        <div class="alertbox__exclamation">!</div>
+        <div class="alertbox__exclamation" v-if="!hide_alert_sign">!</div>
         <div class="alertbox__text" v-html="alert_text"></div>
     </div>
 
@@ -11,7 +11,8 @@
 <script>
 export default {
     props: {
-        alert_text:  String
+        alert_text:        String,
+        hide_alert_sign:   Boolean
     }
 }
 </script>
