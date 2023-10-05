@@ -58,19 +58,57 @@
             </div>
 
 
-            <br>
+            <br><br>
+
 
             <h2>Estudios</h2>
 
-            <div class="resume__studies-history"></div>
+            <div class="resume__studies-history">
 
-            <br>
+                <div class="window">
+                    <div class="window__inner-container">
+
+                        <div class="window__bar">
+                            <div class="window__bar-title">{{ studies_history[0].university }}</div>
+                            <div class="window__bar-buttons disabled-button">
+                                <span>X</span>
+                            </div>
+                        </div>
+
+                        <div class="window__main">
+                            <div class="window__image-container">
+                                <div class="window__image">
+                                    <img :src="studies_history[0].logo" :alt="studies_history[0].title">
+                                </div>
+                                <p class="window__place">{{ studies_history[0].place }}</p>
+                            </div>
+
+                            <div class="window__text">
+                                <div>
+                                    <p class="window__text-title">{{ studies_history[0].title }}</p>
+                                    <p class="window__text-time" v-html="studies_history[0].time"></p>
+                                    <div class="window__text-description" v-html="studies_history[0].major"></div>
+                                    <!-- <p class="window__text-languages">{{ job.positions[0].languages }}</p> -->
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            
+            <br><br>
+
 
             <div>
-                <p>- Sección tecnologías -</p>
+                <h2>Tecnologías y herramientas</h2>
+
                 <p>HTML, CSS, SAAS, JAVASCRIPT, JQUERY, VUE, TAILWINDCSS</p>
                 <P>GITHUB, VISUAL STUDIO CODE, JIRA</P>
-                <p>También conocimiento en BOOTSTRAP, PHP, MYSQL</p>
+                <p>También conocimientos de BOOTSTRAP, PHP, MYSQL</p>
                 <p>ADOBE PHOTOSHOP, FIGMA, INVISION</p>
             </div>
 
@@ -126,13 +164,13 @@ export default {
             },
 
             {
-                company: 'ICOGroup',
+                company: 'icogroup',
                 place: 'Caracas, Venezuela',
                 logo: '/assets/images/resume/icogroup.png',
                 positions: [
                     {
                         title: 'Junior Web Developer',
-                        time: 'Marzo 2016 - Junio 2016',
+                        time: 'Abril 2016 - Junio 2016',
                         description: `
                                         <p>
                                             Desarrollo web responsive para el Departamento de Marketing de la empresa. Creación del sitio web del famoso juego <i>Apensar</i>
@@ -142,7 +180,7 @@ export default {
                     },
                     {
                         title: 'Pasante de Development',
-                        time: 'Noviembre 2016 - Mayo 2017',
+                        time: 'Noviembre 2015 - Marzo 2016',
                         description: `
                                         <p>
                                             Pasantía de 20 semanas de duración en el Departamento de Marketing de la empresa, donde se adquirieron conocimientos en distintas
@@ -159,9 +197,23 @@ export default {
         // Studies list
         const studies_history = [
             {
-                title: 'Universidad Simon Bolivar',
+                university: 'Universidad Simón Bolívar',
+                title: 'Ingeniería de la Computación',
                 place: 'Caracas, Venezuela',
-                major: 'Ingeniería de la Computacion (Software Development Engineering)',
+                logo: '/assets/images/resume/usb.png',
+                time: '<span>Año de egresado:</span> 2016',
+                major: `
+                            <p>
+                                
+                            </p>
+                            <p>
+                                <b>Especializaciones:</b> Desarrollo de Software, Sistemas de Información, Computación Gráfica
+                                <br>
+                                <b>Agrupación:</b> Asociación de Jóvenes Empresarios (AJE-USB)
+                                <br>
+                                <b>Voluntariado:</b> Centro de Estudios de Movilidad en Bicicleta (CEMBI)
+                            </p>
+                        `,
             },
         ]
 
@@ -179,7 +231,7 @@ export default {
 @import '@/assets/styles/global.scss';
 
 .resume {
-    .resume__job-history {
+    .resume__job-history, .resume__studies-history {
         margin-top: 3rem;
 
         .window {
@@ -189,6 +241,7 @@ export default {
                 .window__bar {
                     .window__bar-title {
                         font-size: $font-size-16px;
+                        white-space: normal;
                     }
 
                     // .window__bar-buttons {}
@@ -206,10 +259,15 @@ export default {
                         // display: flex;
                         // flex-direction: column;
 
+                        @media (min-width: $breakpoint-min-desktop) {
+                            flex: 1;
+                        }
+
                         .window__image {
+                            align-items: center;
                             height: 150px;
 
-                            img {}
+                            // img {}
                         }
 
                         .window__place {
@@ -221,7 +279,10 @@ export default {
                     .window__text {
                         padding: 2rem 0 1rem 0;
 
-                        @media (min-width: $breakpoint-min-desktop) { padding: 0 1rem; }
+                        @media (min-width: $breakpoint-min-desktop) {
+                            flex: 3;
+                            padding: 0 1rem;
+                        }
 
                         & > div {
                             .window__text-title {
@@ -230,8 +291,10 @@ export default {
                                 margin-bottom: 0.2rem;
                             }
 
-                            .window__text-time {
+                            .window__text-time ::v-deep {
                                 font-style: italic;
+
+                                & > span { font-style: normal; }
                             }
 
                             .window__text-description ::v-deep {
