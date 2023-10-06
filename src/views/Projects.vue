@@ -48,25 +48,27 @@
             ></SmallWindow>
         </div>
 
-        <h2 class="projects__heading-latest">Actualizaciones recientes</h2>
+        <div v-if="recent_projects">
+            <h2 class="projects__heading-latest">Actualizaciones recientes</h2>
 
-        <p class="secondary-text">
-            Mis últimos repositorios actualizados.
-        </p>
+            <p class="secondary-text">
+                Mis últimos repositorios actualizados.
+            </p>
 
-        <div class="projects__github-list">
-            <ul>
-                <li v-for="(project, index) in recent_projects" :key="index">
-                    <a :href="project.html_url" target="_blank">
-                        <div class="projects__github-list__title">
-                            {{ project.full_name }}
-                            <span v-if="project.fork" class="projects__github-list__fork">  ( Fork ): </span>
-                        </div>
-                        <span class="projects__github-list__description">{{ project.description }}</span>
-                        
-                    </a>
-                </li>
-            </ul>
+            <div class="projects__github-list">
+                <ul>
+                    <li v-for="(project, index) in recent_projects" :key="index">
+                        <a :href="project.html_url" target="_blank">
+                            <div class="projects__github-list__title">
+                                {{ project.full_name }}
+                                <span v-if="project.fork" class="projects__github-list__fork">  ( Fork ): </span>
+                            </div>
+                            <span class="projects__github-list__description">{{ project.description }}</span>
+                            
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
     </div>
@@ -75,10 +77,10 @@
 
 
 <script>
+import { ref } from 'vue';
+
 import AlertBox from '@/components/AlertBox.vue';
 import SmallWindow from '@/components/SmallWindow.vue';
-
-import { ref } from 'vue';
 
 export default {
     name: 'Projects',
@@ -224,6 +226,7 @@ export default {
 
                 const data = await response.json()
                 recent_projects.value = data
+
             } catch (error) {
                 console.error(error.message)
                 throw new Error('Error fetching recent projects')
@@ -277,34 +280,40 @@ export default {
             padding: 0 1rem;
         
             li {
+                display: flex;
+                flex-direction: row;
+
                 margin-bottom: 1.5rem;
                 line-height: 1rem;
+
+                &:before {
+                    content: '';
+                    background-image: url('/assets/images/heart.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    color: $accent-color-03;
+                    display: inline-block;
+                    font-size: $font-size-21px;
+                    height: 18px;
+                    width: 18px;
+
+                    flex: 1;
+                }
 
                 a {
                     text-decoration: none;
 
-                    div {
-                        &:before {
-                            content: '';
-                            background-image: url('/assets/images/heart.svg');
-                            background-size: contain;
-                            color: $accent-color-03;
-                            display: inline-block;
-                            font-size: $font-size-21px;
-                            height: 18px;
-                            margin-inline-end: 1rem;
-                            width: 18px;
-                        }
+                    flex: 9;
+                    @media (min-width: $breakpoint-min-desktop) { flex: 19; }
 
+                    div {
                         &.projects__github-list__title {
                             color: $accent-color-05;
                             font-family: $font-family-02;
                             font-size: $font-size-14px;
                             letter-spacing: 0.1rem;
 
-                            @media (max-width: $breakpoint-max-mobile) {
-                                margin-bottom: 0.7rem;
-                            }
+                            @media (max-width: $breakpoint-max-mobile) {  margin-bottom: 0.7rem; }
 
                             .projects__github-list__fork {
                                 color: $accent-color-05;

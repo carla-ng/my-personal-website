@@ -17,19 +17,19 @@
         <nav class="nav__container">
             <div>
                 <span class="nav__container--divider"></span>
-                <router-link  @click="toggleNavVisibility" to="/about">Acerca de mi</router-link>
+                <router-link  @click="toggleNavVisibility" to="/acerca-de-mi">Acerca de mi</router-link>
             </div>
             <div>
                 <span class="nav__container--divider"></span>
-                <router-link  @click="toggleNavVisibility" to="/resume">Curriculum</router-link>
+                <router-link  @click="toggleNavVisibility" to="/curriculum">Curriculum</router-link>
             </div>
             <div>
                 <span class="nav__container--divider"></span>
-                <router-link  @click="toggleNavVisibility" to="/projects">Proyectos</router-link>
+                <router-link  @click="toggleNavVisibility" to="/proyectos">Proyectos</router-link>
             </div>
             <div>
                 <span class="nav__container--divider"></span>
-                <router-link  @click="toggleNavVisibility" to="/contact">Contacto</router-link>
+                <router-link  @click="toggleNavVisibility" to="/contacto">Contacto</router-link>
             </div>
         </nav>
 
@@ -45,7 +45,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 export default {
     setup() {
-        let showingNav = ref(false)
+        let showingNav = ref(false)                           // boolean to know if nav is showing on mobile/tablet
         let isMobileOrTablet = ref(window.innerWidth < 769)   // detect if user is on a mobile or tablet
 
 
@@ -54,7 +54,7 @@ export default {
             if ( isMobileOrTablet.value ) {
                 showingNav.value = !showingNav.value
 
-                var root = document.getElementsByTagName('html')[0]
+                let root = document.getElementsByTagName('html')[0]
                 if (  root.classList.contains('no-scroll') ) {
                     root.classList.remove('no-scroll')
                 } else {
@@ -99,7 +99,6 @@ export default {
     max-width: 1250px;
 
     display: flex;
-    //align-items: center;
     flex-direction: column;
     justify-content: center;
 
@@ -124,11 +123,10 @@ export default {
         }
 
         .nav__top--logo {
-            //margin: 3rem 0 0 0;
             
             a {
                 font-size: $font-size-28px;
-                font-weight: bold;
+                font-weight: 700;
                 text-align: center;
                 text-decoration: none;
             }
@@ -138,18 +136,12 @@ export default {
             @media (max-width: $breakpoint-max-tablet) {
                 cursor: pointer;
                 display: block;
-                //margin: auto 0;
-
-                //position: absolute;
-                // left: 20px;
-                // top: 17px;
 
                 & > span {
                     background-color: $black;
                     display: block;
                     height: 2px;
                     margin: 5px auto;
-                    // -webkit-transition: all 0.3s ease-in-out;
                     transition: all 0.3s ease-in-out;
                     width: 30px;
                 }
@@ -231,14 +223,11 @@ export default {
     }
 
 
-    // Open nav on mobile y tablet
+    // Open nav on mobile and tablet
     &.show-nav {
         @media (max-width: $breakpoint-max-tablet) {
 
             .nav__top {
-                // .nav__top--logo {
-                //     a {}
-                // }
 
                 .nav__top--hamburger {
                     position: fixed;
@@ -248,13 +237,15 @@ export default {
 
                     span {
                         &:nth-child(1) {
-                            transform: translateY(7px) rotate(45deg);
+                            translate: 0 7px;
+                            rotate: 45deg;
                         }
 
                         &:nth-child(2) { opacity: 0; }
-
+                        
                         &:nth-child(3) {
-                            transform: translateY(-7px) rotate(-45deg);
+                            translate: 0 -7px;
+                            rotate: -45deg;
                         }
                     }
                 }
@@ -275,8 +266,6 @@ export default {
                 & > div {
                     margin: 1rem 0;
 
-                    // .nav__container--divider {}
-
                     a { padding: 0 1.5rem; }
                 }
             }
@@ -285,9 +274,7 @@ export default {
         }
 
         @media (min-width: $breakpoint-min-tablet) and (max-width: $breakpoint-max-tablet) {
-            .nav__container {
-                width: 70%;
-            }
+            .nav__container { width: 70%; }
         }
 
         @media (orientation: landscape) and (max-width: $breakpoint-max-tablet) {

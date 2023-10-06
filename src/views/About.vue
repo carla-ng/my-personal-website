@@ -71,8 +71,8 @@ import { ref, computed } from 'vue';
 
 export default {
     setup() {
-        const currentIndex = ref(0)                 // current window page
-        const mySection = ref(null)                 // window to scroll up to
+        const currentIndex = ref(0)     // current window page
+        const mySection = ref(null)     // window/section to scroll up to
 
         
         // Information to be shown
@@ -100,6 +100,7 @@ export default {
                 imageSrc: 'assets/images/about/art_contest.jpg',
             },
         ]
+
 
         // Drawings
         const drawings = [
@@ -153,8 +154,10 @@ export default {
             }
         ]
 
-        // Current information shown on the window
+
+        // Current information shown
         const getCurrentContent = computed(() => content[currentIndex.value])
+
 
         // Disable previous/next button according to current content
         const isPrevButtonDisabled = computed(() => currentIndex.value === 0)
@@ -187,33 +190,32 @@ export default {
         const openModal = ( imagePath ) => {
             const modal = document.getElementById('myModal')
             const img = document.getElementById('enlargedImg')
+
             img.src = imagePath
             modal.style.display = 'block'
 
-            document.getElementsByTagName( 'html' )[0].classList.add('scroll-blocked')
+            document.getElementsByTagName('html')[0].classList.add('scroll-blocked')
         }
         const closeModal = () => {
             const modal = document.getElementById('myModal')
             modal.style.display = 'none'
 
-            document.getElementsByTagName( 'html' )[0].classList.remove('scroll-blocked')
+            document.getElementsByTagName('html')[0].classList.remove('scroll-blocked')
         }
-
 
 
         return {
             currentIndex,
             getCurrentContent,
-
-            isPrevButtonDisabled,
             isNextButtonDisabled,
+            isPrevButtonDisabled,
             mySection,
-            nextStep,
-            previousStep,
 
-            drawings,
-            openModal,
             closeModal,
+            drawings,
+            nextStep,
+            openModal,
+            previousStep,
         }
     }
 }
@@ -227,7 +229,6 @@ export default {
     .window {
         margin: 0 auto;
         max-width: 1024px;
-        //padding: 0.2rem;
 
         @media (min-width: $breakpoint-min-tablet) {
             min-height: 750px;
@@ -249,11 +250,7 @@ export default {
                 .window__bar-title {
                     @media (max-width: $breakpoint-max-mobile) { font-size: $font-size-12px; }
                 }
-                .window__bar-buttons {
-                    cursor: auto;
-                    
-                    // span {}
-                }
+                .window__bar-buttons { cursor: auto; }
             }
 
             .window-about {
@@ -263,7 +260,10 @@ export default {
                 @media (min-width: $breakpoint-min-tablet) {
                     flex-direction: row;
 
-                    height: -webkit-fill-available;
+                    height: -moz-available;          /* WebKit-based browsers will ignore this. */
+                    height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+                    height: fill-available;
+
                     margin-top: 2rem;
                     margin-bottom: 2rem;
                 }
@@ -279,8 +279,6 @@ export default {
                         margin: 0 2rem;
                         width: 45%;
                     }
-
-                    // img {}
                 }
 
                 .window__text {
@@ -288,7 +286,6 @@ export default {
 
                     display: flex;
                     flex-direction: column;
-                    //align-items: flex-end;
                     justify-content: space-between;
 
                     @media (min-width: $breakpoint-min-tablet) {
@@ -296,17 +293,12 @@ export default {
                         width: 55%;
                     }
 
-                    // .window__text-info {
-                    //     p {}
-                    // }
-
                     .window__text-buttons {
                         display: flex;
                         flex-direction: row;
                         justify-content: flex-end;
 
                         margin-top: 2rem;
-
                         @media (min-width: $breakpoint-min-desktop) { margin-top: 1rem; }
 
                         & > div {
@@ -368,15 +360,16 @@ export default {
 
     .about__drawings {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
 
+        grid-template-columns: repeat(2, 1fr);
         @media (min-width: $breakpoint-min-tablet) { grid-template-columns: repeat(4, 1fr); }
         @media (min-width: $breakpoint-min-tablet) { grid-template-columns: repeat(6, 1fr); }
 
         div {
             height: 160px;
             overflow: hidden;
+            user-select: none;
 
             display: flex;
             align-items: flex-start;
@@ -430,7 +423,7 @@ export default {
 
             color: $white;
             font-size: $font-size-56px;
-            font-weight: bold;
+            font-weight: 700;
             line-height: 1;
             transition: 0.3s;
 
@@ -442,7 +435,6 @@ export default {
         }
     }
 
-    
 }
 
 </style>

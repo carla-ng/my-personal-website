@@ -1,18 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Press+Start+2P&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&family=Noto+Sans:wght@300;400;600&family=Press+Start+2P&family=Space+Grotesk:wght@400;600&display=swap');
-
 
 
 /***********************
  *      Variables      *
  ***********************/
-
-/* Colors */
-$palette-color-dark: rgb(11, 13, 23);       // #0B0D17
-$palette-color-accent: rgb(208, 214, 249);  // #D0D6F9
-$palette-color-light: rgb(255, 255, 255);   // #FFFFFF
-
 
 /* Main/light theme */
 $palette-color-01: #ffd6dd;  // light pink
@@ -25,8 +17,8 @@ $palette-color-06: #ffa3b2;  // darker pink
 $palette-color-07: #f0e088;  // darker creamy light yellow
 $palette-color-08: #b680ec;  // darker purple
 
-$white: rgba(255, 252, 236, 0.45);
-$black: #3d3d3d;
+$white: rgba(255, 252, 236); // main light color
+$black: #3d3d3d;             // main dark color
 
 
 /* Dark theme */
@@ -79,6 +71,7 @@ $breakpoint-max-tablet:  768px;
 $breakpoint-min-desktop: 769px;
 
 
+
 /***********************************************************
 *   Resets (https://andy-bell.co.uk/a-modern-css-reset/)  *
 ***********************************************************/
@@ -122,23 +115,9 @@ html, body {
 
 /* Set core body defaults */
 body {
-    background-color: $white;
-    color: $font-color-01;
-    font-family: $font-family-01;
-    font-size: $font-size-16px;
-    min-height: 100vh;
-    line-height: 1.5;
     text-rendering: optimizeSpeed;
     width: 100%;
 }
-
-
-/* A elements that don't have a class get default styles */
-/*
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-}
-*/
 
 /* Make images easier to work with */
 img, picture {
@@ -182,8 +161,20 @@ input, button, textarea, select {
     width: 1px;
 }
 
- /* Pages */
- #app {
+body {
+    background-color: $white;
+    color: $font-color-01;
+    font-family: $font-family-01;
+    font-size: $font-size-16px;
+    // min-height: 100vh;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    width: 100%;
+}
+
+
+/* Pages */
+#app {
     min-height: calc(100vh - 2rem);
     position: relative;
 
@@ -199,33 +190,9 @@ input, button, textarea, select {
     @media (min-width: $breakpoint-min-tablet) { padding: 0 1rem 10rem 1rem; }
 }
 
- 
- /* Colors */
-.bg-dark { background-color: $palette-color-dark; }
-.bg-accent { background-color: $palette-color-accent; }
-.bg-light { background-color: $palette-color-light; }
-
-.text-dark { color: $palette-color-dark; }
-.text-accent { color: $palette-color-accent; }
-.text-light { color: $palette-color-light; }
 
 
 /* Headings, Texts */
-
-// .ff-serif { font-family: $font-family-serif; }
-// .ff-sans { font-family: $font-family-sans; }
-// .ff-sans-cond { font-family: $font-family-sans-cond; }
-
-.fs-14 { font-size: $font-size-14px; }   
-.fs-16 { font-size: $font-size-16px; }   
-.fs-18 { font-size: $font-size-18px; }
-.fs-24 { font-size: $font-size-24px; }
-.fs-28 { font-size: $font-size-28px; }   
-.fs-32 { font-size: $font-size-32px; }   
-.fs-56 { font-size: $font-size-56px; }   
-.fs-100 { font-size: $font-size-100px; } 
-.fs-150 { font-size: $font-size-150px; } 
-
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-family-02;

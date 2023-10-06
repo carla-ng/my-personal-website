@@ -11,8 +11,8 @@
 <script>
 export default {
     props: {
-        alert_text:        String,
-        hide_alert_sign:   Boolean
+        alert_text:        String,  // text to include inside the alert box
+        hide_alert_sign:   Boolean  // hide the exclamation mark in the alert box
     }
 }
 </script>
@@ -30,7 +30,6 @@ export default {
     padding: 0.5rem 1rem;
     width: fit-content;
 
-    // https://codepen.io/MatthewShields/pen/pwrXpV
     background: rgba($accent-color-02, 0.1);
     box-shadow: inset (-4px) (-4px) 0px 0px rgba($accent-color-02, 0.3);
     position: relative;
@@ -68,7 +67,7 @@ export default {
     .alertbox__text {
         color: $font-color-01;
         font-family: $font-family-01;
-        font-weight: bold;
+        font-weight: 700;
         font-size: $font-size-16px;
         letter-spacing: 0.1rem;
         z-index: 1;

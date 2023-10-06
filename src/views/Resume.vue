@@ -319,8 +319,6 @@ export default {
                         font-size: $font-size-16px;
                         white-space: normal;
                     }
-
-                    // .window__bar-buttons {}
                 }
 
                 .window__main {
@@ -332,9 +330,6 @@ export default {
                     @media (min-width: $breakpoint-min-desktop) { flex-direction: row; }
 
                     .window__image-container {
-                        // display: flex;
-                        // flex-direction: column;
-
                         @media (min-width: $breakpoint-min-desktop) { flex: 1; }
 
                         .window__image {
@@ -342,8 +337,6 @@ export default {
                             height: 150px;
 
                             @media (min-width: $breakpoint-min-tablet) and (max-width: $breakpoint-max-tablet) { height: 280px; }
-
-                            // img {}
                         }
 
                         .window__place {
@@ -363,7 +356,7 @@ export default {
                         & > div {
                             .window__text-title {
                                 font-size: $font-size-18px;
-                                font-weight: bold;
+                                font-weight: 700;
                                 margin-bottom: 0.2rem;
                             }
 
@@ -376,23 +369,16 @@ export default {
                             .window__text-description ::v-deep {
 
                                 ul {
-                                    li {
-                                        margin-top: 0.5rem;
-                                    }
+                                    li { margin-top: 0.5rem; }
                                 }
 
-                                p {
-                                    margin: 1rem 1.5rem;
-                                }
+                                p { margin: 1rem 1.5rem; }
                             }
 
-                            .window__text-languages {
-                                text-align: center;
-                            }
+                            .window__text-languages { text-align: center; }
                         }
 
                         .window__text-divider {
-                            // border-style: inset;
                             border: 1px solid #b1b1b1;
                             margin: 1.2rem auto;
                             width: 50%;
@@ -432,9 +418,7 @@ export default {
                         width: 30px;
                     }
 
-                    span {
-                        margin-inline-start: 0.5rem;
-                    }
+                    span { margin-inline-start: 0.5rem; }
                 }
             }
         }

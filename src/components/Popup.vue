@@ -90,11 +90,10 @@ export default {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    translate: -50% -50%;
     z-index: 999;
 
     height: 90vh;
-    //margin: 0 auto;
     width: 90vw;
     @media (min-width: $breakpoint-min-tablet) { width: 80vw; }
     @media (min-width: $breakpoint-min-desktop) { width: 70vw; }
@@ -106,13 +105,13 @@ export default {
         box-shadow: 6px 6px 5px #3b3b3b;
         height: 90vh;
         min-width: 0;
+        overflow: hidden;
         padding: 0.2rem;
         position: relative;
         width: 100%;
 
         .popup__bar {
             padding: 0.3rem;
-            //position: absolute;
 
             width: -moz-available;          /* WebKit-based browsers will ignore this. */
             width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
@@ -137,14 +136,14 @@ export default {
 
                 &:active {
                     box-shadow: none;
-                    transform: translateY(2px);
+                    translate: 0 2px;
                 }
             }
         } 
 
         .popup__content {
             overflow-y: scroll;
-            padding: 3rem 2rem 2rem 2rem;
+            padding: 3rem 2rem;
 
             height: -moz-available;          /* WebKit-based browsers will ignore this. */
             height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */

@@ -72,15 +72,14 @@ import emoji from 'markdown-it-emoji';
 import { computed, onMounted, ref } from 'vue';
 import Popup from './Popup.vue';
 
-
 export default {
     props: {
-        title: String,
-        intro: String,
-        description: String,
-        tags: Array,
-        urls: Array,
-        repo: String
+        title: String,          // window title
+        intro: String,          // window intro
+        description: String,    // window description
+        tags: Array,            // window tags
+        urls: Array,            // window URLs for buttons
+        repo: String            // repository name for Code button
     },
 
     components: {
@@ -88,10 +87,10 @@ export default {
     },
 
     setup ( props ) {
-        const readmeContainer = ref(null)
-        const readmeHtml = ref('')
-        const showReadme = ref(false)
+        let readmeHtml = ref('')        // README content from repository's README.md
+        let showReadme = ref(false)     // show README information
 
+        // With this, we can get the README content markdown, including emojis
         const markdown = new MarkdownIt({ html: true })
         markdown.use(emoji)
 
@@ -102,6 +101,7 @@ export default {
                 return props.urls[0][key]
             }).length
         )
+
 
         // Generate image url using the title of the project
         const generateImageUrl = ( title ) => {
@@ -117,7 +117,7 @@ export default {
         }
 
 
-        // Get class from a tag
+        // Get class from a tag, to add styles
         const getTagClass = ( tag ) => {
             const tagClass = tag
                                 .toLowerCase()
@@ -128,7 +128,7 @@ export default {
         }
 
 
-        // Open and fetch the README content (from github project)
+        // Open and fetch the README content (from GitHub project)
         const openReadme = async () => {
             try {
                 // We have to check both main and master branches
@@ -144,7 +144,7 @@ export default {
                     }
                 }
 
-                // Add the README content to the DOM as Markdown
+                // Add the README content to the DOM as markdown
                 if ( readmeContent ) {
                     const markdownContent = markdown.render(readmeContent)
                     readmeHtml.value = markdownContent
@@ -156,13 +156,13 @@ export default {
         }
 
 
-        // Fetch the README content (from github project)
+        // Fetch the README content (from GitHub project)
         const fetchReadmeContent = async ( repoUrl ) => {
             try {
                 const response = await axios.get(`${repoUrl}/README.md`,
                     {
                         headers: {
-                            Accept: 'application/vnd.github.v3.raw', // Request raw content
+                            Accept: 'application/vnd.github.v3.raw',
                         },
                     }
                 )
@@ -193,7 +193,6 @@ export default {
 
         
         return {
-            readmeContainer,
             readmeHtml,
             showReadme,
             visibleButtonsCount,
@@ -215,28 +214,14 @@ export default {
 .window {
     padding: 0.2rem;
 
-    @media (max-width: $breakpoint-max-mobile) {
-        margin: 2rem 0;
-    }
+    @media (max-width: $breakpoint-max-mobile) { margin: 2rem 0; }
 
     .window__inner-container {
 
         .window__main {
-
-            // .window__bar {
-
-                // .window__bar-title {}
-
-                // .window__bar-buttons {
-                    // span {}
-                // }
-            // }
-
             .window__image {
                 height: 200px;
                 margin: 0.7rem 0.5rem;
-
-                // img {}
             }
 
             .window__tags {
@@ -271,13 +256,11 @@ export default {
             }
 
             .window__intro {
-                font-weight: bold;
+                font-weight: 700;
                 padding: 0 0.5rem;
             }
 
-            .window__description {
-                padding: 0 0.5rem 0.7rem 0.5rem;
-            }
+            .window__description { padding: 0 0.5rem 0.7rem 0.5rem; }
         }
         
 

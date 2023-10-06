@@ -23,8 +23,8 @@
 
 <script>
 export default {
-  name: "Home",
-};
+    name: "Home",
+}
 </script>
 
 
@@ -39,18 +39,14 @@ export default {
         align-items: center;
         flex-direction: column;
 
-        @media (min-width: $breakpoint-min-tablet) {
-            flex-direction: row;
-        }
+        @media (min-width: $breakpoint-min-tablet) { flex-direction: row; }
 
         .home__image {
             background-color: #c7c7c7;
             height: 320px;
             width: 100%;
 
-            @media (min-width: $breakpoint-min-tablet) {
-                flex: 0 0 30%
-            }
+            @media (min-width: $breakpoint-min-tablet) { flex: 0 0 30% }
         }
 
         .home__intro {
@@ -60,12 +56,9 @@ export default {
                 flex: 0 0 70%;
                 padding: 1rem 2rem;
             }
-    
-            //.home__intro--welcome {}
 
             p {
                 span { font-family: $font-family-02; }
-
                 .accent-03 { color: $accent-color-01; }
             }
         }
