@@ -15,22 +15,24 @@
         </div>
         
         <nav class="nav__container">
-            <div>
-                <span class="nav__container--divider"></span>
-                <router-link  @click="toggleNavVisibility" to="/acerca-de-mi">Acerca de mi</router-link>
-            </div>
-            <div>
-                <span class="nav__container--divider"></span>
-                <router-link  @click="toggleNavVisibility" to="/curriculum">Curriculum</router-link>
-            </div>
-            <div>
-                <span class="nav__container--divider"></span>
-                <router-link  @click="toggleNavVisibility" to="/proyectos">Proyectos</router-link>
-            </div>
-            <div>
-                <span class="nav__container--divider"></span>
-                <router-link  @click="toggleNavVisibility" to="/contacto">Contacto</router-link>
-            </div>
+            <ul>
+                <li>
+                    <span class="nav__container--divider"></span>
+                    <router-link  @click="toggleNavVisibility" to="/acerca-de-mi">Acerca de mi</router-link>
+                </li>
+                <li>
+                    <span class="nav__container--divider"></span>
+                    <router-link  @click="toggleNavVisibility" to="/curriculum">Curriculum</router-link>
+                </li>
+                <li>
+                    <span class="nav__container--divider"></span>
+                    <router-link  @click="toggleNavVisibility" to="/proyectos">Proyectos</router-link>
+                </li>
+                <li>
+                    <span class="nav__container--divider"></span>
+                    <router-link  @click="toggleNavVisibility" to="/contacto">Contacto</router-link>
+                </li>
+            </ul>
         </nav>
 
         <div class="nav__veil" v-if="showingNav"></div>
@@ -159,54 +161,64 @@ export default {
         width: fit-content;
 
         @media (max-width: $breakpoint-max-tablet) {
-            flex-direction: column;
             &:not(.show-nav) { display: none; }
-        }
-        
-        @media (min-width: $breakpoint-min-desktop) {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
+        }      
 
-        & > div {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            @media (max-width: $breakpoint-max-tablet) { flex-direction: column; }
+
             @media (min-width: $breakpoint-min-desktop) {
                 display: flex;
-                align-items: center;
+                flex-direction: row;
                 justify-content: center;
-
-                &:first-child {
-                    .nav__container--divider { display: none; }
-                }
             }
 
-            .nav__container--divider {
-                &::before {
-                    content: '';
-                    background-image: url('/assets/images/heart.svg');
-                    background-size: contain;
-                    display: inline-block;
-                    height: 18px;
-                    width: 18px;
-                }
-            }
+            li {                
+                display: flex;
+                align-items: center;
 
-            a {
-                color: $font-color-01;
-                font-family: $font-family-02;
-                font-size: $font-size-14px;
-                letter-spacing: 0.1rem;
-                padding: 0 1rem;
-                text-decoration: none;
-                text-shadow: 1px 1px 1px #777;
-                text-transform: uppercase;
+                @media (min-width: $breakpoint-min-desktop) {
+                    justify-content: center;
 
-                &:not(.router-link-exact-active):hover {
-                    color: $accent-color-01;
-                    opacity: 0.8;
+                    &:first-child {
+                        .nav__container--divider { display: none; }
+                    }
                 }
 
-                &.router-link-exact-active { color: $accent-color-01; }
+                .nav__container--divider {
+                    &::before {
+                        content: '';
+                        background-image: url('/assets/images/heart.svg');
+                        background-size: contain;
+                        display: inline-block;
+                        height: 18px;
+                        width: 18px;
+                    }
+                }
+
+                a {
+                    color: $font-color-01;
+                    font-family: $font-family-02;
+                    font-size: $font-size-14px;
+                    letter-spacing: 0.1rem;
+                    padding: 0 1rem;
+                    text-decoration: none;
+                    text-shadow: 1px 1px 1px #777;
+                    text-transform: uppercase;
+
+                    &:not(.router-link-exact-active):hover {
+                        color: $accent-color-01;
+                        opacity: 0.8;
+                    }
+
+                    &.router-link-exact-active { color: $accent-color-01; }
+
+                    @media (max-width: $breakpoint-max-tablet) { padding: 0.8rem 1rem; }
+                }
             }
         }
     }

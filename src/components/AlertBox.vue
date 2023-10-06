@@ -1,7 +1,7 @@
 <template>
 
     <div class="alertbox">
-        <div class="alertbox__exclamation" v-if="!hide_alert_sign">!</div>
+        <span class="alertbox__exclamation" v-if="!hide_alert_sign">!</span>
         <div class="alertbox__text" v-html="alert_text"></div>
     </div>
 

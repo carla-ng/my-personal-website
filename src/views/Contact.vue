@@ -2,13 +2,15 @@
 
     <main class="contact-page page-container">
     
-        <h1 class="typewriter-effect">Contacto</h1>
+        <header>
+            <h1 class="typewriter-effect">Contacto</h1>
 
-        <p class="primary-text">
-            Si deseas contactar conmigo o seguirme en redes, me podrás encontrar en:
-        </p>
+            <p class="primary-text">
+                Si deseas contactar conmigo o seguirme en redes, me podrás encontrar en:
+            </p>
+        </header>
 
-        <div class="contact">
+        <nav class="contact">
             <ul class="contact__list">
                 <li class="contact__list--linkedin">
                     <a href="https://www.linkedin.com/in/carla-nardone-gonzalez/" target="_blank">
@@ -31,9 +33,9 @@
                     </a>
                 </li>
             </ul>
-        </div>
+        </nav>
 
-        </main>
+    </main>
 
 </template>
 

@@ -2,19 +2,19 @@
 
     <main class="home page-container">
 
-        <div class="home--container">
+        <section class="home__container">
             <div class="home__image">
 
             </div>
 
             <div class="home__intro">
-                <h1 class="home__intro--welcome typewriter-effect">¡Bienvenid@!</h1>
+                <h1 class="home__intro-welcome typewriter-effect">¡Bienvenid@!</h1>
                 <p>
-                    <span>Soy Carla</span>, una apasionada <strong class="accent-03">Desarrolladora Web especializada en Front-end</strong>. Me encanta dar vida a proyectos creativos y diseñar experiencias únicas.
+                    <span>Soy Carla</span>, una apasionada <strong class="accent-01">Desarrolladora Web especializada en Front-end</strong>. Me encanta dar vida a proyectos creativos y diseñar experiencias únicas.
                     Explorar el arte de la programación es mi pasión, y aquí compartiré contigo mis creaciones y aventuras en el universo del desarrollo web.
                 </p>
             </div>
-        </div>
+        </section>
 
     </main>
 
@@ -34,7 +34,7 @@ export default {
 .home {
     max-width: 992px;
 
-    .home--container {
+    .home__container {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -59,7 +59,6 @@ export default {
 
             p {
                 span { font-family: $font-family-02; }
-                .accent-03 { color: $accent-color-01; }
             }
         }
     }

@@ -1,55 +1,66 @@
 <template>
+
   <main class="projects-page page-container">
+
+    <header>
+        <h1 class="typewriter-effect">Proyectos</h1>
+
+        <p class="primary-text">
+            En esta página se encuentran algunos de los proyectos en los que me encuentro trabajando actualmente o en los que he trabajado en el pasado.
+        </p>
+    </header>
     
-    <h1 class="typewriter-effect">Proyectos</h1>
 
-    <p class="primary-text">
-        En esta página se encuentran algunos de los proyectos en los que me encuentro trabajando actualmente o en los que he trabajado en el pasado.
-    </p>
+    <section class="projects">
 
-    <div class="projects">
+        <article class="project-group">
+            <h2 class="project-group__heading">Proyectos personales y de aprendizaje</h2>
 
-        <h2 class="projects__heading-personal">Proyectos personales y de aprendizaje</h2>
+            <p class="secondary-text">
+                Desarrollados en mi tiempo libre para crecer como programadora. La mayoría de estos proyectos se encuentran <span class="text-bold text-underlined">en progreso</span>,
+                ya que los utilizo para aprender y practicar cuando puedo.
+            </p>
 
-        <p class="secondary-text">
-            Desarrollados en mi tiempo libre para crecer como programadora. La mayoría de estos proyectos se encuentran <span class="text-bold text-underlined">en progreso</span>,
-            ya que los utilizo para aprender y practicar cuando puedo.
-        </p>
+            <div class="projects__list">
+                <SmallWindow v-for="(project, index) in personal_projects" :key="index"
+                            :title="project.title"
+                            :intro="project.intro"
+                            :description="project.description"
+                            :tags="project.tags"
+                            :urls="project.urls"
+                            :repo="project.repo"
+                ></SmallWindow>
+            </div>
 
-        <div class="projects__list">
-            <SmallWindow v-for="(project, index) in personal_projects" :key="index"
-                        :title="project.title"
-                        :intro="project.intro"
-                        :description="project.description"
-                        :tags="project.tags"
-                        :urls="project.urls"
-                        :repo="project.repo"
-            ></SmallWindow>
-        </div>
+            <p class="projects__github-profile">
+                <AlertBox alert_text='También podrás encontrar más proyectos en <a href="https://github.com/carla-ng" target="_blank">mi perfil de Github</a>.' />
+            </p>
+        </article>
 
-        <p class="projects__github-profile">
-            <AlertBox alert_text='También podrás encontrar más proyectos en <a href="https://github.com/carla-ng" target="_blank">mi perfil de Github</a>.' />
-        </p>
 
-        <h2 class="projects__heading-professional">Proyectos a nivel profesional</h2>
+        <article class="project-group">
+            <h2 class="project-group__heading">Proyectos a nivel profesional</h2>
 
-        <p class="secondary-text">
-            Algunos desarrollos destacados de las empresas donde he trabajado.
-        </p>
+            <p class="secondary-text">
+                Algunos desarrollos destacados de las empresas donde he trabajado.
+            </p>
 
-        <div class="projects__list">
-            <SmallWindow v-for="(project, index) in professional_projects" :key="index"
-                        :title="project.title"
-                        :intro="project.intro"
-                        :description="project.description"
-                        :tags="project.tags"
-                        :urls="project.urls"
-                        :repo="project.repo"
-            ></SmallWindow>
-        </div>
+            <div class="projects__list">
+                <SmallWindow v-for="(project, index) in professional_projects" :key="index"
+                            :title="project.title"
+                            :intro="project.intro"
+                            :description="project.description"
+                            :tags="project.tags"
+                            :urls="project.urls"
+                            :repo="project.repo"
+                ></SmallWindow>
+            </div>
+        </article>
 
-        <div v-if="recent_projects">
-            <h2 class="projects__heading-latest">Actualizaciones recientes</h2>
+        
+
+        <article class="project-group" v-if="recent_projects">
+            <h2 class="project-group__heading">Actualizaciones recientes</h2>
 
             <p class="secondary-text">
                 Mis últimos repositorios actualizados.
@@ -69,10 +80,12 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </article>
 
-    </div>
+    </section>
+
   </main>
+
 </template>
 
 
@@ -251,9 +264,8 @@ export default {
 
 .projects {
 
-    h2.projects__heading-professional,
-    h2.projects__heading-latest {
-        margin-top: 6rem;
+    article:not(:first-child) {
+        h2 { margin-top: 6rem; }
     }
 
     .projects__list {
@@ -268,9 +280,7 @@ export default {
         @media (min-width: $breakpoint-min-desktop) { grid-template-columns: repeat(3, 1fr); }
     }
 
-    .projects__github-profile {
-        margin-top: 4rem;
-    }
+    .projects__github-profile { margin-top: 4rem; }
 
     .projects__github-list {
        ul {

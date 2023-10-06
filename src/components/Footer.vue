@@ -1,8 +1,8 @@
 <template>
 
     <footer class="footer">
-        <a class="footer__text" href="https://github.com/carla-ng/" target="_blank">
-            Hecho con <span class="footer__text--heart"></span> por Carla Nardone
+        <a class="footer__link" href="https://github.com/carla-ng/" target="_blank">
+            Hecho con <span class="footer__link--heart"></span> por Carla Nardone
         </a>
     </footer>
 
@@ -21,7 +21,7 @@
     bottom: 0;
     width: 100%;
 
-    .footer__text {
+    .footer__link {
         color: $font-color-02;
         font-size: $font-size-14px;
         padding: 0.8rem;
@@ -33,7 +33,7 @@
         justify-content: center;
         flex-direction: row;
 
-        span.footer__text--heart {
+        .footer__link--heart {
             margin: 0 0.3rem;
 
             &::before {

@@ -1,17 +1,17 @@
 <template>
 
-    <div class="window">
+    <article class="window">
 
         <div class="window__inner-container">
 
             <div class="window__main">
-                <div class="window__bar">
+                <header class="window__bar">
                     <span class="window__bar-title"> {{ title }} </span>
 
                     <div class="window__bar-buttons">
                         <span v-show="readmeHtml" @click="toggleReadme">?</span>
                     </div>
-                </div>
+                </header>
 
                 <div class="window__image">
                     <img :src="generateImageUrl(title)" :alt="title">
@@ -23,41 +23,49 @@
                     </span>
                 </div>
 
-                <div>
+                <section>
                     <p class="window__intro"> {{ intro }} </p>
                     <p class="window__description"> {{ description }} </p>
-                </div>
+                </section>
             </div>
             
-            <div class="window__buttons" :class="{ 'multiple' : (visibleButtonsCount > 1) }" v-if="urls">
-                <a :href="urls[0].code" target="_blank" v-if="urls[0].code">
-                    <button class="window__buttons-code">
-                        <span>Código</span>
-                    </button>
-                </a>
-
-                <a :href="urls[0].demo" target="_blank" v-if="urls[0].demo">
-                    <button class="window__buttons-demo">
-                        <span>Demo</span>
-                    </button>
-                </a>
-
-                <a :href="urls[0].example" target="_blank" v-if="urls[0].example">
-                    <button class="window__buttons-example">
-                        <span>Ejemplos</span>
-                    </button>
-                </a>
-
-                <a :href="urls[0].comingsoon" target="_blank" v-if="urls[0].comingsoon" class="disabled-button">
-                    <button class="window__buttons-comingsoon">
-                        <span>Próximamente</span>
-                    </button>
-                </a>
-            </div>
+            <nav class="window__buttons" :class="{ 'multiple' : (visibleButtonsCount > 1) }" v-if="urls">
+                <ul>
+                    <li v-if="urls[0].code">
+                        <a :href="urls[0].code" target="_blank">
+                            <button class="window__buttons-code">
+                                <span>Código</span>
+                            </button>
+                        </a>
+                    </li>
+                    <li v-if="urls[0].demo">
+                        <a :href="urls[0].demo" target="_blank">
+                            <button class="window__buttons-demo">
+                                <span>Demo</span>
+                            </button>
+                        </a>
+                    </li>
+                    <li v-if="urls[0].example">
+                        <a :href="urls[0].example" target="_blank">
+                            <button class="window__buttons-example">
+                                <span>Ejemplos</span>
+                            </button>
+                        </a>
+                    </li>
+                    <li v-if="urls[0].comingsoon">
+                        <a :href="urls[0].comingsoon" target="_blank" class="disabled-button">
+                            <button class="window__buttons-comingsoon">
+                                <span>Próximamente</span>
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+                
+            </nav>
 
         </div>
 
-    </div>
+    </article>
 
     <Popup :is-visible="showReadme" :readme-html="readmeHtml" :closePopup="closePopup" />
 
@@ -266,54 +274,70 @@ export default {
 
         .window__buttons {
             padding-bottom: 1rem;
-            
-            display: flex;
-            justify-content: center;
 
-            a {
-                border: 1px solid $palette-color-04;
-                border-radius: 2px;
-                box-shadow: 2px 2px 0px #919191;
-                color: $palette-color-04;
-                display: block;
-                margin: 0 1rem;
-                padding: 0.2rem;
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
 
-                button {
-                    background-color: #ffd6dd;
-                    border: 1px dashed $palette-color-04;
-                    cursor: pointer;
-                    height: 100%;
-                    padding: 0 2rem;
-                    width: 100%;
+                display: flex;
+                justify-content: center;
 
-                    span {
+                li {
+                    a {
+                        border: 1px solid $palette-color-04;
+                        border-radius: 2px;
+                        box-shadow: 2px 2px 0px #919191;
+                        color: $palette-color-04;
                         display: block;
+                        margin: 0 1rem;
+                        padding: 0.2rem;
 
-                        &:first-letter { text-decoration:underline; }
+                        button {
+                            background-color: #ffd6dd;
+                            border: 1px dashed $palette-color-04;
+                            cursor: pointer;
+                            height: 100%;
+                            padding: 0 2rem;
+                            width: 100%;
+
+                            span {
+                                display: block;
+
+                                &:first-letter { text-decoration:underline; }
+                            }
+                        }
+
+                        &.disabled-button {
+                            box-shadow: none;
+                            opacity: 0.5;
+                            pointer-events: none;
+                        }
+
+                        &:active {
+                            box-shadow: none;
+                            transform: translateY(2px);
+                        }
                     }
-                }
 
-                &.disabled-button {
-                    box-shadow: none;
-                    opacity: 0.5;
-                    pointer-events: none;
-                }
-
-                &:active {
-                    box-shadow: none;
-                    transform: translateY(2px);
                 }
             }
 
+            
             &.multiple {
-                justify-content: space-between;
+                ul {
+                    justify-content: space-between;
 
-                a {
-                    width: 50%;
+                    li {
+                        width: 50%;
 
-                    button { padding: 0; }
+                        a {
+                            button { padding: 0; }
+                        }
+                    }
                 }
+
+                
             }
         }
     }    

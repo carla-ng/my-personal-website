@@ -1,68 +1,76 @@
 <template>
-  <main class="about page-container">
 
-    <h1 class="typewriter-effect">Acerca de mí</h1>
+    <main class="about page-container">
 
-    <p class="primary-text">
-        Conoce un poco más sobre las tecnologías con las que trabajo, mis gustos y mis pasatiempos. 
-    </p>
+        <header>
+            <h1 class="typewriter-effect">Acerca de mí</h1>
 
-    <div class="window" ref="mySection">
+            <p class="primary-text">
+                Conoce un poco más sobre las tecnologías con las que trabajo, mis gustos y mis pasatiempos. 
+            </p>
+        </header>
 
-        <div class="window__inner-container">
-            <div class="window__bar">
-                <span class="window__bar-title"> Carla Nardone ({{ currentIndex + 1 }}/2) </span>
 
-                <div class="window__bar-buttons disabled-button">
-                    <span>X</span>
+        <section class="window" ref="mySection">
+
+            <div class="window__inner-container">
+                <div class="window__bar">
+                    <span class="window__bar-title"> Carla Nardone ({{ currentIndex + 1 }}/2) </span>
+
+                    <div class="window__bar-buttons disabled-button">
+                        <span>X</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="window-about">
-                <div class="window__image">
-                    <img :src="getCurrentContent.imageSrc" alt="Mi setup">
-                </div>
-                
-                <div class="window__text">
+                <div class="window-about">
+                    <div class="window__image">
+                        <img :src="getCurrentContent.imageSrc" alt="Mi setup">
+                    </div>
+                    
+                    <div class="window__text">
 
-                    <div class="window__text-info" v-html="getCurrentContent.text"></div>
+                        <div class="window__text-info" v-html="getCurrentContent.text"></div>
 
-                    <div class="window__text-buttons">
-                        <div :class="{ 'disabled-button': isPrevButtonDisabled }">
-                            <button class="prev" @click="previousStep">
-                                <span>Anterior</span>
-                            </button>
-                        </div>
-                        
-                        <div :class="{ 'disabled-button': isNextButtonDisabled }">
-                            <button class="next" @click="nextStep">
-                                <span>Siguiente</span>
-                            </button>
+                        <div class="window__text-buttons">
+                            <div :class="{ 'disabled-button': isPrevButtonDisabled }">
+                                <button class="prev" @click="previousStep">
+                                    <span>Anterior</span>
+                                </button>
+                            </div>
+                            
+                            <div :class="{ 'disabled-button': isNextButtonDisabled }">
+                                <button class="next" @click="nextStep">
+                                    <span>Siguiente</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+        </section>
+
+
+        <article>
+            <p class="secondary-text">Aquí puedes ver algunos de mis dibujos:</p>
+
+            <div class="about__drawings">
+
+                <div v-for="(drawing, index) in drawings" :key="index">
+                    <img :src="drawing.url" :alt="drawing.alt" @click="openModal(drawing.url)">
+                </div>
+
+            </div>
+        </article>
+
+
+        <div id="myModal" class="about__modal" @click="closeModal()">
+            <span class="about__modal--close" @click="closeModal()">&times;</span>
+            <img src="" alt="Enlarged Image" id="enlargedImg" class="about__modal--content">
         </div>
 
-    </div>
+    </main>
 
-    <p class="secondary-text">Aquí puedes ver algunos de mis dibujos:</p>
-
-    <div class="about__drawings">
-
-        <div v-for="(drawing, index) in drawings" :key="index">
-            <img :src="drawing.url" :alt="drawing.alt" @click="openModal(drawing.url)">
-        </div>
-
-    </div>
-
-    <div id="myModal" class="about__modal" @click="closeModal()">
-        <span class="about__modal--close" @click="closeModal()">&times;</span>
-        <img src="" alt="Enlarged Image" id="enlargedImg" class="about__modal--content">
-    </div>
-
-
-  </main>
 </template>
 
 

@@ -3,14 +3,14 @@
     <div class="popup__container" v-if="isVisible">
 
         <div class="popup">
-            <div class="popup__bar window__bar">
+            <header class="popup__bar window__bar">
                 <span>Github > README.md</span>
                 <button @click="closePopup" class="window__bar-button">X</button>
-            </div>
+            </header>
 
-            <div class="popup__content">
+            <article class="popup__content">
                 <div v-html="readmeHtml"></div>
-            </div>
+            </article>
         </div>
 
     </div>
