@@ -18,19 +18,19 @@
             <ul>
                 <li>
                     <span class="nav__container--divider"></span>
-                    <router-link  @click="toggleNavVisibility" to="/about">Acerca de mi</router-link>
+                    <router-link  @click="toggleNavVisibility" to="/acerca">Acerca de mi</router-link>
                 </li>
                 <li>
                     <span class="nav__container--divider"></span>
-                    <router-link  @click="toggleNavVisibility" to="/resume">Curriculum</router-link>
+                    <router-link  @click="toggleNavVisibility" to="/curriculum">Curriculum</router-link>
                 </li>
                 <li>
                     <span class="nav__container--divider"></span>
-                    <router-link  @click="toggleNavVisibility" to="/projects">Proyectos</router-link>
+                    <router-link  @click="toggleNavVisibility" to="/proyectos">Proyectos</router-link>
                 </li>
                 <li>
                     <span class="nav__container--divider"></span>
-                    <router-link  @click="toggleNavVisibility" to="/contact">Contacto</router-link>
+                    <router-link  @click="toggleNavVisibility" to="/contacto">Contacto</router-link>
                 </li>
             </ul>
         </nav>

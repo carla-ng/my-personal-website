@@ -12,7 +12,7 @@
 export default {
     props: {
         alert_text:        String,  // text to include inside the alert box
-        hide_alert_sign:   Boolean  // hide the exclamation mark in the alert box
+        hide_alert_sign:   String  // hide the exclamation mark in the alert box
     }
 }
 </script>

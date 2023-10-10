@@ -8,7 +8,7 @@ const routes = [
     component: Home,
   },
   {
-    path: "/about",
+    path: "/acerca",
     name: "About",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -17,7 +17,7 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   {
-    path: "/resume",
+    path: "/curriculum",
     name: "Resume",
     // route level code-splitting
     // this generates a separate chunk (resume.[hash].js) for this route
@@ -26,7 +26,7 @@ const routes = [
       import(/* webpackChunkName: "resume" */ "../views/Resume.vue"),
   },
   {
-    path: "/projects",
+    path: "/proyectos",
     name: "Projects",
     // route level code-splitting
     // this generates a separate chunk (projects.[hash].js) for this route
@@ -35,7 +35,7 @@ const routes = [
       import(/* webpackChunkName: "projects" */ "../views/Projects.vue"),
   },
   {
-    path: "/contact",
+    path: "/contacto",
     name: "Contact",
     // route level code-splitting
     // this generates a separate chunk (contact.[hash].js) for this route
@@ -46,7 +46,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHashHistory(process.env.BASE_URL),
     routes,
 });
 
