@@ -97,7 +97,7 @@ export default {
 
 
 #nav {
-    margin: 2rem auto 4rem auto;
+    margin: 2rem auto 3rem auto;
     max-width: 1250px;
 
     display: flex;
