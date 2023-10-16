@@ -32,9 +32,9 @@
                 ></SmallWindow>
             </div>
 
-            <p class="projects__github-profile">
+            <div class="projects__github-profile">
                 <AlertBox alert_text='También podrás encontrar más proyectos en <a href="https://github.com/carla-ng" target="_blank">mi perfil de Github</a>.' />
-            </p>
+            </div>
         </article>
 
 

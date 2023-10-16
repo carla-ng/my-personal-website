@@ -2,6 +2,10 @@
 
     <main class="home page-container">
 
+        <div class="home__temp-alert">
+            <AlertBox alert_text='¡Pssst! ¡Esta web se encuentra en construcción!' />
+        </div>
+
         <section class="home__container">
 
             <div class="home__heart-container">
@@ -34,8 +38,14 @@
 
 
 <script>
+import AlertBox from '@/components/AlertBox.vue';
+
 export default {
     name: "Home",
+
+    components: {
+        AlertBox
+    },
 }
 </script>
 
@@ -50,6 +60,10 @@ $heart-light-color: #fff;
 
 .home {
     max-width: 992px;
+
+    .home__temp-alert {
+        margin-bottom: 5rem;
+    }
 
     .home__container {
         display: flex;

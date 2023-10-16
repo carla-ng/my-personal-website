@@ -153,8 +153,8 @@ export default {
                 alt: 'Drawing of an Elf'
             },
             {
-                url: '/assets/images/about/drawing_seungyeon.jpg',
-                alt: 'Drawing of Seungyeon'
+                url: '/assets/images/about/drawing_alolanraichu.jpg',
+                alt: 'Drawing of Alolan Raichu'
             },
             {
                 url: '/assets/images/about/drawing_witch1.jpg',
