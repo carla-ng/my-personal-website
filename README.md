@@ -40,7 +40,6 @@ https://carla-nardone.netlify.app/
 * Perform all relevant tests (NO tests have been performed yet!)
 * Dark theme
 * English version (now it's only available in Spanish)
-* Check if all texts received from the API are in English and verify they don't include special characters _(in progress)_
 
 <br/>
 
