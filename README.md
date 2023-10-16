@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/carla-ng/my-pokemon-project/blob/master/src/assets/readme_image_1.jpg?raw=true" alt="Pokemon Project">
+  <img src="https://github.com/carla-ng/my-personal-website/blob/master/src/assets/readme_image_1.jpg?raw=true" alt="My Personal Website">
 </p>
 
 <br/>
