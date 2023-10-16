@@ -29,8 +29,6 @@ https://carla-nardone.netlify.app/
 
 <br/>
 
-<br/>
-
 ## To Do List / Possible Future Improvements and Features
 * Add more CSS Pixel Art _(in progress)_
 * Create website logo
