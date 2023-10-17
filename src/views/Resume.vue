@@ -2,12 +2,18 @@
 
     <main class="resume-page page-container">
 
-        <header>
-            <h1 class="typewriter-effect">Currículum</h1>
+        <header class="resume__header">
+            <div class="resume__header-info">
+                <h1 class="typewriter-effect">Currículum</h1>
 
-            <p class="primary-text">
-                Información sobre mi trayectoria laboral y mis estudios.
-            </p>
+                <p class="primary-text">
+                    Información sobre mi trayectoria laboral y mis estudios.
+                </p>
+            </div>
+            
+            <div class="resume__header-img">
+                <div class="pixelart__keyboard"></div>
+            </div>
         </header>
     
         
@@ -303,6 +309,53 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/styles/global.scss';
+
+.resume__header {
+    @media (max-width: $breakpoint-max-tablet) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (min-width: $breakpoint-min-desktop) { position: relative; }
+
+    .resume__header-info {
+        @media (min-width: $breakpoint-min-desktop) {
+            margin: 0 auto;
+            max-width: 90%;
+        }
+
+        @media (max-width: $breakpoint-max-tablet) {
+            order: 2;
+        }
+    }
+
+    .resume__header-img {
+
+        @media (min-width: $breakpoint-min-desktop) {
+            position: absolute;
+            right: 32%;
+            top: 125px;
+            rotate: -12deg;
+        }
+
+        @media (min-width: $breakpoint-min-desktop-lg) {
+            right: 25%;
+        }
+
+        @media (max-width: $breakpoint-max-tablet) {
+            display: flex;
+            justify-content: center;
+
+            height: 110px;
+            order: 1;
+            translate: -123px 0;
+        }
+
+        .pixelart__keyboard {
+            @include keyboard;
+        }
+    }        
+}
 
 .resume {
 

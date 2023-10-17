@@ -14,12 +14,23 @@
     <section class="projects">
 
         <article class="project-group">
-            <h2 class="project-group__heading">Proyectos personales y de aprendizaje</h2>
 
-            <p class="secondary-text">
-                Desarrollados en mi tiempo libre para crecer como programadora. La mayoría de estos proyectos se encuentran <span class="text-bold text-underlined">en progreso</span>,
-                ya que los utilizo para aprender y practicar cuando puedo.
-            </p>
+            <header class="project-group__header">
+
+                <div class="project-group__info">
+                    <h2 class="project-group__heading">Proyectos personales y de aprendizaje</h2>
+
+                    <p class="secondary-text">
+                        Desarrollados en mi tiempo libre para crecer como programadora. La mayoría de estos proyectos se encuentran <span class="text-bold text-underlined">en progreso</span>,
+                        ya que los utilizo para aprender y practicar cuando puedo.
+                    </p>
+                </div>
+
+                <div class="project-group__img">
+                    <div class="pixelart__blastoise"></div>
+                </div>
+
+            </header>
 
             <div class="projects__list">
                 <SmallWindow v-for="(project, index) in personal_projects" :key="index"
@@ -39,11 +50,22 @@
 
 
         <article class="project-group">
-            <h2 class="project-group__heading">Proyectos a nivel profesional</h2>
 
-            <p class="secondary-text">
-                Algunos desarrollos destacados de las empresas donde he trabajado.
-            </p>
+            <header class="project-group__header-professional secondary-title">
+
+                <div class="project-group__info">
+                    <h2 class="project-group__heading">Proyectos a nivel profesional</h2>
+
+                    <p class="secondary-text">
+                        Algunos desarrollos destacados de las empresas donde he trabajado.
+                    </p>
+                </div>
+
+                <div class="project-group__img">
+                    <div class="pixelart__super-nintendo-controller"></div>
+                </div>
+
+            </header>
 
             <div class="projects__list">
                 <SmallWindow v-for="(project, index) in professional_projects" :key="index"
@@ -59,7 +81,7 @@
 
         
 
-        <article class="project-group" v-if="recent_projects">
+        <article class="project-group secondary-title" v-if="recent_projects">
             <h2 class="project-group__heading">Actualizaciones recientes</h2>
 
             <p class="secondary-text">
@@ -263,9 +285,96 @@ export default {
 @import '@/assets/styles/global.scss';
 
 .projects {
+    .secondary-title { margin-top: 6rem; }
 
-    article:not(:first-child) {
-        h2 { margin-top: 6rem; }
+    .project-group__header {
+        @media (max-width: $breakpoint-max-tablet) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: $breakpoint-min-desktop) { position: relative; }
+
+        .project-group__info {
+            @media (min-width: $breakpoint-min-desktop) {
+                margin: 0 auto;
+                max-width: 90%;
+            }
+
+            @media (max-width: $breakpoint-max-tablet) {
+                order: 2;
+            }
+
+            p.secondary-text {
+                @media (min-width: $breakpoint-min-desktop) { max-width: 620px; }
+                @media (min-width: $breakpoint-min-desktop-lg) { max-width: 700px; }
+            }
+        }
+
+        .project-group__img {
+
+            @media (min-width: $breakpoint-min-desktop) {
+                position: absolute;
+                right: 10%;
+                top: 85px;
+            }
+
+            @media (max-width: $breakpoint-max-tablet) {
+                display: flex;
+                justify-content: center;
+
+                height: 120px;
+                order: 1;
+                translate: -35px 0;
+            }
+
+            .pixelart__blastoise {
+                @include blastoise;
+            }
+        }        
+    }
+
+    .project-group__header-professional {
+        @media (max-width: $breakpoint-max-tablet) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: $breakpoint-min-desktop) { position: relative; }
+
+        .project-group__info {
+            @media (min-width: $breakpoint-min-desktop) {
+                max-width: 75%;
+            }
+
+            @media (max-width: $breakpoint-max-tablet) {
+                order: 2;
+            }
+        }
+
+        .project-group__img {
+
+            @media (min-width: $breakpoint-min-desktop) {
+                position: absolute;
+                right: 24%;
+                top: 5px;
+                rotate: -11deg;
+            }
+
+            @media (max-width: $breakpoint-max-tablet) {
+                display: flex;
+                justify-content: center;
+
+                height: 140px;
+                order: 1;
+                rotate: -8deg;
+                translate: -85px 0;
+            }
+
+            .pixelart__super-nintendo-controller {
+                @include super_nintendo_controller;
+            }
+        }        
     }
 
     .projects__list {

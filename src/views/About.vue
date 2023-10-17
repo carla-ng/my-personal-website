@@ -2,12 +2,18 @@
 
     <main class="about page-container">
 
-        <header>
-            <h1 class="typewriter-effect">Acerca de mí</h1>
+        <header class="about__header">
+            <div class="about__header-info">
+                <h1 class="typewriter-effect">Acerca de mí</h1>
 
-            <p class="primary-text">
-                Conoce un poco más sobre las tecnologías con las que trabajo, mis gustos y mis pasatiempos. 
-            </p>
+                <p class="primary-text">
+                    Conoce un poco más sobre las tecnologías con las que trabajo, mis gustos y mis pasatiempos. 
+                </p>
+            </div>
+
+            <div class="about__header-img">
+                <div class="pixelart__nintendo-switch"></div>
+            </div>
         </header>
 
 
@@ -234,6 +240,50 @@ export default {
 @import '@/assets/styles/global.scss';
 
 .about {
+    .about__header {
+        @media (max-width: $breakpoint-max-tablet) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: $breakpoint-min-desktop) { position: relative; }
+
+        .about__header-info {
+            @media (min-width: $breakpoint-min-desktop) {
+                margin: 0 auto;
+                max-width: 90%;
+            }
+
+            @media (max-width: $breakpoint-max-tablet) {
+                order: 2;
+            }
+        }
+
+        .about__header-img {
+
+            @media (min-width: $breakpoint-min-desktop) {
+                position: absolute;
+                right: 22%;
+                top: -75px;
+                rotate: 15deg;
+            }
+
+            @media (max-width: $breakpoint-max-tablet) {
+                display: flex;
+                justify-content: center;
+
+                height: 120px;
+                order: 1;
+                rotate: -10deg;
+                translate: -92px 0;
+            }
+
+            .pixelart__nintendo-switch {
+                @include nintendo_switch;
+            }
+        }        
+    }
+
     .window {
         margin: 0 auto;
         max-width: 1024px;
