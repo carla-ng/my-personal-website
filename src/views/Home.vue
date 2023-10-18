@@ -99,13 +99,17 @@ $bubble-border: 0 -4px #fff,
         @media (max-width: $breakpoint-max-mobile) { align-items: center; }
 
         .home__image {
-            height: 320px;
+            height: 300px;
             margin: 0 auto;
             max-width: 300px;
             width: 100%;
 
             @media (min-width: $breakpoint-min-desktop) { flex: 0 0 30%; }
-            @media (max-width: $breakpoint-max-tablet) { order: 2; }
+
+            @media (max-width: $breakpoint-max-tablet) {
+                margin: 2rem auto 0 auto;
+                order: 2;
+            }
 
             & > .home__image-pixelart {
                 scale: 3;
@@ -201,7 +205,7 @@ $bubble-border: 0 -4px #fff,
     }
 
     .home__pixelart {
-        margin: 0 auto 2rem auto;
+        margin: 0 auto;
         @media (min-width: $breakpoint-min-desktop) { margin: 0 2rem; }
         @media (max-width: $breakpoint-max-tablet) { order: 3; }
 
