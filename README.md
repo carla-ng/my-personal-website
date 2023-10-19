@@ -30,7 +30,6 @@ https://carla-nardone.netlify.app/
 <br/>
 
 ## To Do List / Possible Future Improvements and Features
-* Create website logo _(in progress)_
 * Add animations
 * Add button to take user back to the top of the current page
 * Add Resume download

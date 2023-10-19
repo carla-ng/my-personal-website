@@ -4,7 +4,10 @@
 
         <div class="nav__top">
             <div class="nav__top--logo">
-                <router-link to="/">LOGO</router-link>
+                <router-link to="/">
+                    <span>Carla</span>
+                    <span>Nardone</span>
+                </router-link>
             </div>
 
             <div class="nav__top--hamburger" @click="toggleNavVisibility">
@@ -97,7 +100,7 @@ export default {
 
 
 #nav {
-    margin: 2rem auto 3rem auto;
+    margin: 2rem auto 4rem auto;
     max-width: 1250px;
 
     display: flex;
@@ -125,12 +128,41 @@ export default {
         }
 
         .nav__top--logo {
+            @media (min-width: $breakpoint-min-desktop) { margin: 0 0 1rem 0; }
             
             a {
-                font-size: $font-size-28px;
+                -webkit-text-stroke: 1px #232323;   
+                font-family: $font-family-02;
                 font-weight: 700;
-                text-align: center;
                 text-decoration: none;
+                text-shadow: 3px 3px 2px #5b5b5b;
+                text-transform: uppercase;
+
+                @media (min-width: $breakpoint-min-desktop) {
+                    display: block;
+                    font-size: $font-size-32px;
+                    line-height: 1.1;
+                    text-align: center;
+                }
+
+                @media (max-width: $breakpoint-max-tablet) {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: $font-size-28px;
+                    letter-spacing: 2px;
+                    line-height: 1.2;
+                }
+
+                & > span {
+                    &:first-child {
+                        color: #f78caf;
+                    }
+
+                    &:nth-child(2) {
+                        color: #f78caf;
+                        @media (min-width: $breakpoint-min-desktop) { margin-left: 1.2rem; }
+                    }
+                }
             }
         }
 

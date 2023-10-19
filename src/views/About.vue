@@ -21,7 +21,7 @@
 
             <div class="window__inner-container">
                 <div class="window__bar">
-                    <span class="window__bar-title"> Carla Nardone ({{ currentIndex + 1 }}/2) </span>
+                    <span class="window__bar-title"> Quién soy ({{ currentIndex + 1 }}/2) </span>
 
                     <div class="window__bar-buttons disabled-button">
                         <span>X</span>
@@ -264,7 +264,7 @@ export default {
             @media (min-width: $breakpoint-min-desktop) {
                 position: absolute;
                 right: 22%;
-                top: -75px;
+                top: -65px;
                 rotate: 15deg;
             }
 
