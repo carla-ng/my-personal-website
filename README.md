@@ -31,7 +31,6 @@ https://carla-nardone.netlify.app/
 
 ## To Do List / Possible Future Improvements and Features
 * Add animations
-* Add button to take user back to the top of the current page
 * Add Resume download
 * Perform all relevant tests (NO tests have been performed yet!)
 * Dark theme

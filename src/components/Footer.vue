@@ -1,12 +1,25 @@
 <template>
 
+    <ScrollToTopButton></ScrollToTopButton>
+
     <footer class="footer">
-        <a class="footer__link" href="https://github.com/carla-ng/" target="_blank">
+        <a class="footer__link" href="https://github.com/carla-ng/my-personal-website" target="_blank">
             Hecho con <span class="footer__link--heart"></span> por Carla Nardone
         </a>
     </footer>
 
 </template>
+
+
+<script>
+import ScrollToTopButton from './ScrollToTopButton.vue';
+
+export default {
+    components: {
+        ScrollToTopButton
+    }
+}
+</script>
 
 
 <style lang="scss" scoped>

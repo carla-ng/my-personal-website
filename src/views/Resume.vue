@@ -418,13 +418,13 @@ export default {
                                 margin-bottom: 0.2rem;
                             }
 
-                            .window__text-time ::v-deep {
+                            :deep(.window__text-time) {
                                 font-style: italic;
 
                                 & > span { font-style: normal; }
                             }
 
-                            .window__text-description ::v-deep {
+                            :deep(.window__text-description) {
 
                                 ul {
                                     li { margin-top: 0.5rem; }
@@ -449,7 +449,7 @@ export default {
 
     .resume__skills {
 
-        & > div ::v-deep {
+        & > :deep(div) {
             margin-bottom: 1rem;
 
             display: flex;

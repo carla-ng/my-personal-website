@@ -30,8 +30,8 @@ export default {
     padding: 0.5rem 1rem;
     width: fit-content;
 
-    background: rgba($accent-color-02, 0.1);
-    box-shadow: inset (-4px) (-4px) 0px 0px rgba($accent-color-02, 0.3);
+    background: #fff4d6;
+    box-shadow: inset (-4px) (-4px) 0px 0px #ffe09a;
     position: relative;
     text-align: center;
 
