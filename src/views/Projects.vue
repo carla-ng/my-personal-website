@@ -13,6 +13,16 @@
 
     <section class="projects">
 
+        <article>
+            <div class="project-explanation">
+                <div class="pixelart__project-explanation"></div>
+                <SpeechBubble speechbubble_text='Si quieres saber más sobre algún proyecto, haz click en su botón de <div class="window__bar-buttons"> <span>?</span></div> para ver el archivo README de su repositorio'
+                              speechbubble_position='top-left'>
+                </SpeechBubble>
+            </div>
+        </article>
+
+
         <article class="project-group">
 
             <header class="project-group__header">
@@ -40,6 +50,7 @@
                             :tags="project.tags"
                             :urls="project.urls"
                             :repo="project.repo"
+                            :subrepo="project.subrepo"
                 ></SmallWindow>
             </div>
 
@@ -75,6 +86,7 @@
                             :tags="project.tags"
                             :urls="project.urls"
                             :repo="project.repo"
+                            :subrepo="project.subrepo"
                 ></SmallWindow>
             </div>
         </article>
@@ -116,13 +128,15 @@ import { ref } from 'vue';
 
 import AlertBox from '@/components/AlertBox.vue';
 import SmallWindow from '@/components/SmallWindow.vue';
+import SpeechBubble from '@/components/SpeechBubble.vue';
 
 export default {
     name: 'Projects',
 
     components: {
         AlertBox,
-        SmallWindow
+        SmallWindow,
+        SpeechBubble
     },
 
     setup() {
@@ -142,12 +156,13 @@ export default {
             {
                 title: 'Space Tourism',
                 intro: 'Sitio web sobre turismo espacial.',
-                description: 'Forma parte de un proyecto personal para practicar desarrollo web, en el cual se pueden encontrar otros pequeños proyectos (para más información hacer click en opción de "Código").',
+                description: 'Forma parte de un repositorio personal para practicar desarrollo web, en el cual se pueden encontrar otros pequeños proyectos (para más información ver el proyecto de "Web Development" incluido en esta sección).',
                 tags: ['Vue','JavaScript','SCSS'],
                 urls: [
-                    { code: 'https://github.com/carla-ng/web-development-practice/', demo: 'https://carla-ng-space-tourism.netlify.app/' }
+                    { code: 'https://github.com/carla-ng/web-development-practice/tree/main/space-tourism-website', demo: 'https://carla-ng-space-tourism.netlify.app/' }
                 ],
-                repo: 'web-development-practice'
+                repo: 'web-development-practice',
+                subrepo: 'space-tourism-website'
             },
             {
                 title: '50 JS Projects',
@@ -158,6 +173,16 @@ export default {
                     { code: 'https://github.com/carla-ng/50-javascript-projects/', demo: 'https://carla-ng.github.io/50-javascript-projects/' }
                 ],
                 repo: '50-javascript-projects'
+            },
+            {
+                title: 'Web Development',
+                intro: 'De todo un poco.',
+                description: 'En este repositorio incluyo mini-proyectos, no relacionados entre sí, para practicar distintas tecnologías de forma rápida y sencilla. Un ejemplo de este repositorio es el proyecto ya mencionado de "Space Tourism Website", el cual he destacado por ser el más grande de este respositorio.',
+                tags: ['SCSS','Vue','React','JavaScript'],
+                urls: [
+                    { code: 'https://github.com/carla-ng/web-development-practice/' }
+                ],
+                repo: 'web-development-practice'
             },
             {
                 title: 'CSS Animations',
@@ -199,18 +224,6 @@ export default {
                 ],
                 repo: 'who-is-that-pokemon'
             },
-            /*
-            {
-                title: 'Tic Tac Toe',
-                intro: 'Mini juego de tres en raya.',
-                description: 'Juego sencillo de dos personas basado en el clásico "tres en raya".',
-                tags: ['Vue','JavaScript','TailwindCSS'],
-                urls: [
-                    { code: 'https://github.com/carla-ng/vue-tic-tac-toe/', demo: 'https://carla-ng-vue-tic-tac-toe.netlify.app/' }
-                ],
-                repo: 'vue-tic-tac-toe'
-            }
-            */
         ])
 
 
@@ -224,7 +237,8 @@ export default {
                 urls: [
                     { example: 'https://carla-ng.github.io/my-portfolio/' }
                 ],
-                repo: 'my-portfolio'
+                repo: 'my-portfolio',
+                subrepo: 'subrepositories/components'
             },
             {
                 title: 'Sitio Web Apensar',
@@ -234,7 +248,8 @@ export default {
                 urls: [
                     { comingsoon: '#' }
                 ],
-                repo: 'my-portfolio'
+                repo: 'my-portfolio',
+                subrepo: 'subrepositories/apensar-website'
             },
             {
                 title: 'Demo Juego Apensar',
@@ -244,7 +259,8 @@ export default {
                 urls: [
                     { comingsoon: '#' }
                 ],
-                repo: 'my-portfolio'
+                repo: 'my-portfolio',
+                subrepo: 'subrepositories/apensar-demo'
             },
         ])
 
@@ -285,7 +301,48 @@ export default {
 @import '@/assets/styles/global.scss';
 
 .projects {
+
+    .project-group {
+        margin-top: 2rem;
+    }
+
     .secondary-title { margin-top: 6rem; }
+
+    .project-explanation {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        height: 225px;
+        margin: 0 auto 4rem auto;
+        max-width: 675px;
+        padding: 0 1rem;
+        position: relative;
+        
+        @media (min-width: $breakpoint-min-tablet) { height: 165px; }
+
+        @media (min-width: $breakpoint-min-desktop) {
+            height: 155px;
+            margin: 0 auto 7rem auto;
+        }
+
+        .pixelart__project-explanation {
+            position: absolute;
+            top: 0;
+            left: 2rem;
+
+            @include trainer;
+        }
+
+        :deep(.speechbubble) {
+            margin: 0 auto;
+            max-width: none;
+            width: 100%;
+
+            .window__bar-buttons { display: inline-block; }
+        }
+    }
 
     .project-group__header {
         @media (max-width: $breakpoint-max-tablet) {

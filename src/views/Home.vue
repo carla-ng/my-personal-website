@@ -26,7 +26,9 @@
             </div>
 
             <div class="home__pixelart mobile">
-                <div class="home__pixelart-speechbubble">Todo el Pixel Art en esta web ha sido hecho por mí con CSS</div>
+                <SpeechBubble speechbubble_text='Todo el Pixel Art en esta web ha sido hecho por mí con CSS'
+                              speechbubble_position='top-left'>
+                </SpeechBubble>
             </div>
 
             <div class="home__intro">
@@ -41,7 +43,9 @@
 
 
         <div class="home__pixelart desktop">
-            <div class="home__pixelart-speechbubble">Todo el Pixel Art en esta web ha sido hecho por mí con CSS</div>
+            <SpeechBubble speechbubble_text='Todo el Pixel Art en esta web ha sido hecho por mí con CSS'
+                          speechbubble_position='top-left'>
+            </SpeechBubble>
         </div>
 
     </main>
@@ -51,12 +55,14 @@
 
 <script>
 import AlertBox from '@/components/AlertBox.vue';
+import SpeechBubble from '@/components/SpeechBubble.vue';
 
 export default {
     name: "Home",
 
     components: {
-        AlertBox
+        AlertBox,
+        SpeechBubble
     },
 }
 </script>
@@ -70,18 +76,6 @@ $heart-main-color: rgba(247, 156, 186, 1);
 $heart-shadow-color: rgba(245, 105, 153, 1);
 $heart-light-color: #fff;
 
-$bubble-border: 0 -4px #fff, 
-                0 -8px #000, 
-                4px 0 #fff, 
-                4px -4px #000, 
-                8px 0 #000, 
-                0 4px #fff, 
-                0 8px #000, 
-                -4px 0 #fff, 
-                -4px  4px #000, 
-                -8px 0 #000, 
-                -4px -4px #000, 
-                4px 4px #000;
 
 .home {
     max-width: 875px;
@@ -208,55 +202,6 @@ $bubble-border: 0 -4px #fff,
         margin: 0 auto;
         @media (min-width: $breakpoint-min-desktop) { margin: 0 2rem; }
         @media (max-width: $breakpoint-max-tablet) { order: 3; }
-
-        .home__pixelart-speechbubble {
-            background-color: #fff;
-            box-sizing: border-box;
-            color: #000;
-            display: inline-block;
-            font-family: $font-family-02;
-            font-size: $font-size-12px;
-            margin: 1rem 0;
-            padding: 0.3rem 0.6rem;
-            position: relative;
-            text-align: left;
-            width: 100%;
-
-            @media (min-width: $breakpoint-min-desktop) {
-                font-size: $font-size-14px;
-                width: 70%;
-            }
-
-            @media (max-width: $breakpoint-max-tablet) { max-width: 325px; }
-
-            box-shadow: $bubble-border, 4px 12px rgba(0,0,0,0.1), 12px 4px rgba(0,0,0,0.1), 12px 8px rgba(0,0,0,0.1);
-
-            &::after {
-                content: '';
-                display: block;
-                position: absolute;
-                box-sizing: border-box;
-
-                height: 4px;
-                width: 4px;
-                top: -8px;
-                left: 32px;
-                box-shadow: 
-                    0 -4px #000, 
-                    0 -8px #000, 
-                    0 -12px #000, 
-                    0 -4*4px #000, 
-                    -4px -12px #000, 
-                    -8px -8px #000, 
-                    -12px -4px #000, 
-                    -4px -4px #fff, 
-                    -8px -4px #fff, 
-                    -4px -8px #fff, 
-                    -4px 0 #fff, 
-                    -8px 0 #fff, 
-                    -12px 0 #fff;
-            }
-        }
     }
 }
 

@@ -68,7 +68,7 @@ export default {
     right: 14px;
     z-index: 1;
     
-    @media (min-width: $breakpoint-min-desktop) {
+    @media (min-width: $breakpoint-min-desktop) { 
         bottom: 32px;
         right: 24px;
     }
@@ -80,6 +80,8 @@ export default {
         svg {
             color: $black;
             height: 20px;
+            margin-left: -2px;
+            margin-top: -2px;
             transform: rotateZ(90deg);
             width: 20px;
 

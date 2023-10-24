@@ -34,7 +34,7 @@
                     <li v-if="urls[0].code">
                         <a :href="urls[0].code" target="_blank">
                             <button class="window__buttons-code">
-                                <span>Código</span>
+                                <span>Repositorio</span>
                             </button>
                         </a>
                     </li>
@@ -87,7 +87,8 @@ export default {
         description: String,    // window description
         tags: Array,            // window tags
         urls: Array,            // window URLs for buttons
-        repo: String            // repository name for Code button
+        repo: String,           // repository name for Code button
+        subrepo: String         // specifies if is subfolder in repository
     },
 
     components: {
@@ -145,7 +146,13 @@ export default {
                 // Loop through the branch names and try fetching README content
                 let readmeContent = null
                 for ( const branch of branchesToCheck ) {
-                    readmeContent = await fetchReadmeContent(`https://raw.githubusercontent.com/carla-ng/${props.repo}/${branch}`)
+                    
+                    // Check if repository is actually a subfolder in a bigger repository
+                    if ( props.subrepo ) {
+                        readmeContent = await fetchReadmeContent(`https://raw.githubusercontent.com/carla-ng/${props.repo}/${branch}/${props.subrepo}`)
+                    } else {
+                        readmeContent = await fetchReadmeContent(`https://raw.githubusercontent.com/carla-ng/${props.repo}/${branch}`)
+                    }
 
                     if ( readmeContent ) {
                         break;  // if content is found, exit the loop
@@ -259,6 +266,7 @@ export default {
                     &.scss { background-color: $accent-color-05; }
                     &.jquery { background-color: $accent-color-06; }
                     &.bootstrap { background-color: #553c7b; }
+                    &.react { background-color: #61dbfb; }
                    
                 }
             }

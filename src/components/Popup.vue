@@ -143,7 +143,7 @@ export default {
 
         .popup__content {
             overflow-y: scroll;
-            padding: 3rem 2rem;
+            padding: 3rem 2rem 4rem 2rem;
 
             height: -moz-available;          /* WebKit-based browsers will ignore this. */
             height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */

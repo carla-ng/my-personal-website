@@ -36,7 +36,7 @@ $headline-h3-color: $headline-h1-color;
 $accent-color-01: #41b883;
 $accent-color-02: #ffb310;
 $accent-color-03: #8484ff;
-$accent-color-04: #38bdf8;
+$accent-color-04: #0096d6;
 $accent-color-05: #e560b2;
 $accent-color-06: #0868ac;
 
@@ -343,35 +343,36 @@ a { color: $accent-color-05;}
         text-shadow: 1px 1px 3px #4d4d4d;
         white-space: nowrap;
     }
+}
 
-    .window__bar-buttons {
-        cursor: pointer;
-        position: relative;
-        
-        &:active:not(.disabled-button) {
-            transform: translateY(2px);
+.window__bar-buttons {
+    cursor: pointer;
+    position: relative;
+    
+    &:active:not(.disabled-button) {
+        transform: translateY(2px);
 
-            span { box-shadow: none; }
-        }
-
-        &.disabled-button {
-            span {
-                box-shadow: none;
-                opacity: 0.5;
-                pointer-events: none;
-            }  
-        }
+        span { box-shadow: none; }
     }
 
-    .window__bar-buttons span, .window__bar-button {
-        background-color: $palette-color-01;
-        border: 1px solid $palette-color-04;
-        border-radius: 2px;
-        box-shadow: 2px 2px 0px #919191;
-        color: $font-color-01;
-        padding: 0 0.3rem;
-        user-select: none;
+    &.disabled-button {
+        span {
+            box-shadow: none;
+            opacity: 0.5;
+            pointer-events: none;
+        }  
     }
+}
+
+.window__bar-buttons span, .window__bar-button {
+    background-color: $palette-color-01;
+    border: 1px solid $palette-color-04;
+    border-radius: 2px;
+    box-shadow: 2px 2px 0px #919191;
+    color: $font-color-01;
+    font-family: $font-family-01;
+    padding: 0 0.3rem;
+    user-select: none;
 }
 
 .window__image {
