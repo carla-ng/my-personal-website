@@ -161,10 +161,13 @@ export default {
 
                 img {
                     display: none;
-                    border-radius: 10px;
-                    max-width: 95%;
+                    // border-radius: 10px;
+                    // max-width: 95%;
+                    // @media (min-width: $breakpoint-min-tablet) { max-width: 70%; }
+                }
 
-                    @media (min-width: $breakpoint-min-tablet) { max-width: 70%; }
+                table {
+                    img { display: block; }
                 }
 
                 h1, h2, h3, h4, h5, h6 {

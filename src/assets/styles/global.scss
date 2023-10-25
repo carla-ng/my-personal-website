@@ -26,7 +26,7 @@ $black: #3d3d3d;             // main dark color
 
 
 /* Colors */
-$font-color-01: #000000;
+$font-color-01: #000;
 $font-color-02: #fff;
 
 $headline-h1-color: #161616;
@@ -71,6 +71,7 @@ $breakpoint-min-tablet:      481px;
 $breakpoint-max-tablet:      768px;
 $breakpoint-min-desktop:     769px;
 $breakpoint-min-desktop-lg:  992px;
+$breakpoint-min-desktop-xl:  1024px;
 
 
 
@@ -184,10 +185,12 @@ body {
 }
 
 .page-container {
-    margin: 2rem auto 0 auto;
+    margin: 4rem auto 0 auto;
     max-width: 1140px;
     //min-height: 100vh;
     padding: 0 1.2rem 8rem 1.2rem;
+
+    @media (orientation: landscape) { margin: 2rem auto 0 auto; }
 
     @media (min-width: $breakpoint-min-tablet) { padding: 0 1rem 10rem 1rem; }
 }
@@ -217,10 +220,12 @@ h2 {
     font-size: $font-size-18px;
     line-height: 1.7;
     margin-bottom: 1rem;
+    margin-top: 2rem;
     text-shadow: 5px 5px 2px $palette-color-07;
 
     @media (min-width: $breakpoint-min-tablet) { font-size: $font-size-21px; }
     @media (max-width: $breakpoint-max-tablet) { text-align: center; }
+    @media (min-width: $breakpoint-min-desktop) { margin-top: 6rem; }
 }
 
 h3 {
@@ -259,6 +264,11 @@ p {
 }
 
 span { color: $font-color-01; }
+
+article {
+    display: inline-block;
+    width: 100%;
+}
 
 b, strong { font-weight: 600; }
 

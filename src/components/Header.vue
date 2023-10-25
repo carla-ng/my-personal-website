@@ -38,7 +38,7 @@
             </ul>
         </nav>
 
-        <div class="nav__veil" v-if="showingNav"></div>
+        <div class="nav__veil" v-if="showingNav" @click="toggleNavVisibility"></div>
 
     </header>
 
@@ -100,32 +100,42 @@ export default {
 
 
 #nav {
-    margin: 2rem auto 4rem auto;
+    margin: 0 auto 2rem auto;
     max-width: 1250px;
+    padding: 1.5rem 0;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
+    @media (max-width: $breakpoint-max-tablet) {
+        background-color: #fff;
+        border-bottom: 1px solid $font-color-01;
+    }
+
     @media (orientation: landscape) and (max-width: $breakpoint-max-tablet) {
-        margin: 1rem auto 4rem auto;
+        margin: 0 auto;
+        padding: 1rem 0;
     }
 
     @media (min-width: $breakpoint-min-desktop) {
         align-items: center;
-        margin: 3rem auto 6rem auto;
+        margin: 2rem auto 4rem auto;
     }
 
     .nav__top {
 
         @media (max-width: $breakpoint-max-tablet) {
             display: flex;
+            align-items: center;
             flex-direction: row;
             justify-content: space-between;
 
             padding: 0 1rem;
             position: relative;
         }
+
+        @media (orientation: landscape) { align-items: flex-start; }
 
         .nav__top--logo {
             @media (min-width: $breakpoint-min-desktop) { margin: 0 0 1rem 0; }
@@ -170,6 +180,13 @@ export default {
             @media (max-width: $breakpoint-max-tablet) {
                 cursor: pointer;
                 display: block;
+
+                position: absolute;
+                top: 1.3rem;
+                right: 2rem;
+                z-index: 2;
+
+                @media (orientation: landscape) { top: 1rem; }
 
                 & > span {
                     background-color: $black;
@@ -263,7 +280,7 @@ export default {
         width: 100%;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.8);
-        z-index: 1000;
+        z-index: 1;
     }
 
 
@@ -274,11 +291,6 @@ export default {
             .nav__top {
 
                 .nav__top--hamburger {
-                    position: fixed;
-                    top: 2rem;
-                    right: 1rem;
-                    z-index: 1001;
-
                     span {
                         &:nth-child(1) {
                             translate: 0 7px;
@@ -301,7 +313,7 @@ export default {
                 width: 90%;
 
                 position: fixed;
-                top: 7rem;
+                top: 9rem;
                 left: 50%;
                 right: 0;
                 translate: -50% 0;
@@ -322,10 +334,6 @@ export default {
         }
 
         @media (orientation: landscape) and (max-width: $breakpoint-max-tablet) {
-            .nav__top {
-                .nav__top--hamburger { top: 1rem; }
-            }
-
             .nav__container { top: 3rem; }
         }
     }

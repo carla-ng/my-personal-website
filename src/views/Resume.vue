@@ -108,6 +108,79 @@
                 </div>
             </article>
 
+
+            <article>
+                <h2>Cursos</h2>
+
+                <div class="resume__courses">
+
+                    <div class="window">
+                        <div class="window__inner-container">
+
+                            <header class="window__bar">
+                                <div class="window__bar-title">Destacados online</div>
+                                <div class="window__bar-buttons disabled-button">
+                                    <span>X</span>
+                                </div>
+                            </header>
+
+                            <div class="window__main">
+                                <div class="window__text">
+                                    <div>
+                                        <div class="window__text-description">
+                                            <ul>
+                                                <li v-for="(course,index) in online_courses_history" :key="index">
+                                                    <span>
+                                                        <b>{{ course.name }}</b> (<i>{{ course.where }}</i>, {{ course.time }})
+                                                    </span>
+                                                    <a :href="course.certificate" target="_blank">
+                                                        [Certificado]
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="window">
+                        <div class="window__inner-container">
+
+                            <header class="window__bar">
+                                <div class="window__bar-title">Presenciales</div>
+                                <div class="window__bar-buttons disabled-button">
+                                    <span>X</span>
+                                </div>
+                            </header>
+
+                            <div class="window__main">
+                                <div class="window__text">
+                                    <div>
+                                        <div class="window__text-description">
+                                            <ul>
+                                                <li v-for="(course,index) in in_person_courses_history" :key="index">
+                                                    <span class="course__title">
+                                                        <b>{{ course.name }}</b> ({{ course.time }}):
+                                                    </span>
+                                                    <span class="course__description" v-html="course.description"></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
             
             <article>
                 <h2>Tecnologías y herramientas</h2>
@@ -298,8 +371,55 @@ export default {
         ]
 
 
+        // Online courses
+        const online_courses_history = [
+            {
+                name: 'Vue.js: De cero a experto',
+                time: 'nov. 2022',
+                where: 'Udemy',
+                certificate: 'https://www.udemy.com/certificate/UC-5135eb30-03ef-4708-b632-3a6fc297e3dd/',
+            },
+            {
+                name: 'React JS, Angular & Vue JS - Quickstart & Comparison',
+                time: 'ene. 2022',
+                where: 'Udemy',
+                certificate: 'https://www.udemy.com/certificate/UC-c18fd8a3-9f4c-4bfe-9f12-2edeb00dc475/',
+            },
+            {
+                name: 'Programa tus Primeros Juegos HTML5 con JavaScript',
+                time: 'oct. 2021',
+                where: 'Udemy',
+                certificate: 'https://www.udemy.com/certificate/UC-502e1303-8aab-4e0a-b592-fa2d5a9487f1/',
+            },
+            {
+                name: 'Curso de JavaScript Profesional',
+                time: 'jun. 2020',
+                where: 'OpenWebinars',
+                certificate: 'https://openwebinars.net/cert/ArDqz',
+            },
+            {
+                name: 'Mejores prácticas para la creación de documentación técnica',
+                time: 'mar. 2020',
+                where: 'OpenWebinars',
+                certificate: 'https://openwebinars.net/cert/jn6jy',
+            },
+        ]
+
+
+        // In person courses
+        const in_person_courses_history = [
+            {
+                name: 'Diseño de videojuegos y conceptualización',
+                time: 'Cursando actualmente',
+                description: 'Desarrollar la documentación necesaria para el dossier de un videojuego a nivel profesional como GameDesigner y LevelDesigner, una vez establecidos los elementos requeridos: mecánicas de juego, inteligencia artificial, guión, misiones. Además del diseño con <b><i>Photoshop</i></b> y desarrollo del juego con <b><i>Unity</i></b>.'
+            },
+        ]
+
+
         return {
+            in_person_courses_history,
             job_history,
+            online_courses_history,
             studies_history
         }
     }
@@ -364,6 +484,36 @@ export default {
     article:not(:first-child) {
         h2 { margin-top: 4rem; }
     }
+
+    .resume__courses {
+        .window {
+            margin-bottom: 2rem;
+            .window__inner-container {
+                .window__main {
+                    .window__text {
+                        .window__text-description {
+                            ul {
+                                li {
+                                    margin-bottom: 0.5rem;
+
+                                    a { color: $font-color-01; }
+
+                                    .course__title { text-decoration: underline; }
+
+                                    .course__description {
+                                        display: block;
+                                        margin-top: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .resume__courses, .resume__skills { margin-top: 3rem; }
 
     .resume__job-history, .resume__studies-history {
         margin-top: 3rem;

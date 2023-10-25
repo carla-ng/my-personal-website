@@ -98,6 +98,8 @@ export default {
                         <p>Mi nombre es <strong>Carla</strong>, y soy <strong>Ingeniera de Software especializada en desarrollo Front-end</strong>. Las tecnologías que suelo utilizar son <strong>JavaScript, Vue, jQuery, CSS/SCSS</strong> y <strong>TailwindCSS</strong>. También tengo un poco de experiencia trabajando con Back-end y BBDD, especialmente con <strong>PHP</strong> y <strong>MySQL</strong>. Tengo mucho interés en aprender nuevas tecnologías.</p>
                         <br>
                         <p>Además de la programación, me interesa mucho la <strong>gestión de proyectos</strong>, soy una persona muy <strong>organizada</strong> y <strong>atenta</strong>. Estoy acostumbrada a trabajar con la metodología agile de <strong>Scrum</strong>.</p>
+                        <br>
+                        <p>También estoy interesada en el <strong>desarrollo de videojuegos</strong> y me encuentro actualmente aprendiendo sobre ello (diseño, conceptualización y desarrollo en <strong>Unity</strong>).</p>
                       `,
                 imageSrc: 'assets/images/about/setup.jpg',
             },
@@ -108,8 +110,6 @@ export default {
                         <p>Gracias al <strong>dibujo</strong> y la <strong>pintura</strong>, he tenido la oportunidad de hacer un montón de nuevos amigos, y he podido participar en <strong>concursos de pintura rápida</strong> y hacer <strong>exposiciones colectivas</strong> en centros culturales.</p>
                         <br>
                         <p>En cuanto a los <strong>videojuegos</strong> que me gusta jugar, soy fan de los <strong>RPG</strong> estilo <i>Final Fantasy</i> y <i>Persona</i>, aunque últimamente he estado disfrutando más de los conocidos <strong>cozy games</strong>. Podrás encontrarme jugando principalmente en <strong>Nintendo Switch</strong> y <strong>Steam</strong>.</p>
-                        <br>
-                        <p>También me interesaría aprender en un futuro sobre <strong>desarrollo de videojuegos</strong>.</p>
                         `,
                 imageSrc: 'assets/images/about/art_contest.jpg',
             },
@@ -264,7 +264,7 @@ export default {
             @media (min-width: $breakpoint-min-desktop) {
                 position: absolute;
                 right: 22%;
-                top: -65px;
+                top: -60px;
                 rotate: 15deg;
             }
 
@@ -289,11 +289,12 @@ export default {
         max-width: 1024px;
 
         @media (min-width: $breakpoint-min-tablet) {
-            min-height: 750px;
+            min-height: 980px;
             position: relative;
         }
 
-        @media (min-width: $breakpoint-min-desktop) { min-height: 620px; }
+        @media (min-width: $breakpoint-min-desktop) { min-height: 710px; }
+        @media (min-width: $breakpoint-min-desktop-xl) { min-height: 620px; }
 
         .window__inner-container {
 
@@ -315,7 +316,7 @@ export default {
                 display: flex;
                 flex-direction: column;
 
-                @media (min-width: $breakpoint-min-tablet) {
+                @media (min-width: $breakpoint-min-desktop) {
                     flex-direction: row;
 
                     height: -moz-available;          /* WebKit-based browsers will ignore this. */
@@ -332,7 +333,7 @@ export default {
 
                     align-items: center;
 
-                    @media (min-width: $breakpoint-min-tablet) {
+                    @media (min-width: $breakpoint-min-desktop) {
                         height: 450px;
                         margin: 0 2rem;
                         width: 45%;
@@ -346,7 +347,7 @@ export default {
                     flex-direction: column;
                     justify-content: space-between;
 
-                    @media (min-width: $breakpoint-min-tablet) {
+                    @media (min-width: $breakpoint-min-desktop) {
                         margin: 1rem 2rem 1rem 1rem;
                         width: 55%;
                     }
@@ -368,7 +369,7 @@ export default {
                             padding: 0.2rem;
                             width: 50%;
 
-                            @media (min-width: $breakpoint-min-tablet) {
+                            @media (min-width: $breakpoint-min-desktop) {
                                 margin: 0 1rem;
                                 width: fit-content;
                             }
@@ -381,7 +382,7 @@ export default {
                                 padding: 0 1rem;
                                 width: 100%;
 
-                                @media (min-width: $breakpoint-min-tablet) { padding: 0 2rem; }
+                                @media (min-width: $breakpoint-min-desktop) { padding: 0 2rem; }
                                 
                                 span {
                                     display: block;
@@ -451,7 +452,7 @@ export default {
         height: 100%;
         overflow: auto;
         width: 100%;
-        z-index: 1;
+        z-index: 2;
 
         background-color: rgb(0, 0, 0);
         background-color: rgba(0, 0, 0, 0.5);

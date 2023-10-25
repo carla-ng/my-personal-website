@@ -301,13 +301,6 @@ export default {
 @import '@/assets/styles/global.scss';
 
 .projects {
-
-    .project-group {
-        margin-top: 2rem;
-    }
-
-    .secondary-title { margin-top: 6rem; }
-
     .project-explanation {
         display: flex;
         align-items: center;
@@ -315,16 +308,19 @@ export default {
         justify-content: flex-end;
 
         height: 225px;
-        margin: 0 auto 4rem auto;
-        max-width: 675px;
+        margin: 0 auto 3rem auto;
+        max-width: 320px;
         padding: 0 1rem;
         position: relative;
         
-        @media (min-width: $breakpoint-min-tablet) { height: 165px; }
+        @media (min-width: $breakpoint-min-tablet) {
+            height: 165px;
+            max-width: 675px;
+        }
 
         @media (min-width: $breakpoint-min-desktop) {
             height: 155px;
-            margin: 0 auto 7rem auto;
+            margin: 0 auto 1rem auto;
         }
 
         .pixelart__project-explanation {
@@ -340,8 +336,16 @@ export default {
             max-width: none;
             width: 100%;
 
-            .window__bar-buttons { display: inline-block; }
+            .window__bar-buttons {
+                display: inline-block;
+                top: -0.2rem;
+                @media (min-width: $breakpoint-min-desktop) { top: -0.3rem; }
+            }
         }
+    }
+
+    .project-group {
+        @media (max-width: $breakpoint-max-tablet) { margin-top: 3rem; }
     }
 
     .project-group__header {
@@ -425,7 +429,7 @@ export default {
                 height: 140px;
                 order: 1;
                 rotate: -8deg;
-                translate: -85px 0;
+                translate: -85px 35px;
             }
 
             .pixelart__super-nintendo-controller {
