@@ -34,7 +34,7 @@
                     <li v-if="urls[0].code">
                         <a :href="urls[0].code" target="_blank" class="os-button">
                             <button class="window__buttons-code os-button__button">
-                                <span>Repo</span>
+                                <span>Repositorio</span>
                             </button>
                         </a>
                     </li>
@@ -224,12 +224,10 @@ export default {
 
 
 <style lang="scss" scoped>
-@import '@/assets/styles/global.scss';
-
 .window {
     padding: 0.2rem;
 
-    @media (max-width: $breakpoint-max-mobile) { margin: 2rem 0; }
+    @media (max-width: $breakpoint-max-tablet) { margin: 2rem 0; }
 
     .window__inner-container {
 
@@ -245,7 +243,7 @@ export default {
                 flex-wrap: wrap;
                 margin: 0.7rem 0.5rem;
 
-                @media (min-width: $breakpoint-min-tablet) { min-height: 3.7rem; }
+                @media (min-width: $breakpoint-min-desktop) { min-height: 3.7rem; }
 
                 span {
                     background-color: $palette-color-04;

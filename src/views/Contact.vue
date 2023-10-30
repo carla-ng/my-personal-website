@@ -48,8 +48,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import '@/assets/styles/global.scss';
-
 .contact-page {
     .primary-text {
         @media (max-width: $breakpoint-max-mobile) { margin-bottom: 1rem; }

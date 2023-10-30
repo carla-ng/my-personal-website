@@ -263,7 +263,7 @@
 
             <article>
                 <div class="resume__download">
-                    <div class="resume__download-title secondary-text">Si lo deseas, puedes descargar mi <b>currículum</b> tanto en
+                    <div class="resume__download-title secondary-text">Si lo deseas, puedes <b>descargar mi currículum</b> tanto en
                         <div class="os-button" @click="downloadCVSpanish">
                             <button class="os-button__button">
                                 <span>español</span>
@@ -470,8 +470,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import '@/assets/styles/global.scss';
-
 .resume__header {
     @media (max-width: $breakpoint-max-tablet) {
         display: flex;
@@ -486,9 +484,7 @@ export default {
             max-width: 90%;
         }
 
-        @media (max-width: $breakpoint-max-tablet) {
-            order: 2;
-        }
+        @media (max-width: $breakpoint-max-tablet) { order: 2; }
     }
 
     .resume__header-img {
@@ -500,9 +496,7 @@ export default {
             rotate: -12deg;
         }
 
-        @media (min-width: $breakpoint-min-desktop-lg) {
-            right: 25%;
-        }
+        @media (min-width: $breakpoint-min-desktop-lg) { right: 25%; }
 
         @media (max-width: $breakpoint-max-tablet) {
             display: flex;
@@ -526,56 +520,6 @@ export default {
     article:not(:first-child) {
         h2 { margin-top: 4rem; }
     }
-
-    .resume__courses {
-        .window {
-            margin-bottom: 2rem;
-            .window__inner-container {
-                .window__main {
-                    .window__text {
-                        .window__text-description {
-                            ul {
-                                li {
-                                    margin-bottom: 0.5rem;
-
-                                    a { color: $font-color-01; }
-
-                                    .course__title { text-decoration: underline; }
-
-                                    .course__description {
-                                        display: block;
-                                        margin-top: 0.5rem;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .resume__download {
-        margin-top: 4rem;
-
-        @media (max-width: $breakpoint-max-tablet) { text-align: center; }
-
-        .resume__download-title {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: none;
-            line-height: 2;
-
-            .os-button {
-                display: inline-block;
-                margin: 0 0.3rem;
-                line-height: 1.5;
-                width: fit-content;
-            }
-        }
-    }
-
-    .resume__courses, .resume__skills { margin-top: 3rem; }
 
     .resume__job-history, .resume__studies-history {
         margin-top: 3rem;
@@ -659,7 +603,39 @@ export default {
         }
     }
 
+    .resume__courses {
+        margin-top: 3rem;
+
+        .window {
+            margin-bottom: 2rem;
+            .window__inner-container {
+                .window__main {
+                    .window__text {
+                        .window__text-description {
+                            ul {
+                                li {
+                                    margin-bottom: 0.5rem;
+
+                                    a { color: $font-color-01; }
+
+                                    .course__title { text-decoration: underline; }
+
+                                    .course__description {
+                                        display: block;
+                                        margin-top: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .resume__skills {
+        margin-top: 3rem;
+
 
         & > :deep(div) {
             margin-bottom: 1rem;
@@ -693,6 +669,26 @@ export default {
             }
         }
         
+    }
+
+    .resume__download {
+        margin-top: 6rem;
+
+        @media (max-width: $breakpoint-max-tablet) { text-align: center; }
+
+        .resume__download-title {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: none;
+            line-height: 2;
+
+            .os-button {
+                display: inline-block;
+                margin: 0 0.3rem;
+                line-height: 1.5;
+                width: fit-content;
+            }
+        }
     }
 }
 </style>

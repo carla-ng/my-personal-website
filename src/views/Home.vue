@@ -69,8 +69,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import '@/assets/styles/global.scss';
-
 $heart-border-color: #000;
 $heart-main-color: rgba(247, 156, 186, 1);
 $heart-shadow-color: rgba(245, 105, 153, 1);

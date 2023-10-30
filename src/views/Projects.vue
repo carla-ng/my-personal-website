@@ -298,9 +298,180 @@ export default {
 
 
 <style lang="scss" scoped>
-@import '@/assets/styles/global.scss';
-
 .projects {
+
+    .project-group {
+        @media (max-width: $breakpoint-max-tablet) { margin-top: 3rem; }
+
+        .project-group__header {
+            @media (max-width: $breakpoint-max-tablet) {
+                display: flex;
+                flex-direction: column;
+            }
+
+            @media (min-width: $breakpoint-min-desktop) { position: relative; }
+
+            .project-group__info {
+                @media (min-width: $breakpoint-min-desktop) {
+                    margin: 0 auto;
+                    max-width: 90%;
+                }
+
+                @media (max-width: $breakpoint-max-tablet) {
+                    order: 2;
+                }
+
+                p.secondary-text {
+                    @media (min-width: $breakpoint-min-desktop) { max-width: 620px; }
+                    @media (min-width: $breakpoint-min-desktop-lg) { max-width: 700px; }
+                }
+            }
+
+            .project-group__img {
+
+                @media (min-width: $breakpoint-min-desktop) {
+                    position: absolute;
+                    right: 10%;
+                    top: 85px;
+                }
+
+                @media (max-width: $breakpoint-max-tablet) {
+                    display: flex;
+                    justify-content: center;
+
+                    height: 120px;
+                    order: 1;
+                    translate: -35px 0;
+                }
+
+                .pixelart__blastoise {
+                    @include blastoise;
+                }
+            }        
+        }
+
+        .project-group__header-professional {
+            @media (max-width: $breakpoint-max-tablet) {
+                display: flex;
+                flex-direction: column;
+            }
+
+            @media (min-width: $breakpoint-min-desktop) { position: relative; }
+
+            .project-group__info {
+                @media (min-width: $breakpoint-min-desktop) {
+                    max-width: 75%;
+                }
+
+                @media (max-width: $breakpoint-max-tablet) {
+                    order: 2;
+                }
+            }
+
+            .project-group__img {
+
+                @media (min-width: $breakpoint-min-desktop) {
+                    position: absolute;
+                    right: 24%;
+                    top: 5px;
+                    rotate: -11deg;
+                }
+
+                @media (max-width: $breakpoint-max-tablet) {
+                    display: flex;
+                    justify-content: center;
+
+                    height: 140px;
+                    order: 1;
+                    rotate: -8deg;
+                    translate: -85px 35px;
+                }
+
+                .pixelart__super-nintendo-controller {
+                    @include super_nintendo_controller;
+                }
+            }        
+        }
+
+        .projects__list {
+            @media (min-width: $breakpoint-min-desktop) {
+                display: grid;
+                gap: 1.5rem;
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 3rem;
+                max-width: 100%;
+            }
+
+            @media (min-width: $breakpoint-min-desktop-lg) { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .projects__github-profile { margin-top: 4rem; }
+
+        .projects__github-list {
+            ul {
+                    list-style: none;
+                    margin: 0 auto;
+                    max-width: 800px;
+                    padding: 0 1rem;
+                
+                    li {
+                        display: flex;
+                        flex-direction: row;
+
+                        margin-bottom: 1.5rem;
+                        line-height: 1rem;
+
+                        &:before {
+                            content: '';
+                            background-image: url('/assets/images/heart.svg');
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            color: $accent-color-03;
+                            display: inline-block;
+                            font-size: $font-size-21px;
+                            height: 18px;
+                            width: 18px;
+
+                            flex: 1;
+                        }
+
+                        a {
+                            text-decoration: none;
+
+                            flex: 9;
+                            @media (min-width: $breakpoint-min-desktop) { flex: 19; }
+
+                            div {
+                                &.projects__github-list__title {
+                                    color: $accent-color-05;
+                                    font-family: $font-family-02;
+                                    font-size: $font-size-14px;
+                                    letter-spacing: 0.1rem;
+
+                                    @media (max-width: $breakpoint-max-mobile) {  margin-bottom: 0.7rem; }
+
+                                    .projects__github-list__fork {
+                                        color: $accent-color-05;
+                                        font-size: $font-size-13px;
+                                        font-style: italic;
+                                    }
+                                }
+                            }
+
+                            span {
+                                &.projects__github-list__description {
+                                    color: $font-color-01;
+                                    font-family: $font-family-02;
+                                    font-size: $font-size-13px;
+                                    letter-spacing: 0.1rem;
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+    }
+
     .project-explanation {
         display: flex;
         align-items: center;
@@ -342,178 +513,6 @@ export default {
                 @media (min-width: $breakpoint-min-desktop) { top: -0.3rem; }
             }
         }
-    }
-
-    .project-group {
-        @media (max-width: $breakpoint-max-tablet) { margin-top: 3rem; }
-    }
-
-    .project-group__header {
-        @media (max-width: $breakpoint-max-tablet) {
-            display: flex;
-            flex-direction: column;
-        }
-
-        @media (min-width: $breakpoint-min-desktop) { position: relative; }
-
-        .project-group__info {
-            @media (min-width: $breakpoint-min-desktop) {
-                margin: 0 auto;
-                max-width: 90%;
-            }
-
-            @media (max-width: $breakpoint-max-tablet) {
-                order: 2;
-            }
-
-            p.secondary-text {
-                @media (min-width: $breakpoint-min-desktop) { max-width: 620px; }
-                @media (min-width: $breakpoint-min-desktop-lg) { max-width: 700px; }
-            }
-        }
-
-        .project-group__img {
-
-            @media (min-width: $breakpoint-min-desktop) {
-                position: absolute;
-                right: 10%;
-                top: 85px;
-            }
-
-            @media (max-width: $breakpoint-max-tablet) {
-                display: flex;
-                justify-content: center;
-
-                height: 120px;
-                order: 1;
-                translate: -35px 0;
-            }
-
-            .pixelart__blastoise {
-                @include blastoise;
-            }
-        }        
-    }
-
-    .project-group__header-professional {
-        @media (max-width: $breakpoint-max-tablet) {
-            display: flex;
-            flex-direction: column;
-        }
-
-        @media (min-width: $breakpoint-min-desktop) { position: relative; }
-
-        .project-group__info {
-            @media (min-width: $breakpoint-min-desktop) {
-                max-width: 75%;
-            }
-
-            @media (max-width: $breakpoint-max-tablet) {
-                order: 2;
-            }
-        }
-
-        .project-group__img {
-
-            @media (min-width: $breakpoint-min-desktop) {
-                position: absolute;
-                right: 24%;
-                top: 5px;
-                rotate: -11deg;
-            }
-
-            @media (max-width: $breakpoint-max-tablet) {
-                display: flex;
-                justify-content: center;
-
-                height: 140px;
-                order: 1;
-                rotate: -8deg;
-                translate: -85px 35px;
-            }
-
-            .pixelart__super-nintendo-controller {
-                @include super_nintendo_controller;
-            }
-        }        
-    }
-
-    .projects__list {
-        @media (min-width: $breakpoint-min-tablet) {
-            display: grid;
-            gap: 1.5rem;
-            grid-template-columns: repeat(2, 1fr);
-            margin-top: 3rem;
-            max-width: 100%;
-        }
-
-        @media (min-width: $breakpoint-min-desktop) { grid-template-columns: repeat(3, 1fr); }
-    }
-
-    .projects__github-profile { margin-top: 4rem; }
-
-    .projects__github-list {
-       ul {
-            list-style: none;
-            margin: 0 auto;
-            max-width: 800px;
-            padding: 0 1rem;
-        
-            li {
-                display: flex;
-                flex-direction: row;
-
-                margin-bottom: 1.5rem;
-                line-height: 1rem;
-
-                &:before {
-                    content: '';
-                    background-image: url('/assets/images/heart.svg');
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    color: $accent-color-03;
-                    display: inline-block;
-                    font-size: $font-size-21px;
-                    height: 18px;
-                    width: 18px;
-
-                    flex: 1;
-                }
-
-                a {
-                    text-decoration: none;
-
-                    flex: 9;
-                    @media (min-width: $breakpoint-min-desktop) { flex: 19; }
-
-                    div {
-                        &.projects__github-list__title {
-                            color: $accent-color-05;
-                            font-family: $font-family-02;
-                            font-size: $font-size-14px;
-                            letter-spacing: 0.1rem;
-
-                            @media (max-width: $breakpoint-max-mobile) {  margin-bottom: 0.7rem; }
-
-                            .projects__github-list__fork {
-                                color: $accent-color-05;
-                                font-size: $font-size-13px;
-                                font-style: italic;
-                            }
-                        }
-                    }
-
-                    span {
-                        &.projects__github-list__description {
-                            color: $font-color-01;
-                            font-family: $font-family-02;
-                            font-size: $font-size-13px;
-                            letter-spacing: 0.1rem;
-                        }
-                    }
-                }
-            }
-       }
     }
 }
 </style>

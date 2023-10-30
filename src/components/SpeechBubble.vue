@@ -16,8 +16,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import '@/assets/styles/global.scss';
-
 $bubble-border: 0 -4px #fff, 
                 0 -8px #000, 
                 4px 0 #fff, 

@@ -96,9 +96,6 @@ export default {
 
 
 <style lang="scss">
-@import '@/assets/styles/global.scss';
-
-
 #nav {
     margin: 0 auto 2rem auto;
     max-width: 1250px;

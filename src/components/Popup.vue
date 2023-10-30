@@ -159,12 +159,7 @@ export default {
                 
                 @media (min-width: $breakpoint-min-desktop) { max-width: 70%; }
 
-                img {
-                    display: none;
-                    // border-radius: 10px;
-                    // max-width: 95%;
-                    // @media (min-width: $breakpoint-min-tablet) { max-width: 70%; }
-                }
+                img { display: none; }
 
                 table {
                     img { display: block; }
@@ -175,13 +170,9 @@ export default {
                     word-wrap:break-word;
                 }
 
-                h1 {
-                    margin: 0.5rem 0 1.5rem 0;
-                }
+                h1 { margin: 0.5rem 0 1.5rem 0; }
 
-                h3 {
-                    margin: 1.5rem 0 1.5rem 0;
-                }
+                h3 { margin: 1.5rem 0 1.5rem 0; }
             }
         }
     }

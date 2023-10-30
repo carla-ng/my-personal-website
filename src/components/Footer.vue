@@ -23,8 +23,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import '@/assets/styles/global.scss';
-
 .footer {
     background-color: $palette-color-08;
     height: 3rem;

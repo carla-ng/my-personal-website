@@ -19,8 +19,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import '@/assets/styles/global.scss';
-
 .alertbox {
     display: flex;
     align-items: center;

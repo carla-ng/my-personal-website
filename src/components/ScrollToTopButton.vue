@@ -56,8 +56,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import '@/assets/styles/global.scss';
-
 .scroll-to-top {
     background: #99ffd1;
     box-shadow: inset -4px -4px 0px 0px #5dd59f;

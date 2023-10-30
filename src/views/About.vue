@@ -237,9 +237,14 @@ export default {
 
 
 <style lang="scss" scoped>
-@import '@/assets/styles/global.scss';
-
 .about {
+    
+    .secondary-text {
+        margin-top: 4rem;
+        text-align: center;
+        max-width: 100%;
+    }
+
     .about__header {
         @media (max-width: $breakpoint-max-tablet) {
             display: flex;
@@ -254,9 +259,7 @@ export default {
                 max-width: 90%;
             }
 
-            @media (max-width: $breakpoint-max-tablet) {
-                order: 2;
-            }
+            @media (max-width: $breakpoint-max-tablet) { order: 2; }
         }
 
         .about__header-img {
@@ -386,12 +389,6 @@ export default {
       
         }
 
-    }
-
-    .secondary-text {
-        margin-top: 4rem;
-        text-align: center;
-        max-width: 100%;
     }
 
     .about__drawings {
