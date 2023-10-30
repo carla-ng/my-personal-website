@@ -45,15 +45,15 @@ export default {
     &:before {
         top: -4px;
         left: 0;
-        border-top: 4px $black solid;
-        border-bottom: 4px $black solid;
+        border-top: 4px $dark-color solid;
+        border-bottom: 4px $dark-color solid;
     }
 
     &:after {
         left: -4px;
         top: 0;
-        border-left: 4px $black solid;
-        border-right: 4px $black solid;
+        border-left: 4px $dark-color solid;
+        border-right: 4px $dark-color solid;
     }
 
     .alertbox__exclamation {

@@ -69,10 +69,10 @@ export default {
 
 
 <style lang="scss" scoped>
-$heart-border-color: #000;
+$heart-border-color: $black;
 $heart-main-color: rgba(247, 156, 186, 1);
 $heart-shadow-color: rgba(245, 105, 153, 1);
-$heart-light-color: #fff;
+$heart-light-color: $white;
 
 
 .home {

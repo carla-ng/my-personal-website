@@ -76,7 +76,7 @@ export default {
         @media (min-width: $breakpoint-min-desktop) { height: 24px; }
 
         svg {
-            color: $black;
+            color: $dark-color;
             height: 20px;
             margin-left: -2px;
             margin-top: -2px;
@@ -88,7 +88,7 @@ export default {
                 width: 24px;
             }
 
-            path { fill: $black; }
+            path { fill: $dark-color; }
         }
     }
 }

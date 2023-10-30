@@ -99,9 +99,9 @@ export default {
     @media (min-width: $breakpoint-min-desktop) { width: 70vw; }
 
     .popup {    
-        background-color: $white;
+        background-color: $light-color;
         border-radius: 5px;
-        border: 1px solid $palette-color-04;
+        border: 1px solid $palette-color-03;
         box-shadow: 6px 6px 5px #3b3b3b;
         height: 90vh;
         min-width: 0;

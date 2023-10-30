@@ -4,36 +4,37 @@
 
 /* Main/light theme */
 $palette-color-01: #ffd6dd;  // light pink
-$palette-color-02: #fbfbdb;  // creamy light yellow
-$palette-color-03: #cdaaf1;  // purple
-$palette-color-04: #403f4c;  // dark grey
-$palette-color-05: #595959;  // grey
-
+$palette-color-02: #cdaaf1;  // purple
+$palette-color-03: #403f4c;  // dark grey
+$palette-color-04: #f0e088;  // darker creamy light yellow
+$palette-color-05: #b680ec;  // darker purple
 $palette-color-06: #ffa3b2;  // darker pink
-$palette-color-07: #f0e088;  // darker creamy light yellow
-$palette-color-08: #b680ec;  // darker purple
 
-$white: rgba(255, 252, 236); // main light color
-$black: #3d3d3d;             // main dark color
+$light-color: rgba(255, 252, 236);   // main light color
+$dark-color: #3d3d3d;                // main dark color
+
+$black: #000;
+$white: #fff;
+$grey: #595959;
 
 
 /* Dark theme */
 
 
 /* Colors */
-$font-color-01: #000;
-$font-color-02: #fff;
-
-$headline-h1-color: #161616;
-$headline-h2-color: $headline-h1-color;
-$headline-h3-color: $headline-h1-color;
-
 $accent-color-01: #41b883;
 $accent-color-02: #ffb310;
 $accent-color-03: #8484ff;
 $accent-color-04: #0096d6;
 $accent-color-05: #e560b2;
 $accent-color-06: #0868ac;
+
+$font-color-01: $black;
+$font-color-02: $white;
+
+$headline-h1-color: #161616;
+$headline-h2-color: $headline-h1-color;
+$headline-h3-color: $headline-h1-color;
 
 
 /* Fonts */

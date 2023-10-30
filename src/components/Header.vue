@@ -106,7 +106,7 @@ export default {
     justify-content: center;
 
     @media (max-width: $breakpoint-max-tablet) {
-        background-color: #fff;
+        background-color: $white;
         border-bottom: 1px solid $font-color-01;
     }
 
@@ -186,7 +186,7 @@ export default {
                 @media (orientation: landscape) { top: 1rem; }
 
                 & > span {
-                    background-color: $black;
+                    background-color: $dark-color;
                     display: block;
                     height: 2px;
                     margin: 5px auto;
@@ -198,7 +198,7 @@ export default {
     }
 
     .nav__container {
-        background-color: #fff;
+        background-color: $white;
         border-radius: 17px;
         border: 2px solid #353535;
         box-shadow: 3px 3px 7px #5b5b5b;

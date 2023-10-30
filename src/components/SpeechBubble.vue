@@ -16,23 +16,23 @@ export default {
 
 
 <style lang="scss" scoped>
-$bubble-border: 0 -4px #fff, 
-                0 -8px #000, 
-                4px 0 #fff, 
-                4px -4px #000, 
-                8px 0 #000, 
-                0 4px #fff, 
-                0 8px #000, 
-                -4px 0 #fff, 
-                -4px  4px #000, 
-                -8px 0 #000, 
-                -4px -4px #000, 
-                4px 4px #000;
+$bubble-border: 0 -4px $white, 
+                0 -8px $black, 
+                4px 0 $white, 
+                4px -4px $black, 
+                8px 0 $black, 
+                0 4px $white, 
+                0 8px $black, 
+                -4px 0 $white, 
+                -4px  4px $black, 
+                -8px 0 $black, 
+                -4px -4px $black, 
+                4px 4px $black;
 
 .speechbubble {
-    background-color: #fff;
+    background-color: $white;
     box-sizing: border-box;
-    color: #000;
+    color: $black;
     display: inline-block;
     font-family: $font-family-02;
     font-size: $font-size-12px;
@@ -65,19 +65,19 @@ $bubble-border: 0 -4px #fff,
             top: -8px;
             left: 32px;
             box-shadow: 
-                0 -4px #000, 
-                0 -8px #000, 
-                0 -12px #000, 
-                0 -4*4px #000, 
-                -4px -12px #000,
-                -8px -8px #000, 
-                -12px -4px #000, 
-                -4px -4px #fff, 
-                -8px -4px #fff, 
-                -4px -8px #fff, 
-                -4px 0 #fff, 
-                -8px 0 #fff, 
-                -12px 0 #fff;
+                0 -4px $black, 
+                0 -8px $black, 
+                0 -12px $black, 
+                0 -4*4px $black, 
+                -4px -12px $black,
+                -8px -8px $black, 
+                -12px -4px $black, 
+                -4px -4px $white, 
+                -8px -4px $white, 
+                -4px -8px $white, 
+                -4px 0 $white, 
+                -8px 0 $white, 
+                -12px 0 $white;
         }
     }
 

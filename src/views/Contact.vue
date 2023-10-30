@@ -79,7 +79,7 @@ export default {
                 &::before, &::after {
                     content: '';
                     position: absolute;
-                    background-color: $white;
+                    background-color: $light-color;
                     width: 10px;
                     height: 10px;
                 }
@@ -103,7 +103,7 @@ export default {
                     &::before, &::after {
                         content: '';
                         position: absolute;
-                        background-color: $white;
+                        background-color: $light-color;
                         width: 10px;
                         height: 10px;
                     }
@@ -130,7 +130,7 @@ export default {
                     a {
                         & > span {
                             span {
-                                background: #fff;
+                                background: $white;
                                 color: #0077b5;
                                 margin: 0 0.3rem;
                                 padding: 0.4rem 0.2rem;
@@ -139,19 +139,19 @@ export default {
                     }
                 }
 
-                &.contact__list--github { background: #000; }
+                &.contact__list--github { background: $black; }
 
                 &.contact__list--instagram {
                     background: #d6249f;
                     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
                     
                     a {
-                        span { text-shadow: 2px 2px 1px $palette-color-05; }
+                        span { text-shadow: 2px 2px 1px $grey; }
                     }
                 }
 
                 &.contact__list--tiktok {
-                    background: #000;
+                    background: $black;
 
                     a {
                         span { text-shadow: 2px 2px 1px #00eae4, 4px 4px 1px #f7004c; }

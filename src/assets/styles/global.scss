@@ -94,7 +94,7 @@ input, button, textarea, select {
 }
 
 body {
-    background-color: $white;
+    background-color: $light-color;
     color: $font-color-01;
     font-family: $font-family-01;
     font-size: $font-size-16px;
@@ -150,7 +150,7 @@ h2 {
     line-height: 1.7;
     margin-bottom: 1rem;
     margin-top: 2rem;
-    text-shadow: 5px 5px 2px $palette-color-07;
+    text-shadow: 5px 5px 2px $palette-color-04;
 
     @media (min-width: $breakpoint-min-tablet) { font-size: $font-size-21px; }
     @media (max-width: $breakpoint-max-tablet) { text-align: center; }
@@ -161,7 +161,7 @@ h3 {
     color: $headline-h3-color;
     font-size: $font-size-16px;
     line-height: 1.7;
-    text-shadow: 5px 5px 2px $palette-color-08;
+    text-shadow: 5px 5px 2px $palette-color-05;
 
     @media (min-width: $breakpoint-min-tablet) { font-size: $font-size-18px; }
 }
@@ -246,7 +246,7 @@ a { color: $accent-color-05;}
  *************************/
 .window {
     background-color: $palette-color-01;
-    border: 1px solid $palette-color-04;
+    border: 1px solid $palette-color-03;
     border-radius: 5px;
     box-shadow: 8px 9px 4px #bdbbbb;
     min-width: 0;
@@ -261,7 +261,7 @@ a { color: $accent-color-05;}
 }
 
 .window__bar {
-    background-color: $palette-color-03;
+    background-color: $palette-color-02;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding: 0.2rem 0.3rem;
@@ -305,7 +305,7 @@ a { color: $accent-color-05;}
 
 .window__bar-buttons span, .window__bar-button {
     background-color: $palette-color-01;
-    border: 1px solid $palette-color-04;
+    border: 1px solid $palette-color-03;
     border-radius: 2px;
     box-shadow: 2px 2px 0px #919191;
     color: $font-color-01;
@@ -334,17 +334,17 @@ a { color: $accent-color-05;}
  *************************/
 .os-button {
     background-color: #ffd6dd;
-    border: 1px solid $palette-color-04;
+    border: 1px solid $palette-color-03;
     border-radius: 2px;
     box-shadow: 2px 2px 0px #919191;
-    color: $palette-color-04;
+    color: $palette-color-03;
     display: block;
     margin: 0 1rem;
     padding: 0.2rem;
 
     .os-button__button {
         background-color: #ffd6dd;
-        border: 1px dashed $palette-color-04;
+        border: 1px dashed $palette-color-03;
         cursor: pointer;
         height: 100%;
         padding: 0 2rem;

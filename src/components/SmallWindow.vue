@@ -246,7 +246,7 @@ export default {
                 @media (min-width: $breakpoint-min-desktop) { min-height: 3.7rem; }
 
                 span {
-                    background-color: $palette-color-04;
+                    background-color: $palette-color-03;
                     border-radius: 25px;
                     color: $font-color-02;
                     font-family: $font-family-02;

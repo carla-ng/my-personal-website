@@ -432,7 +432,7 @@ export default {
         background-color: rgba(0, 0, 0, 0.5);
 
         .about__modal--content {
-            box-shadow: 0 0 5px $black;
+            box-shadow: 0 0 5px $dark-color;
             display: block;
             margin: auto;
             max-height: 90%;
@@ -454,7 +454,7 @@ export default {
             top: 1rem;
             right: 2rem;
 
-            color: $white;
+            color: $light-color;
             font-size: $font-size-56px;
             font-weight: 700;
             line-height: 1;
