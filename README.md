@@ -30,8 +30,6 @@ Personal website and portfolio as a web developer.
 <br>
 
 ## To Do List / Possible Future Improvements and Features
-* Add animations
-* Add Resume download
 * Perform all relevant tests (NO tests have been performed yet!)
 * Dark theme?
 * English version (now it's only available in Spanish)

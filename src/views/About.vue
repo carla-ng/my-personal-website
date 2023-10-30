@@ -38,14 +38,14 @@
                         <div class="window__text-info" v-html="getCurrentContent.text"></div>
 
                         <div class="window__text-buttons">
-                            <div :class="{ 'disabled-button': isPrevButtonDisabled }">
-                                <button class="prev" @click="previousStep">
+                            <div :class="{ 'disabled-button': isPrevButtonDisabled }" class="os-button">
+                                <button class="os-button__button prev" @click="previousStep">
                                     <span>Anterior</span>
                                 </button>
                             </div>
                             
-                            <div :class="{ 'disabled-button': isNextButtonDisabled }">
-                                <button class="next" @click="nextStep">
+                            <div :class="{ 'disabled-button': isNextButtonDisabled }" class="os-button">
+                                <button class="os-button__button next" @click="nextStep">
                                     <span>Siguiente</span>
                                 </button>
                             </div>
@@ -315,6 +315,11 @@ export default {
             .window-about {
                 display: flex;
                 flex-direction: column;
+                
+                @media (max-width: $breakpoint-max-tablet) {
+                    justify-content: space-around;
+                    height: 100%;
+                }
 
                 @media (min-width: $breakpoint-min-desktop) {
                     flex-direction: row;
@@ -358,15 +363,10 @@ export default {
                         justify-content: flex-end;
 
                         margin-top: 2rem;
+
                         @media (min-width: $breakpoint-min-desktop) { margin-top: 1rem; }
 
-                        & > div {
-                            border: 1px solid $palette-color-04;
-                            border-radius: 2px;
-                            box-shadow: 2px 2px 0px #919191;
-                            color: $palette-color-04;
-                            margin: 0 0.5rem;
-                            padding: 0.2rem;
+                        & > .os-button {
                             width: 50%;
 
                             @media (min-width: $breakpoint-min-desktop) {
@@ -374,33 +374,10 @@ export default {
                                 width: fit-content;
                             }
 
-                            button {
-                                background-color: #ffd6dd;
-                                border: 1px dashed $palette-color-04;
-                                cursor: pointer;
-                                height: 100%;
-                                padding: 0 1rem;
-                                width: 100%;
+                            @media (max-width: $breakpoint-max-tablet) { margin: 0 0.5rem; }
 
-                                @media (min-width: $breakpoint-min-desktop) { padding: 0 2rem; }
-                                
-                                span {
-                                    display: block;
-                                    user-select: none;
-
-                                    &:first-letter { text-decoration:underline; }
-                                }
-                            }
-
-                            &.disabled-button {
-                                box-shadow: none;
-                                opacity: 0.5;
-                                pointer-events: none;
-                            }
-
-                            &:active {
-                                box-shadow: none;
-                                transform: translateY(2px);
+                            .os-button__button {
+                                @media (max-width: $breakpoint-max-tablet) { padding: 0 1rem; }
                             }
                         }
                     }

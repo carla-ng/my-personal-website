@@ -32,29 +32,29 @@
             <nav class="window__buttons" :class="{ 'multiple' : (visibleButtonsCount > 1) }" v-if="urls">
                 <ul>
                     <li v-if="urls[0].code">
-                        <a :href="urls[0].code" target="_blank">
-                            <button class="window__buttons-code">
-                                <span>Repositorio</span>
+                        <a :href="urls[0].code" target="_blank" class="os-button">
+                            <button class="window__buttons-code os-button__button">
+                                <span>Repo</span>
                             </button>
                         </a>
                     </li>
                     <li v-if="urls[0].demo">
-                        <a :href="urls[0].demo" target="_blank">
-                            <button class="window__buttons-demo">
+                        <a :href="urls[0].demo" target="_blank" class="os-button">
+                            <button class="window__buttons-demo os-button__button">
                                 <span>Demo</span>
                             </button>
                         </a>
                     </li>
                     <li v-if="urls[0].example">
-                        <a :href="urls[0].example" target="_blank">
-                            <button class="window__buttons-example">
+                        <a :href="urls[0].example" target="_blank" class="os-button">
+                            <button class="window__buttons-example os-button__button">
                                 <span>Ejemplos</span>
                             </button>
                         </a>
                     </li>
                     <li v-if="urls[0].comingsoon">
-                        <a :href="urls[0].comingsoon" target="_blank" class="disabled-button">
-                            <button class="window__buttons-comingsoon">
+                        <a :href="urls[0].comingsoon" target="_blank" class="os-button disabled-button">
+                            <button class="window__buttons-comingsoon os-button__button">
                                 <span>Próximamente</span>
                             </button>
                         </a>
@@ -290,45 +290,6 @@ export default {
 
                 display: flex;
                 justify-content: center;
-
-                li {
-                    a {
-                        border: 1px solid $palette-color-04;
-                        border-radius: 2px;
-                        box-shadow: 2px 2px 0px #919191;
-                        color: $palette-color-04;
-                        display: block;
-                        margin: 0 1rem;
-                        padding: 0.2rem;
-
-                        button {
-                            background-color: #ffd6dd;
-                            border: 1px dashed $palette-color-04;
-                            cursor: pointer;
-                            height: 100%;
-                            padding: 0 2rem;
-                            width: 100%;
-
-                            span {
-                                display: block;
-
-                                &:first-letter { text-decoration:underline; }
-                            }
-                        }
-
-                        &.disabled-button {
-                            box-shadow: none;
-                            opacity: 0.5;
-                            pointer-events: none;
-                        }
-
-                        &:active {
-                            box-shadow: none;
-                            transform: translateY(2px);
-                        }
-                    }
-
-                }
             }
 
             
@@ -339,8 +300,8 @@ export default {
                     li {
                         width: 50%;
 
-                        a {
-                            button { padding: 0; }
+                        .os-button {
+                            .os-button__button { padding: 0; }
                         }
                     }
                 }

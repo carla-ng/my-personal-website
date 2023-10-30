@@ -400,6 +400,46 @@ a { color: $accent-color-05;}
     }
 }
 
+/*************************
+ *     Buttons Base      *
+ *************************/
+.os-button {
+    background-color: #ffd6dd;
+    border: 1px solid $palette-color-04;
+    border-radius: 2px;
+    box-shadow: 2px 2px 0px #919191;
+    color: $palette-color-04;
+    display: block;
+    margin: 0 1rem;
+    padding: 0.2rem;
+
+    .os-button__button {
+        background-color: #ffd6dd;
+        border: 1px dashed $palette-color-04;
+        cursor: pointer;
+        height: 100%;
+        padding: 0 2rem;
+        width: 100%;
+
+        span {
+            display: block;
+            user-select: none;
+
+            &:first-letter { text-decoration: underline; }
+        }   
+    }
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(2px);
+    }
+
+    &.disabled-button {
+        box-shadow: none;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
   
  
  
