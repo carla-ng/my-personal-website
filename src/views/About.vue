@@ -101,7 +101,7 @@ export default {
                         <br>
                         <p>También me gusta el <strong>desarrollo de videojuegos</strong> y me encuentro actualmente aprendiendo sobre ello (diseño con <strong>Photoshop</strong> y <strong>Maya</strong>, conceptualización y desarrollo en <strong>Unity</strong>).</p>
                       `,
-                imageSrc: 'assets/images/about/setup.jpg',
+                imageSrc: 'assets/images/about/setup.webp',
             },
             {
                 text: `
@@ -119,52 +119,52 @@ export default {
         // Drawings
         const drawings = [
             {
-                url: '/assets/images/about/drawing_witch2.jpg',
-                alt: 'Drawing of a witch'
+                url: '/assets/images/about/drawing_witch2.webp',
+                alt: 'Dibujo de una bruja'
             },
             {
-                url: '/assets/images/about/drawing_peach.jpg',
-                alt: 'Drawing of Peach'
+                url: '/assets/images/about/drawing_peach.webp',
+                alt: 'Dibujo de Peach'
             },
             {
                 url: '/assets/images/about/drawing_billie.jpg',
-                alt: 'Drawing of Billie Eilish'
+                alt: 'Dibujo de Billie Eilish'
             },
             {
                 url: '/assets/images/about/drawing_elf1.jpg',
-                alt: 'Drawing of an Elf'
+                alt: 'Dibujo de un elfo'
             },
             {
-                url: '/assets/images/about/drawing_wednesday.jpg',
-                alt: 'Drawing of Wednesday Addams'
+                url: '/assets/images/about/drawing_wednesday.webp',
+                alt: 'Dibujo de Wednesday Addams'
             },
             {
                 url: '/assets/images/about/drawing_elf3.jpg',
-                alt: 'Drawing of an Elf'
+                alt: 'Dibujo de un elfo'
             },
             {
-                url: '/assets/images/about/drawing_fairy1.jpg',
-                alt: 'Drawing of a Fairy'
+                url: '/assets/images/about/drawing_fairy1.webp',
+                alt: 'Dibujo de un hada'
             },
             {
-                url: '/assets/images/about/drawing_jonghyun.jpg',
-                alt: 'Drawing of Jonghyun'
+                url: '/assets/images/about/drawing_jonghyun.webp',
+                alt: 'Dibujo de Jonghyun'
             },
             {
-                url: '/assets/images/about/drawing_fairy2.jpg',
-                alt: 'Drawing of a Fairy'
+                url: '/assets/images/about/drawing_fairy2.webp',
+                alt: 'Dibujo de un hada'
             },
             {
                 url: '/assets/images/about/drawing_elf2.jpg',
-                alt: 'Drawing of an Elf'
+                alt: 'Dibujo de un elfo'
             },
             {
                 url: '/assets/images/about/drawing_alolanraichu.jpg',
-                alt: 'Drawing of Alolan Raichu'
+                alt: 'Dibujo de un Alolan Raichu'
             },
             {
-                url: '/assets/images/about/drawing_witch1.jpg',
-                alt: 'Drawing of a Witch'
+                url: '/assets/images/about/drawing_witch1.webp',
+                alt: 'Dibujo de una bruja'
             }
         ]
 
