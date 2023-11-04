@@ -255,7 +255,7 @@ export default {
                     letter-spacing: 0.05rem;
                     margin: 0.2rem;
                     padding: 0.3rem 0.5rem;
-                    text-shadow: 1px 1px 5px #4d4d4d;
+                    text-shadow: 1px 1px 5px $smallwindow-text-shadow-color;
 
                     &.vue { background-color: $accent-color-01; }
                     &.javascript { background-color: $accent-color-02; }
@@ -263,8 +263,8 @@ export default {
                     &.tailwindcss { background-color: $accent-color-04; }
                     &.scss { background-color: $accent-color-05; }
                     &.jquery { background-color: $accent-color-06; }
-                    &.bootstrap { background-color: #553c7b; }
-                    &.react { background-color: #61dbfb; }
+                    &.bootstrap { background-color: $smallwindow-bootstrap-color; }
+                    &.react { background-color: $smallwindow-react-color; }
                    
                 }
             }

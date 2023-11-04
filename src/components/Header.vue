@@ -138,11 +138,11 @@ export default {
             @media (min-width: $breakpoint-min-desktop) { margin: 0 0 1rem 0; }
             
             a {
-                -webkit-text-stroke: 1px #232323;   
+                -webkit-text-stroke: 1px $dark-grey;   
                 font-family: $font-family-02;
                 font-weight: 700;
                 text-decoration: none;
-                text-shadow: 3px 3px 2px #5b5b5b;
+                text-shadow: 3px 3px 2px $grey;
                 text-transform: uppercase;
 
                 @media (min-width: $breakpoint-min-desktop) {
@@ -162,11 +162,11 @@ export default {
 
                 & > span {
                     &:first-child {
-                        color: #f78caf;
+                        color: $header-logo-color;
                     }
 
                     &:nth-child(2) {
-                        color: #f78caf;
+                        color: $header-logo-color;
                         @media (min-width: $breakpoint-min-desktop) { margin-left: 1.2rem; }
                     }
                 }
@@ -200,8 +200,8 @@ export default {
     .nav__container {
         background-color: $white;
         border-radius: 17px;
-        border: 2px solid #353535;
-        box-shadow: 3px 3px 7px #5b5b5b;
+        border: 2px solid $dark-grey;
+        box-shadow: 3px 3px 7px $grey;
         margin: 2rem 1rem 0 1rem;
         padding: 1rem 2rem;
         width: fit-content;
@@ -253,7 +253,7 @@ export default {
                     letter-spacing: 0.1rem;
                     padding: 0 1rem;
                     text-decoration: none;
-                    text-shadow: 1px 1px 1px #777;
+                    text-shadow: 1px 1px 1px $header-nav-text-shadow-color;
                     text-transform: uppercase;
 
                     &:not(.router-link-exact-active):hover {
@@ -276,7 +276,7 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: $header-veil-color;
         z-index: 1;
     }
 

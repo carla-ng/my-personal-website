@@ -432,7 +432,7 @@ export default {
             {
                 name: 'Diseño de videojuegos y conceptualización',
                 time: 'Cursando actualmente',
-                description: 'Desarrollar la documentación necesaria para el dossier de un videojuego a nivel profesional como GameDesigner y LevelDesigner, una vez establecidos los elementos requeridos: mecánicas de juego, inteligencia artificial, guión, misiones. Además de diseño con <b><i>Photoshop</i></b> y desarrollo del juego con <b><i>Unity</i></b>.'
+                description: 'Durante el curso serán empleadas herramientas de diseño como <b>Photoshop</b>, <b>Illustrator</b> y <b>Maya</b> para la creación de un personaje principal, elementos del juego y escenarios. Además, se desarrollará un demo del juego utilizando la plataforma <b>Unity</b>.'
             },
         ]
 
@@ -593,7 +593,7 @@ export default {
                         }
 
                         .window__text-divider {
-                            border: 1px solid #b1b1b1;
+                            border: 1px solid $resume-window-text-divider;
                             margin: 1.2rem auto;
                             width: 50%;
                         }

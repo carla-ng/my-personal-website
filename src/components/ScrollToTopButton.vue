@@ -57,8 +57,8 @@ export default {
 
 <style lang="scss" scoped>
 .scroll-to-top {
-    background: #99ffd1;
-    box-shadow: inset -4px -4px 0px 0px #5dd59f;
+    background: $scrolltotopbutton-background-color;
+    box-shadow: inset -4px -4px 0px 0px $scrolltotopbutton-shadow-color;
     bottom: 42px;
     cursor: pointer;
     padding: 1rem;

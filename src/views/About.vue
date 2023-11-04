@@ -99,7 +99,7 @@ export default {
                         <br>
                         <p>Además de la programación, me interesa mucho la <strong>gestión de proyectos</strong>, soy una persona muy <strong>organizada</strong> y <strong>atenta</strong>. Estoy acostumbrada a trabajar con la metodología agile de <strong>Scrum</strong>.</p>
                         <br>
-                        <p>También estoy interesada en el <strong>desarrollo de videojuegos</strong> y me encuentro actualmente aprendiendo sobre ello (diseño, conceptualización y desarrollo en <strong>Unity</strong>).</p>
+                        <p>También me gusta el <strong>desarrollo de videojuegos</strong> y me encuentro actualmente aprendiendo sobre ello (diseño con <strong>Photoshop</strong> y <strong>Maya</strong>, conceptualización y desarrollo en <strong>Unity</strong>).</p>
                       `,
                 imageSrc: 'assets/images/about/setup.jpg',
             },
@@ -327,8 +327,8 @@ export default {
                 @media (min-width: $breakpoint-min-desktop) {
                     flex-direction: row;
 
-                    height: -moz-available;          /* WebKit-based browsers will ignore this. */
-                    height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+                    height: -moz-available;
+                    height: -webkit-fill-available;
                     height: fill-available;
 
                     margin-top: 2rem;
@@ -428,8 +428,7 @@ export default {
         width: 100%;
         z-index: 2;
 
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: $veil-color;
 
         .about__modal--content {
             box-shadow: 0 0 5px $dark-color;

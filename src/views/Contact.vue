@@ -125,13 +125,13 @@ export default {
                 }
 
                 &.contact__list--linkedin {
-                    background: #0077b5;
+                    background: $contact-linkedin-color;
 
                     a {
                         & > span {
                             span {
                                 background: $white;
-                                color: #0077b5;
+                                color: $contact-linkedin-color;
                                 margin: 0 0.3rem;
                                 padding: 0.4rem 0.2rem;
                             }
@@ -142,8 +142,8 @@ export default {
                 &.contact__list--github { background: $black; }
 
                 &.contact__list--instagram {
-                    background: #d6249f;
-                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                    background: $contact-instagram-color-01;
+                    background: radial-gradient(circle at 30% 107%, $contact-instagram-color-02 0%, $contact-instagram-color-02 5%, $contact-instagram-color-03 45%, $contact-instagram-color-01 60%, $contact-instagram-color-04 90%);
                     
                     a {
                         span { text-shadow: 2px 2px 1px $grey; }
@@ -154,7 +154,7 @@ export default {
                     background: $black;
 
                     a {
-                        span { text-shadow: 2px 2px 1px #00eae4, 4px 4px 1px #f7004c; }
+                        span { text-shadow: 2px 2px 1px $contact-tiktok-color-01, 4px 4px 1px $contact-tiktok-color-02; }
                     }
                 }
             }

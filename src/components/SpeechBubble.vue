@@ -16,18 +16,7 @@ export default {
 
 
 <style lang="scss" scoped>
-$bubble-border: 0 -4px $white, 
-                0 -8px $black, 
-                4px 0 $white, 
-                4px -4px $black, 
-                8px 0 $black, 
-                0 4px $white, 
-                0 8px $black, 
-                -4px 0 $white, 
-                -4px  4px $black, 
-                -8px 0 $black, 
-                -4px -4px $black, 
-                4px 4px $black;
+
 
 .speechbubble {
     background-color: $white;
@@ -50,7 +39,7 @@ $bubble-border: 0 -4px $white,
 
     @media (max-width: $breakpoint-max-tablet) { max-width: 325px; }
 
-    box-shadow: $bubble-border, 4px 12px rgba(0,0,0,0.1), 12px 4px rgba(0,0,0,0.1), 12px 8px rgba(0,0,0,0.1);
+    box-shadow: $speechbubble-border, 4px 12px $speechbubble-shadow-color, 12px 4px $speechbubble-shadow-color, 12px 8px $speechbubble-shadow-color;
 
     // Positions
     &.top-left {

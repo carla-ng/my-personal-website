@@ -102,7 +102,7 @@ export default {
         background-color: $light-color;
         border-radius: 5px;
         border: 1px solid $palette-color-03;
-        box-shadow: 6px 6px 5px #3b3b3b;
+        box-shadow: 6px 6px 5px $grey;
         height: 90vh;
         min-width: 0;
         overflow: hidden;
@@ -113,8 +113,8 @@ export default {
         .popup__bar {
             padding: 0.3rem;
 
-            width: -moz-available;          /* WebKit-based browsers will ignore this. */
-            width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+            width: -moz-available;
+            width: -webkit-fill-available;
             width: fill-available;
 
             span {
@@ -145,12 +145,12 @@ export default {
             overflow-y: scroll;
             padding: 3rem 2rem 4rem 2rem;
 
-            height: -moz-available;          /* WebKit-based browsers will ignore this. */
-            height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+            height: -moz-available;
+            height: -webkit-fill-available;
             height: fill-available;
 
             -ms-overflow-style: none;  /* IE and Edge */
-               scrollbar-width: none;  /* Firefox */
+            scrollbar-width: none;  /* Firefox */
 
             &::-webkit-scrollbar { display: none; }
 
@@ -167,7 +167,7 @@ export default {
 
                 h1, h2, h3, h4, h5, h6 {
                     margin: 1rem 0;
-                    word-wrap:break-word;
+                    word-wrap: break-word;
                 }
 
                 h1 { margin: 0.5rem 0 1.5rem 0; }
@@ -179,7 +179,7 @@ export default {
 }
 
 .popup__veil {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $veil-color;
     position: fixed;
     top: 0;
     left: 0;

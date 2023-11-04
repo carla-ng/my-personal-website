@@ -28,8 +28,8 @@ export default {
     padding: 0.5rem 1rem;
     width: fit-content;
 
-    background: #fff4d6;
-    box-shadow: inset (-4px) (-4px) 0px 0px #ffe09a;
+    background: $alertbox-background-color;
+    box-shadow: inset (-4px) (-4px) 0px 0px $alertbox-shadow-color;
     position: relative;
     text-align: center;
 

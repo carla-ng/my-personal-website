@@ -2,42 +2,7 @@
  *      Variables      *
  ***********************/
 
-/* Main/light theme */
-$palette-color-01: #ffd6dd;  // light pink
-$palette-color-02: #cdaaf1;  // purple
-$palette-color-03: #403f4c;  // dark grey
-$palette-color-04: #f0e088;  // darker creamy light yellow
-$palette-color-05: #b680ec;  // darker purple
-$palette-color-06: #ffa3b2;  // darker pink
-
-$light-color: rgba(255, 252, 236);   // main light color
-$dark-color: #3d3d3d;                // main dark color
-
-$black: #000;
-$white: #fff;
-$grey: #595959;
-
-
-/* Dark theme */
-
-
-/* Colors */
-$accent-color-01: #41b883;
-$accent-color-02: #ffb310;
-$accent-color-03: #8484ff;
-$accent-color-04: #0096d6;
-$accent-color-05: #e560b2;
-$accent-color-06: #0868ac;
-
-$font-color-01: $black;
-$font-color-02: $white;
-
-$headline-h1-color: #161616;
-$headline-h2-color: $headline-h1-color;
-$headline-h3-color: $headline-h1-color;
-
-
-/* Fonts */
+ /* Fonts */
 $font-family-01: 'Montserrat', sans-serif;
 $font-family-02: 'Press Start 2P', cursive;
 
@@ -68,3 +33,87 @@ $breakpoint-max-tablet:      768px;
 $breakpoint-min-desktop:     769px;
 $breakpoint-min-desktop-lg:  992px;
 $breakpoint-min-desktop-xl:  1024px;
+
+
+/* Main/light theme */
+$palette-color-01: #ffd6dd;  // light pink
+$palette-color-02: #cdaaf1;  // purple
+$palette-color-03: #403f4c;  // dark grey
+$palette-color-04: #f0e088;  // darker creamy light yellow
+$palette-color-05: #b680ec;  // darker purple
+$palette-color-06: #ffa3b2;  // darker pink
+
+$light-color: rgba(255, 252, 236);   // main light color
+$dark-color: #3d3d3d;                // main dark color
+
+$black: #000;
+$dark-grey: #161616;
+$grey: #595959;
+$light-grey: #919191;
+$white: #fff;
+
+
+
+/* Colors */
+$accent-color-01: #41b883;
+$accent-color-02: #ffb310;
+$accent-color-03: #8484ff;
+$accent-color-04: #0096d6;
+$accent-color-05: #e560b2;
+$accent-color-06: #0868ac;
+
+$font-color-01: $black;
+$font-color-02: $white;
+
+$window-shadow-color: #bdbbbb;
+
+$button-background-color: #ffd6dd;
+
+$veil-color: rgba(0, 0, 0, 0.5);
+
+
+/* Components */
+$alertbox-background-color: #fff4d6;
+$alertbox-shadow-color: #ffe09a;
+
+$header-logo-color: #f78caf;
+$header-veil-color: rgba(255, 255, 255, 0.8); 
+$header-nav-text-shadow-color: #777;
+
+$scrolltotopbutton-background-color: #99ffd1;
+$scrolltotopbutton-shadow-color: #5dd59f;
+
+$smallwindow-text-shadow-color: #4d4d4d;
+$smallwindow-bootstrap-color: #553c7b;
+$smallwindow-react-color: #61dbfb;
+
+$speechbubble-border: 0 -4px $white, 
+                      0 -8px $black, 
+                      4px 0 $white, 
+                      4px -4px $black, 
+                      8px 0 $black, 
+                      0 4px $white, 
+                      0 8px $black, 
+                      -4px 0 $white, 
+                      -4px  4px $black, 
+                      -8px 0 $black, 
+                      -4px -4px $black, 
+                      4px 4px $black;
+$speechbubble-shadow-color: rgba(0,0,0,0.1);
+
+
+/* Pages */
+$contact-linkedin-color: #0077b5;
+$contact-instagram-color-01: #d6249f;
+$contact-instagram-color-02: #fdf497;
+$contact-instagram-color-03: #fd5949;
+$contact-instagram-color-04: #285AEB;
+$contact-tiktok-color-01: #00eae4;
+$contact-tiktok-color-02: #f7004c;
+
+$home-heart-border-color: $black;
+$home-heart-main-color: rgba(247, 156, 186, 1);
+$home-heart-shadow-color: rgba(245, 105, 153, 1);
+$home-heart-light-color: $white;
+
+$resume-window-text-divider: #b1b1b1;

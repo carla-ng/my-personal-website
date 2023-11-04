@@ -41,7 +41,6 @@ html:focus-within {
 html, body {
     margin: 0;
     min-height: 100%;
-    // overflow-x: hidden;
     padding: 0;
 }
 
@@ -98,7 +97,6 @@ body {
     color: $font-color-01;
     font-family: $font-family-01;
     font-size: $font-size-16px;
-    // min-height: 100vh;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     width: 100%;
@@ -116,7 +114,6 @@ body {
 .page-container {
     margin: 4rem auto 0 auto;
     max-width: 1140px;
-    //min-height: 100vh;
     padding: 0 1.2rem 8rem 1.2rem;
 
     @media (orientation: landscape) { margin: 2rem auto 0 auto; }
@@ -135,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    color: $headline-h1-color;
+    color: $dark-grey;
     font-size: $font-size-23px;
     margin-bottom: 1.5rem;
     text-align: center;
@@ -145,7 +142,7 @@ h1 {
 }
 
 h2 {
-    color: $headline-h2-color;
+    color: $dark-grey;
     font-size: $font-size-18px;
     line-height: 1.7;
     margin-bottom: 1rem;
@@ -158,7 +155,7 @@ h2 {
 }
 
 h3 {
-    color: $headline-h3-color;
+    color: $dark-grey;
     font-size: $font-size-16px;
     line-height: 1.7;
     text-shadow: 5px 5px 2px $palette-color-05;
@@ -248,7 +245,7 @@ a { color: $accent-color-05;}
     background-color: $palette-color-01;
     border: 1px solid $palette-color-03;
     border-radius: 5px;
-    box-shadow: 8px 9px 4px #bdbbbb;
+    box-shadow: 8px 9px 4px $window-shadow-color;
     min-width: 0;
 }
 
@@ -279,7 +276,7 @@ a { color: $accent-color-05;}
         overflow: hidden;
         padding: 0 0.2rem;
         text-overflow: ellipsis;
-        text-shadow: 1px 1px 3px #4d4d4d;
+        text-shadow: 1px 1px 3px $grey;
         white-space: nowrap;
     }
 }
@@ -307,7 +304,7 @@ a { color: $accent-color-05;}
     background-color: $palette-color-01;
     border: 1px solid $palette-color-03;
     border-radius: 2px;
-    box-shadow: 2px 2px 0px #919191;
+    box-shadow: 2px 2px 0px $light-grey;
     color: $font-color-01;
     font-family: $font-family-01;
     padding: 0 0.3rem;
@@ -333,17 +330,17 @@ a { color: $accent-color-05;}
  *     Buttons Base      *
  *************************/
 .os-button {
-    background-color: #ffd6dd;
+    background-color: $button-background-color;
     border: 1px solid $palette-color-03;
     border-radius: 2px;
-    box-shadow: 2px 2px 0px #919191;
+    box-shadow: 2px 2px 0px $light-grey;
     color: $palette-color-03;
     display: block;
     margin: 0 1rem;
     padding: 0.2rem;
 
     .os-button__button {
-        background-color: #ffd6dd;
+        background-color: $button-background-color;
         border: 1px dashed $palette-color-03;
         cursor: pointer;
         height: 100%;
@@ -406,13 +403,11 @@ a { color: $accent-color-05;}
 }
 
 .typewriter-effect {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    // border-right: .15em solid orange;
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin-inline-start: auto; /* Gives that scrolling effect as the typing happens */
-    margin-inline-end: auto; /* Gives that scrolling effect as the typing happens */
+    overflow: hidden;
+    white-space: nowrap;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
     animation: typing 1.2s steps(50, end);
-            //    blink-caret .75s step-end infinite;
 
     @media (min-width: $breakpoint-min-tablet) { animation: typing 3s steps(50, end); }
 }
@@ -421,13 +416,3 @@ a { color: $accent-color-05;}
     from { width: 0 }
     to { width: 100% }
 }
-/* The typewriter cursor effect */
-// @keyframes blink-caret {
-//     from, to { border-color: transparent }
-//     50% { border-color: orange; }
-// }
-
-
- /*************************
-  *       Pixel Art       *
-  *************************/
