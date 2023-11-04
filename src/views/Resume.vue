@@ -593,7 +593,7 @@ export default {
                         }
 
                         .window__text-divider {
-                            border: 1px solid $resume-window-text-divider;
+                            border: 1px solid $very-light-gray;
                             margin: 1.2rem auto;
                             width: 50%;
                         }

@@ -426,7 +426,7 @@ export default {
                             background-image: url('/assets/images/heart.svg');
                             background-repeat: no-repeat;
                             background-size: contain;
-                            color: $accent-color-03;
+                            color: $accent-color-02;
                             display: inline-block;
                             font-size: $font-size-21px;
                             height: 18px;
@@ -443,7 +443,7 @@ export default {
 
                             div {
                                 &.projects__github-list__title {
-                                    color: $accent-color-05;
+                                    color: $accent-color-03;
                                     font-family: $font-family-02;
                                     font-size: $font-size-14px;
                                     letter-spacing: 0.1rem;
@@ -451,7 +451,7 @@ export default {
                                     @media (max-width: $breakpoint-max-mobile) {  margin-bottom: 0.7rem; }
 
                                     .projects__github-list__fork {
-                                        color: $accent-color-05;
+                                        color: $accent-color-03;
                                         font-size: $font-size-13px;
                                         font-style: italic;
                                     }

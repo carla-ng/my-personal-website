@@ -102,7 +102,7 @@ export default {
         background-color: $light-color;
         border-radius: 5px;
         border: 1px solid $palette-color-03;
-        box-shadow: 6px 6px 5px $grey;
+        box-shadow: 6px 6px 5px $gray;
         height: 90vh;
         min-width: 0;
         overflow: hidden;

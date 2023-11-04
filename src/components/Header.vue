@@ -138,11 +138,11 @@ export default {
             @media (min-width: $breakpoint-min-desktop) { margin: 0 0 1rem 0; }
             
             a {
-                -webkit-text-stroke: 1px $dark-grey;   
+                -webkit-text-stroke: 1px $dark-gray;   
                 font-family: $font-family-02;
                 font-weight: 700;
                 text-decoration: none;
-                text-shadow: 3px 3px 2px $grey;
+                text-shadow: 3px 3px 2px $gray;
                 text-transform: uppercase;
 
                 @media (min-width: $breakpoint-min-desktop) {
@@ -200,8 +200,8 @@ export default {
     .nav__container {
         background-color: $white;
         border-radius: 17px;
-        border: 2px solid $dark-grey;
-        box-shadow: 3px 3px 7px $grey;
+        border: 2px solid $dark-gray;
+        box-shadow: 3px 3px 7px $gray;
         margin: 2rem 1rem 0 1rem;
         padding: 1rem 2rem;
         width: fit-content;
@@ -253,7 +253,7 @@ export default {
                     letter-spacing: 0.1rem;
                     padding: 0 1rem;
                     text-decoration: none;
-                    text-shadow: 1px 1px 1px $header-nav-text-shadow-color;
+                    text-shadow: 1px 1px 1px $light-gray;
                     text-transform: uppercase;
 
                     &:not(.router-link-exact-active):hover {
@@ -276,7 +276,7 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $header-veil-color;
+        background-color: $veil-light-color;
         z-index: 1;
     }
 

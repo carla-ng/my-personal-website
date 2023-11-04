@@ -146,7 +146,7 @@ export default {
                     background: radial-gradient(circle at 30% 107%, $contact-instagram-color-02 0%, $contact-instagram-color-02 5%, $contact-instagram-color-03 45%, $contact-instagram-color-01 60%, $contact-instagram-color-04 90%);
                     
                     a {
-                        span { text-shadow: 2px 2px 1px $grey; }
+                        span { text-shadow: 2px 2px 1px $gray; }
                     }
                 }
 
