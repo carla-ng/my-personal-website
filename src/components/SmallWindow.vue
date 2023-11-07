@@ -122,7 +122,7 @@ export default {
                                 .replace(/[^a-zA-Z0-9]+/g, "-")
 
             // Return the dynamically generated image URL
-            return `/assets/images/portfolio/${cleanTitle}.jpg`
+            return `/assets/images/portfolio/${cleanTitle}.webp`
         }
 
 

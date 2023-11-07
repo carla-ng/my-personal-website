@@ -30,7 +30,7 @@
 
                 <div class="window-about">
                     <div class="window__image">
-                        <img :src="getCurrentContent.imageSrc" alt="Mi setup">
+                        <img :src="getCurrentContent.imageSrc" alt="Imagen sobre mi">
                     </div>
                     
                     <div class="window__text">
@@ -111,7 +111,7 @@ export default {
                         <br>
                         <p>En cuanto a los <strong>videojuegos</strong> que me gusta jugar, soy fan de los <strong>RPG</strong> estilo <i>Final Fantasy</i> y <i>Persona</i>, aunque últimamente he estado disfrutando más de los conocidos <strong>cozy games</strong>. Podrás encontrarme jugando principalmente en <strong>Nintendo Switch</strong> y <strong>Steam</strong>.</p>
                         `,
-                imageSrc: 'assets/images/about/art_contest.jpg',
+                imageSrc: 'assets/images/about/art_contest.webp',
             },
         ]
 
@@ -127,11 +127,11 @@ export default {
                 alt: 'Dibujo de Peach'
             },
             {
-                url: '/assets/images/about/drawing_billie.jpg',
+                url: '/assets/images/about/drawing_billie.webp',
                 alt: 'Dibujo de Billie Eilish'
             },
             {
-                url: '/assets/images/about/drawing_elf1.jpg',
+                url: '/assets/images/about/drawing_elf1.webp',
                 alt: 'Dibujo de un elfo'
             },
             {
@@ -139,7 +139,7 @@ export default {
                 alt: 'Dibujo de Wednesday Addams'
             },
             {
-                url: '/assets/images/about/drawing_elf3.jpg',
+                url: '/assets/images/about/drawing_elf3.webp',
                 alt: 'Dibujo de un elfo'
             },
             {
@@ -155,11 +155,11 @@ export default {
                 alt: 'Dibujo de un hada'
             },
             {
-                url: '/assets/images/about/drawing_elf2.jpg',
+                url: '/assets/images/about/drawing_elf2.webp',
                 alt: 'Dibujo de un elfo'
             },
             {
-                url: '/assets/images/about/drawing_alolanraichu.jpg',
+                url: '/assets/images/about/drawing_alolanraichu.webp',
                 alt: 'Dibujo de un Alolan Raichu'
             },
             {
