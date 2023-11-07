@@ -235,7 +235,7 @@ export default {
                 description: 'Componentes desarrollados a nivel profesional para la creación de múltiples sitios web.',
                 tags: ['jQuery','JavaScript','SCSS','PHP','MySQL'],
                 urls: [
-                    { example: 'https://carla-ng.github.io/my-portfolio/' }
+                    { demo: 'https://carla-ng.github.io/my-portfolio/subrepositories/components/components.html' }
                 ],
                 repo: 'my-portfolio',
                 subrepo: 'subrepositories/components'
@@ -246,7 +246,7 @@ export default {
                 description: 'Desarrollada para el departamento de Marketing de la empresa para promocionar y publicar noticias sobre el exitoso juego.',
                 tags: ['JavaScript','CSS','Bootstrap','Wordpress','PHP','MySQL'],
                 urls: [
-                    { comingsoon: '#' }
+                    { demo: 'https://carla-ng.github.io/my-portfolio/subrepositories/apensar-website/apensar-website.html' }
                 ],
                 repo: 'my-portfolio',
                 subrepo: 'subrepositories/apensar-website'
@@ -257,7 +257,7 @@ export default {
                 description: 'Versión web del exitoso juego para promocionar como demo y atraer nuevos usuarios.',
                 tags: ['jQuery','CSS','Bootstrap','GSAP','PHP','MySQL'],
                 urls: [
-                    { comingsoon: '#' }
+                    { demo: 'https://carla-ng.github.io/my-portfolio/subrepositories/apensar-demo/apensar-demo.html' }
                 ],
                 repo: 'my-portfolio',
                 subrepo: 'subrepositories/apensar-demo'
