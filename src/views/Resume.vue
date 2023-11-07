@@ -672,9 +672,15 @@ export default {
     }
 
     .resume__download {
-        margin-top: 6rem;
+        margin: 6rem 0 0 0;
 
-        @media (max-width: $breakpoint-max-tablet) { text-align: center; }
+        @media (max-width: $breakpoint-max-tablet) {
+            margin: 6rem auto 0 auto;
+            max-width: 80%;
+            text-align: center;
+        }
+
+        @media (max-width: $breakpoint-max-desktop) { max-width: 65%; }
 
         .resume__download-title {
             margin-left: auto;
@@ -684,7 +690,7 @@ export default {
 
             .os-button {
                 display: inline-block;
-                margin: 0 0.3rem;
+                margin: 0.5rem 0.3rem;
                 line-height: 1.5;
                 width: fit-content;
             }

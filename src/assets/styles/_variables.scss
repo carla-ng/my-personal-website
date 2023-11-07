@@ -25,6 +25,7 @@ $breakpoint-max-mobile:      480px;
 $breakpoint-min-tablet:      481px;
 $breakpoint-max-tablet:      768px;
 $breakpoint-min-desktop:     769px;
+$breakpoint-max-desktop:     991px;
 $breakpoint-min-desktop-lg:  992px;
 $breakpoint-min-desktop-xl:  1024px;
 
@@ -53,8 +54,8 @@ $palette-color-04: #f0e088;  // darker creamy light yellow
 $palette-color-05: #ac6bee;  // darker purple
 $palette-color-06: #ffa3b2;  // darker pink
 
-$light-color: rgba(255, 252, 236);  // main light color
-$dark-color: #3d3d3d;               // main dark color
+$light-color: rgb(255, 252, 236);  // main light color
+$dark-color: #3d3d3d;              // main dark color
 
 $font-color-01: $black;
 $font-color-02: $white;
