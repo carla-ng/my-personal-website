@@ -167,7 +167,7 @@ export default {
             {
                 title: '50 JS Projects',
                 intro: 'Listado de 50 mini proyectos de JavaScript.',
-                description: 'Reto de proyectos de distintos niveles de dificultad para practicar JavaScript. Algunos de ellos realizados con APIs. Desarrollados principalmente para DESKTOP.',
+                description: 'Reto de proyectos de distintos niveles de dificultad para practicar JavaScript. Algunos de ellos realizados con APIs.',
                 tags: ['JavaScript','SCSS','API'],
                 urls: [
                     { code: 'https://github.com/carla-ng/50-javascript-projects/', demo: 'https://carla-ng.github.io/50-javascript-projects/' }
