@@ -187,7 +187,7 @@ export default {
             {
                 title: 'CSS Animations',
                 intro: 'Repertorio de animaciones CSS.',
-                description: 'Se incluyen animaciones tipo hover para DESKTOP de elementos como botones, imágenes y menús.',
+                description: 'Se incluyen animaciones tipo hover de elementos como botones, imágenes y menús.',
                 tags: ['SCSS'],
                 urls: [
                     { code: 'https://github.com/carla-ng/css-animations/', demo: 'https://carla-ng.github.io/css-animations/' }
