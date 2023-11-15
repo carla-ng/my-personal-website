@@ -207,7 +207,7 @@ export default {
             {
                 title: 'Dungeon Mini Game',
                 intro: 'Mini juego de un nivel de una mazmorra.',
-                description: 'Juego donde se deberá obtener la llave y llegar a la puerta para escapar de los enemigos. Sólo para DESKTOP.',
+                description: 'Juego donde se deberá obtener la llave y llegar a la puerta para escapar de los enemigos.',
                 tags: ['JavaScript','SCSS'],
                 urls: [
                     { code: 'https://github.com/carla-ng/dungeon-mini-game-js/', demo: 'https://carla-ng.github.io/dungeon-mini-game-js/' }
