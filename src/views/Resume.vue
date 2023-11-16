@@ -432,7 +432,7 @@ export default {
             {
                 name: 'Diseño de videojuegos y conceptualización',
                 time: 'Cursando actualmente',
-                description: 'Durante el curso serán empleadas herramientas de diseño como <b>Photoshop</b>, <b>Illustrator</b> y <b>Maya</b> para la creación de un personaje principal, elementos del juego y escenarios. Además, se desarrollará un demo del juego utilizando la plataforma <b>Unity</b>.'
+                description: 'Durante el curso serán empleadas herramientas de diseño como <b>Photoshop</b>, <b>Illustrator</b> y <b>Maya</b> para la creación de un personaje principal, elementos del juego y escenarios. Además, se desarrollará un demo del juego utilizando la plataforma <b>Unity</b> y se preparará el correspondiente <b>GDD</b> (Game Design Document / Documento de Diseño de Videojuego).'
             },
         ]
 
