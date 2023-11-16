@@ -485,6 +485,11 @@ export default {
         }
 
         @media (max-width: $breakpoint-max-tablet) { order: 2; }
+
+        p.primary-text {
+            margin: 0 auto 2rem auto;
+            @media (min-width: $breakpoint-min-desktop) { margin: 0 auto 1rem auto; }
+        }
     }
 
     .resume__header-img {
