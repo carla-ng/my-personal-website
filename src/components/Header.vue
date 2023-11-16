@@ -117,7 +117,8 @@ export default {
 
     @media (min-width: $breakpoint-min-desktop) {
         align-items: center;
-        margin: 2rem auto 4rem auto;
+        margin: 0 auto;
+        padding: 3.5rem 0 4rem 0;
     }
 
     .nav__top {

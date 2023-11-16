@@ -40,7 +40,7 @@ html:focus-within {
 
 html, body {
     margin: 0;
-    min-height: 100%;
+    min-height: 100vh;
     padding: 0;
 }
 
@@ -100,12 +100,15 @@ body {
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     width: 100%;
+
+    //@media (min-width: $breakpoint-min-desktop) { min-height: calc(100vh - 3rem); } // minus footers height
 }
 
 
 /* Pages */
 #app {
-    min-height: calc(100vh - 2rem);
+    //min-height: calc(100vh - 2rem);
+    min-height: 100vh;
     position: relative;
 
     @media (min-width: $breakpoint-min-desktop) { min-height: calc(100vh - 3rem); } // minus footers height

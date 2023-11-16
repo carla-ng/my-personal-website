@@ -35,7 +35,7 @@ export default {
     .footer__link {
         color: $font-color-02;
         font-size: $font-size-14px;
-        padding: 0.8rem;
+        padding: 0.7rem;
         text-decoration: none;
         width: 100%;
 
