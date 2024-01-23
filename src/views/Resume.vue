@@ -397,7 +397,7 @@ export default {
         const in_person_courses_history = [
             {
                 name: 'Diseño de Videojuegos y Conceptualización',
-                logo: '/assets/images/portfolio/bosque-de-meigas.jpg',
+                logo: '/assets/images/portfolio/bosque-de-meigas.webp',
                 time: 'oct. 2023 - ene. 2024',
                 description: 'Durante el curso el alumno diseñará un videojuego original desde cero, empezando por la creación de la historia y el concept art. Empleará herramientas de diseño como <b>Photoshop</b> y <b>Maya</b> para la creación de un personaje principal, elementos del juego y un escenario. Finalmente, deberá importar los modelos 3D creados a la plataforma <b>Unity</b>. Al finalizar el curso se deberá haber preparado el correspondiente <b>GDD</b> (Game Design Document / Documento de Diseño de Videojuego), el cual incluirá toda la documentación sobre el juego, además de un demo reel con los modelos 3D creados. <i>[Certificación en progreso]</i>'
             },
