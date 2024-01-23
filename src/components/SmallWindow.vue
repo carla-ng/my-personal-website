@@ -45,13 +45,6 @@
                             </button>
                         </a>
                     </li>
-                    <li v-if="urls[0].example">
-                        <a :href="urls[0].example" target="_blank" class="os-button">
-                            <button class="window__buttons-example os-button__button">
-                                <span>Ejemplos</span>
-                            </button>
-                        </a>
-                    </li>
                     <li v-if="urls[0].comingsoon">
                         <a :href="urls[0].comingsoon" target="_blank" class="os-button disabled-button">
                             <button class="window__buttons-comingsoon os-button__button">
@@ -265,6 +258,9 @@ export default {
                     &.jquery { background-color: $smallwindow-jquery-color; }
                     &.bootstrap { background-color: $smallwindow-bootstrap-color; }
                     &.react { background-color: $smallwindow-react-color; }
+                    &.photoshop { background-color: #2fa3f7; }
+                    &.maya { background-color: #36687f; }
+                    &.unity { background-color: #000; }
                    
                 }
             }

@@ -118,6 +118,38 @@
                         <div class="window__inner-container">
 
                             <header class="window__bar">
+                                <div class="window__bar-title">Presenciales</div>
+                                <div class="window__bar-buttons disabled-button">
+                                    <span>X</span>
+                                </div>
+                            </header>
+
+                            <div class="window__main">
+                                <div class="window__image-container">
+                                    <div class="window__image">
+                                        <img :src="in_person_courses_history[0].logo" :alt="in_person_courses_history[0].title">
+                                    </div>
+                                </div>
+                                <div class="window__text">
+                                    <div>
+                                        <div class="window__text-description">
+                                            <span class="course__title" style="text-decoration: underline;">
+                                                <b>{{ in_person_courses_history[0].name }}</b> ({{ in_person_courses_history[0].time }}
+                                            </span>):
+                                            <span class="course__description" v-html="in_person_courses_history[0].description"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="window">
+                        <div class="window__inner-container">
+
+                            <header class="window__bar">
                                 <div class="window__bar-title">Destacados online</div>
                                 <div class="window__bar-buttons disabled-button">
                                     <span>X</span>
@@ -136,37 +168,6 @@
                                                     <a :href="course.certificate" target="_blank">
                                                         [Certificado]
                                                     </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="window">
-                        <div class="window__inner-container">
-
-                            <header class="window__bar">
-                                <div class="window__bar-title">Presenciales</div>
-                                <div class="window__bar-buttons disabled-button">
-                                    <span>X</span>
-                                </div>
-                            </header>
-
-                            <div class="window__main">
-                                <div class="window__text">
-                                    <div>
-                                        <div class="window__text-description">
-                                            <ul>
-                                                <li v-for="(course,index) in in_person_courses_history" :key="index">
-                                                    <span class="course__title">
-                                                        <b>{{ course.name }}</b> ({{ course.time }}):
-                                                    </span>
-                                                    <span class="course__description" v-html="course.description"></span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -309,7 +310,7 @@ export default {
                 positions: [
                     {
                         title: 'Software Developer',
-                        time: 'Junio 2017 - Actualidad',
+                        time: 'Junio 2017 - Julio 2023',
                         description: `
                                         <ul>
                                             <li>Desarrollo de componentes para la creación de numerosos portales (ej. de componentes: Cards, Video Player, Header).</li>
@@ -392,6 +393,17 @@ export default {
         ]
 
 
+        // In person courses
+        const in_person_courses_history = [
+            {
+                name: 'Diseño de Videojuegos y Conceptualización',
+                logo: '/assets/images/portfolio/bosque-de-meigas.jpg',
+                time: 'oct. 2023 - ene. 2024',
+                description: 'Durante el curso el alumno diseñará un videojuego original desde cero, empezando por la creación de la historia y el concept art. Empleará herramientas de diseño como <b>Photoshop</b> y <b>Maya</b> para la creación de un personaje principal, elementos del juego y un escenario. Finalmente, deberá importar los modelos 3D creados a la plataforma <b>Unity</b>. Al finalizar el curso se deberá haber preparado el correspondiente <b>GDD</b> (Game Design Document / Documento de Diseño de Videojuego), el cual incluirá toda la documentación sobre el juego, además de un demo reel con los modelos 3D creados. <i>[Certificación en progreso]</i>'
+            },
+        ]
+
+        
         // Online courses
         const online_courses_history = [
             {
@@ -423,16 +435,6 @@ export default {
                 time: 'mar. 2020',
                 where: 'OpenWebinars',
                 certificate: 'https://openwebinars.net/cert/jn6jy',
-            },
-        ]
-
-
-        // In person courses
-        const in_person_courses_history = [
-            {
-                name: 'Diseño de videojuegos y conceptualización',
-                time: 'Cursando actualmente',
-                description: 'Durante el curso serán empleadas herramientas de diseño como <b>Photoshop</b>, <b>Illustrator</b> y <b>Maya</b> para la creación de un personaje principal, elementos del juego y escenarios. Además, se desarrollará un demo del juego utilizando la plataforma <b>Unity</b> y se preparará el correspondiente <b>GDD</b> (Game Design Document / Documento de Diseño de Videojuego).'
             },
         ]
 
@@ -615,11 +617,44 @@ export default {
             margin-bottom: 2rem;
             .window__inner-container {
                 .window__main {
+                    padding: 1.5rem 1rem;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    @media (min-width: $breakpoint-min-desktop) { flex-direction: row; }
+
+                    .window__image-container {
+                        @media (min-width: $breakpoint-min-desktop) { flex: 1; }
+
+                        .window__image {
+                            align-items: center;
+                            height: 150px;
+
+                            @media (min-width: $breakpoint-min-tablet) and (max-width: $breakpoint-max-tablet) { height: 280px; }
+                        }
+
+                        .window__place {
+                            font-style: italic;
+                            margin-top: 0.4rem;
+                        }
+                    }
                     .window__text {
+                        padding: 1rem 0;
+
+                        @media (min-width: $breakpoint-min-desktop) {
+                            flex: 3;
+                            padding: 0 1rem;
+                        }
+
                         .window__text-description {
                             ul {
+                                margin-block-start: 0;
+                                margin-block-end: 0;
+                                padding-inline-start: 2rem;
+
                                 li {
-                                    margin-bottom: 0.5rem;
+                                    margin-bottom: 1rem;
 
                                     a { color: $font-color-01; }
 

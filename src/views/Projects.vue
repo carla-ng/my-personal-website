@@ -154,6 +154,16 @@ export default {
                 repo: 'my-pokemon-project'
             },
             {
+                title: 'Bosque de Meigas',
+                intro: 'Diseño del videojuego.',
+                description: 'Desarrollado en un curso de "Diseño y conceptualización de videojuegos", en el cual cada alumno trabajó en la creación de un juego original, tratando cada etapa desde la historia y el concept art, hasta la importación de modelos 3D a Unity.',
+                tags: ['Photoshop','Maya','Unity'],
+                urls: [
+                    { code: 'https://github.com/carla-ng/bosque-de-meigas-game-design', demo: 'https://carla-ng.github.io/bosque-de-meigas-game-design/' }
+                ],
+                repo: 'bosque-de-meigas-game-design'
+            },
+            {
                 title: 'Space Tourism',
                 intro: 'Sitio web sobre turismo espacial.',
                 description: 'Forma parte de un repositorio personal para practicar desarrollo web, en el cual se pueden encontrar otros pequeños proyectos (para más información ver el proyecto de "Web Development" incluido en esta sección).',
@@ -185,6 +195,16 @@ export default {
                 repo: 'web-development-practice'
             },
             {
+                title: 'Who is that Pokémon?',
+                intro: 'Mini juego de adivinar qué Pokémon se muestra en base a su silueta.',
+                description: 'Juego sencillo para adivinar el Pokémon que se muestra en pantalla, se podrá seleccionar su nombre de entre un listado de opciones.',
+                tags: ['Vue','JavaScript','CSS','API', 'PokéAPI','Jest'],
+                urls: [
+                    { code: 'https://github.com/carla-ng/who-is-that-pokemon/', demo: 'https://carla-ng.github.io/who-is-that-pokemon/' }
+                ],
+                repo: 'who-is-that-pokemon'
+            },
+            {
                 title: 'CSS Animations',
                 intro: 'Repertorio de animaciones CSS.',
                 description: 'Se incluyen animaciones tipo hover de elementos como botones, imágenes y menús.',
@@ -213,16 +233,6 @@ export default {
                     { code: 'https://github.com/carla-ng/dungeon-mini-game-js/', demo: 'https://carla-ng.github.io/dungeon-mini-game-js/' }
                 ],
                 repo: 'dungeon-mini-game-js'
-            },
-            {
-                title: 'Who is that Pokémon?',
-                intro: 'Mini juego de adivinar qué Pokémon se muestra en base a su silueta.',
-                description: 'Juego sencillo para adivinar el Pokémon que se muestra en pantalla, se podrá seleccionar su nombre de entre un listado de opciones.',
-                tags: ['Vue','JavaScript','CSS','API', 'PokéAPI','Jest'],
-                urls: [
-                    { code: 'https://github.com/carla-ng/who-is-that-pokemon/', demo: 'https://carla-ng.github.io/who-is-that-pokemon/' }
-                ],
-                repo: 'who-is-that-pokemon'
             },
         ])
 
