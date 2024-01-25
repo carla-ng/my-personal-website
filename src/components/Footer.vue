@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-    background-color: $palette-color-05;
+    background-color: $footer-background-color;
     height: 3rem;
     text-align: center;
 

@@ -250,7 +250,7 @@ export default {
                     padding: 0.3rem 0.5rem;
                     text-shadow: 1px 1px 5px $gray;
 
-                    &.vue { background-color: $accent-color-01; }
+                    &.vue { background-color: #34b37a; }
                     &.javascript { background-color: $smallwindow-javascript-color; }
                     &.css { background-color: $accent-color-02; }
                     &.tailwindcss { background-color: $smallwindow-tailwind-color; }

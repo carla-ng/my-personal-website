@@ -208,13 +208,13 @@ export default {
             img.src = imagePath
             modal.style.display = 'block'
 
-            document.getElementsByTagName('html')[0].classList.add('scroll-blocked')
+            document.getElementsByTagName('html')[0].classList.add('no-scroll')
         }
         const closeModal = () => {
             const modal = document.getElementById('myModal')
             modal.style.display = 'none'
 
-            document.getElementsByTagName('html')[0].classList.remove('scroll-blocked')
+            document.getElementsByTagName('html')[0].classList.remove('no-scroll')
         }
 
 

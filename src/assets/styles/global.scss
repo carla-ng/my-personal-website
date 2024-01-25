@@ -207,7 +207,10 @@ b, strong { font-weight: 600; }
 
 .font-family-02 { font-family: $font-family-02; }
 
-.accent-01 { color: $accent-color-01; }
+.accent-01 {
+    color: $accent-color-01;
+    font-weight: 700;
+}
 
 .uppercase { text-transform: uppercase; }
 
@@ -216,9 +219,7 @@ a { color: $accent-color-03;}
 
 ::selection { background-color: $palette-color-06; }
 
-// TODO: unify
 .no-scroll { overflow: hidden; }
-.scroll-blocked { overflow: hidden; }
 
  
 .desktop {
