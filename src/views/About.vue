@@ -326,11 +326,7 @@ export default {
 
                 @media (min-width: $breakpoint-min-desktop) {
                     flex-direction: row;
-
-                    height: -moz-available;
-                    height: -webkit-fill-available;
-                    height: fill-available;
-
+                    height: inherit;
                     margin-top: 2rem;
                     margin-bottom: 2rem;
                 }

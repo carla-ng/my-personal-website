@@ -93,17 +93,17 @@ export default {
     translate: -50% -50%;
     z-index: 999;
 
-    height: 90vh;
-    width: 90vw;
-    @media (min-width: $breakpoint-min-tablet) { width: 80vw; }
-    @media (min-width: $breakpoint-min-desktop) { width: 70vw; }
+    height: 90%;
+    width: 90%;
+    @media (min-width: $breakpoint-min-tablet) { width: 80%; }
+    @media (min-width: $breakpoint-min-desktop) { width: 70%; }
 
     .popup {    
         background-color: $light-color;
         border-radius: 5px;
         border: 1px solid $palette-color-03;
         box-shadow: 6px 6px 5px $gray;
-        height: 90vh;
+        height: 90%;
         min-width: 0;
         overflow: hidden;
         padding: 0.2rem;
@@ -142,12 +142,9 @@ export default {
         } 
 
         .popup__content {
+            height: inherit;
             overflow-y: scroll;
             padding: 3rem 2rem 4rem 2rem;
-
-            height: -moz-available;
-            height: -webkit-fill-available;
-            height: fill-available;
 
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
