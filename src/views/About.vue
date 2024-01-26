@@ -39,13 +39,13 @@
 
                         <div class="window__text-buttons">
                             <div :class="{ 'disabled-button': isPrevButtonDisabled }" class="os-button">
-                                <button class="os-button__button prev" @click="previousStep">
+                                <button class="os-button__button prev" @click="previousStep" :disabled="isPrevButtonDisabled">
                                     <span>Anterior</span>
                                 </button>
                             </div>
                             
                             <div :class="{ 'disabled-button': isNextButtonDisabled }" class="os-button">
-                                <button class="os-button__button next" @click="nextStep">
+                                <button class="os-button__button next" @click="nextStep" :disabled="isNextButtonDisabled">
                                     <span>Siguiente</span>
                                 </button>
                             </div>
@@ -407,8 +407,8 @@ export default {
             display: flex;
             align-items: flex-start;
 
-            img {
-                cursor: pointer;
+                img {
+                    cursor: pointer;
                 min-width: 100%;
                 min-height: 100%;
                 object-fit: cover;

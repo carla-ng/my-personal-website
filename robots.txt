@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /assets/docs/CV_CarlaNardone.pdf
 Disallow: /assets/docs/EN_CV_CarlaNardone.pdf
+Disallow: *.pdf
