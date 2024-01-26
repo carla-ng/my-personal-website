@@ -248,11 +248,13 @@ export default {
                 }
 
                 a {
+                    -webkit-tap-highlight-color: rgba(0,0,0,0);
                     color: $font-color-01;
                     font-family: $font-family-02;
                     font-size: $font-size-14px;
                     letter-spacing: 0.1rem;
                     padding: 0 1rem;
+                    text-align: center;
                     text-decoration: none;
                     text-shadow: 1px 1px 1px $light-gray;
                     text-transform: uppercase;

@@ -63,7 +63,7 @@
             <div class="about__drawings">
 
                 <div v-for="(drawing, index) in drawings" :key="index">
-                    <img :src="drawing.url" :alt="drawing.alt" @click="openModal(drawing.url)">
+                    <img :src="drawing.url" :alt="drawing.alt" @click.prevent="openModal(drawing.url)">
                 </div>
 
             </div>
@@ -407,12 +407,15 @@ export default {
             display: flex;
             align-items: flex-start;
 
-                img {
-                    cursor: pointer;
+            img {
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                cursor: pointer;
                 min-width: 100%;
                 min-height: 100%;
                 object-fit: cover;
                 scale: 1.1;
+
+                &:focus { outline: none; }
             }
         }
     }

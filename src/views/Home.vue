@@ -2,11 +2,6 @@
 
     <main class="home page-container">
 
-        <div class="home__temp-alert">
-            <AlertBox alert_text='¡Pssst! ¡Esta web se encuentra en construcción!' />
-        </div>
-
-
         <section class="home__container">
 
             <div class="home__image">
@@ -54,14 +49,12 @@
 
 
 <script>
-import AlertBox from '@/components/AlertBox.vue';
 import SpeechBubble from '@/components/SpeechBubble.vue';
 
 export default {
     name: "Home",
 
     components: {
-        AlertBox,
         SpeechBubble
     },
 }

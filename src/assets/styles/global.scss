@@ -111,7 +111,7 @@ body {
     min-height: 100vh;
     position: relative;
 
-    @media (min-width: $breakpoint-min-desktop) { min-height: calc(100vh - 3rem); } // minus footers height
+    //@media (min-width: $breakpoint-min-desktop) { min-height: calc(100vh - 3rem); } // minus footers height
 }
 
 .page-container {

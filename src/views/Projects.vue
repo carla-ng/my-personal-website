@@ -164,6 +164,16 @@ export default {
                 repo: 'bosque-de-meigas-game-design'
             },
             {
+                title: 'CSS Animations',
+                intro: 'Repertorio de animaciones CSS.',
+                description: 'Se incluyen animaciones tipo hover de elementos como botones, imágenes y menús.',
+                tags: ['SCSS'],
+                urls: [
+                    { code: 'https://github.com/carla-ng/css-animations/', demo: 'https://carla-ng.github.io/css-animations/' }
+                ],
+                repo: 'css-animations'
+            },
+            {
                 title: 'Space Tourism',
                 intro: 'Sitio web sobre turismo espacial.',
                 description: 'Forma parte de un repositorio personal para practicar desarrollo web, en el cual se pueden encontrar otros pequeños proyectos (para más información ver el proyecto de "Web Development" incluido en esta sección).',
@@ -185,16 +195,6 @@ export default {
                 repo: '50-javascript-projects'
             },
             {
-                title: 'Web Development',
-                intro: 'De todo un poco.',
-                description: 'En este repositorio incluyo mini-proyectos, no relacionados entre sí, para practicar distintas tecnologías de forma rápida y sencilla. Un ejemplo de este repositorio es el proyecto ya mencionado de "Space Tourism Website", el cual he destacado por ser el más grande de este respositorio.',
-                tags: ['SCSS','Vue','React','JavaScript'],
-                urls: [
-                    { code: 'https://github.com/carla-ng/web-development-practice/' }
-                ],
-                repo: 'web-development-practice'
-            },
-            {
                 title: 'Who is that Pokémon?',
                 intro: 'Mini juego de adivinar qué Pokémon se muestra en base a su silueta.',
                 description: 'Juego sencillo para adivinar el Pokémon que se muestra en pantalla, se podrá seleccionar su nombre de entre un listado de opciones.',
@@ -205,14 +205,14 @@ export default {
                 repo: 'who-is-that-pokemon'
             },
             {
-                title: 'CSS Animations',
-                intro: 'Repertorio de animaciones CSS.',
-                description: 'Se incluyen animaciones tipo hover de elementos como botones, imágenes y menús.',
-                tags: ['SCSS'],
+                title: 'Web Development',
+                intro: 'De todo un poco.',
+                description: 'En este repositorio incluyo mini-proyectos, no relacionados entre sí, para practicar distintas tecnologías de forma rápida y sencilla. Un ejemplo de este repositorio es el proyecto ya mencionado de "Space Tourism Website", el cual he destacado por ser el más grande de este respositorio.',
+                tags: ['SCSS','Vue','React','JavaScript'],
                 urls: [
-                    { code: 'https://github.com/carla-ng/css-animations/', demo: 'https://carla-ng.github.io/css-animations/' }
+                    { code: 'https://github.com/carla-ng/web-development-practice/' }
                 ],
-                repo: 'css-animations'
+                repo: 'web-development-practice'
             },
             {
                 title: 'Rock Paper Scissors',
