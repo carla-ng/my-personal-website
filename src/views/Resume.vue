@@ -127,7 +127,7 @@
                             <div class="window__main">
                                 <div class="window__image-container">
                                     <div class="window__image">
-                                        <img :src="in_person_courses_history[0].logo" :alt="in_person_courses_history[0].title">
+                                        <img :src="in_person_courses_history[0].logo" :alt="in_person_courses_history[0].name">
                                     </div>
                                 </div>
                                 <div class="window__text">
