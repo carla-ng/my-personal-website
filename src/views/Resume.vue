@@ -310,7 +310,7 @@ export default {
                 positions: [
                     {
                         title: 'Software Developer',
-                        time: 'Junio 2017 - Julio 2023',
+                        time: 'Junio 2017 - Junio 2023',
                         description: `
                                         <ul>
                                             <li>Desarrollo de componentes para la creación de numerosos portales (ej. de componentes: Cards, Video Player, Header).</li>
