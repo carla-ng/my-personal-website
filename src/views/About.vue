@@ -97,7 +97,7 @@ export default {
                         <br>
                         <p>Mi nombre es <strong>Carla</strong>, y soy <strong>Ingeniera de Software especializada en desarrollo Front-end</strong>. Las tecnologías que suelo utilizar son <strong>JavaScript, Vue, jQuery, CSS/SCSS</strong> y <strong>TailwindCSS</strong>. También tengo un poco de experiencia trabajando con Back-end y BBDD, especialmente con <strong>PHP</strong> y <strong>MySQL</strong>. Tengo mucho interés en aprender nuevas tecnologías.</p>
                         <br>
-                        <p>Además de la programación, me interesa mucho la <strong>gestión de proyectos</strong>, soy una persona muy <strong>organizada</strong> y <strong>atenta</strong>. Estoy acostumbrada a trabajar con la metodología agile de <strong>Scrum</strong>.</p>
+                        <p>Además de la programación, me interesa mucho la <strong>gestión de proyectos</strong>, soy una persona muy <strong>organizada</strong> y <strong>atenta</strong>. Estoy acostumbrada a trabajar con la metodología ágil de <strong>Scrum</strong>.</p>
                         <br>
                         <p>También me gusta el <strong>desarrollo de videojuegos</strong> y me encuentro actualmente aprendiendo sobre ello (diseño con <strong>Photoshop</strong> y <strong>Maya</strong>, conceptualización y desarrollo en <strong>Unity</strong>).</p>
                       `,
