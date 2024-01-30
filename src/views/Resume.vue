@@ -312,12 +312,20 @@ export default {
                         title: 'Software Developer',
                         time: 'Junio 2017 - Junio 2023',
                         description: `
+                                    <br>
+                                    <b>Desarrollo</b>
                                         <ul>
                                             <li>Desarrollo de componentes para la creación de numerosos portales (ej. de componentes: Cards, Video Player, Header).</li>
                                             <li>Hacer configurables los componentes creados para tener múltiples opciones de diseño, y para que puedan adaptarse a cualquier tipo de contenido aportado por distintos proveedores.</li>
                                             <li>Mantenimiento de editor de componentes y portales.</li>
                                             <li>Creación de funcionalidades dentro de los portales haciendo uso de los componentes para que interactúen entre ellos.</li>
-                                            <li>Planificación y estimación de tareas (metodología Scrum, organización con herramienta JIRA).</li>
+                                        </ul>
+                                    <b>Gestión</b>
+                                        <ul>
+                                            <li>Planificación y estimación de tareas (metodología ágil Scrum, organización con herramienta JIRA), además de realizar seguimiento de las tareas del sprint y el backlog.</li>
+                                            <li>Comunicación interdepartamental.</li>
+                                            <li>Soporte al mánager, además de asumir sus responsabilidades en su ausencia.</li>
+                                            <li>Documentación en Confluence.</li>
                                             <li>Validación de diseños y flujos proporcionados por equipo de UX.</li>
                                         </ul>
                                     `,
