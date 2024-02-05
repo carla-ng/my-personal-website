@@ -214,6 +214,7 @@ export default {
                 ],
                 repo: 'web-development-practice'
             },
+            /*
             {
                 title: 'Rock Paper Scissors',
                 intro: 'Mini juego de piedra, papel o tijeras.',
@@ -224,6 +225,7 @@ export default {
                 ],
                 repo: 'vue-rock-paper-scissors'
             },
+            */
             {
                 title: 'Dungeon Mini Game',
                 intro: 'Mini juego de un nivel de una mazmorra.',
