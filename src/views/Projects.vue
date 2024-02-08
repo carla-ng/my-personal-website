@@ -206,7 +206,7 @@ export default {
             {
                 title: 'Web Development',
                 intro: 'De todo un poco.',
-                description: 'En este repositorio incluyo mini-proyectos, no relacionados entre sí, para practicar distintas tecnologías de forma rápida y sencilla. Un ejemplo de este repositorio es el proyecto ya mencionado de "Space Tourism Website", el cual he destacado por ser el más grande de este respositorio.',
+                description: 'En este repositorio incluyo mini-proyectos, no relacionados entre sí, para practicar distintas tecnologías de forma rápida y sencilla.',
                 tags: ['SCSS','Vue','React','JavaScript'],
                 urls: [
                     { code: 'https://github.com/carla-ng/web-development-practice/' }
