@@ -144,6 +144,16 @@ export default {
         // Personal projects list
         const personal_projects = ref([
             {
+                title: 'Coding Challenges',
+                intro: 'Colección de componentes y páginas web.',
+                description: 'Para aprender y crecer hay que practicar. Es por eso que participo en retos de código front-end para traer a la vida desde componentes reutilizables hasta sitios web completos.',
+                tags: ['Vue','JavaScript','API','SCSS'],
+                urls: [
+                    { code: 'https://github.com/carla-ng/coding-challenges/', demo: 'https://carla-ng.github.io/coding-challenges/' }
+                ],
+                repo: 'coding-challenges'
+            },
+            {
                 title: 'My Pokémon Project',
                 intro: 'Proyecto basado en el mundo Pokémon.',
                 description: 'Se listan los distintos Pokémon obtenidos de la PokéAPI, mostrando sus descripciones y sus características. Además incluye un apartado extra con un listado de ítems que pueden ser utilizados por los entrenadores del mundo Pokémon.',
@@ -152,16 +162,6 @@ export default {
                     { code: 'https://github.com/carla-ng/my-pokemon-project/', demo: 'https://carla-ng-my-pokemon-project.netlify.app/' }
                 ],
                 repo: 'my-pokemon-project'
-            },
-            {
-                title: 'Bosque de Meigas',
-                intro: 'Diseño del videojuego.',
-                description: 'Desarrollado en un curso de "Diseño y conceptualización de videojuegos", en el cual cada alumno trabajó en la creación de un juego original, tratando cada etapa desde la historia y el concept art, hasta la importación de modelos 3D a Unity.',
-                tags: ['Photoshop','Maya','Unity'],
-                urls: [
-                    { code: 'https://github.com/carla-ng/bosque-de-meigas-game-design', demo: 'https://carla-ng.github.io/bosque-de-meigas-game-design/' }
-                ],
-                repo: 'bosque-de-meigas-game-design'
             },
             {
                 title: 'CSS Animations',
@@ -174,15 +174,14 @@ export default {
                 repo: 'css-animations'
             },
             {
-                title: 'Space Tourism',
-                intro: 'Sitio web sobre turismo espacial.',
-                description: 'Forma parte de un repositorio personal para practicar desarrollo web, en el cual se pueden encontrar otros pequeños proyectos (para más información ver el proyecto de "Web Development" incluido en esta sección).',
-                tags: ['Vue','JavaScript','SCSS'],
+                title: 'Bosque de Meigas',
+                intro: 'Diseño del videojuego.',
+                description: 'Desarrollado en un curso de "Diseño y conceptualización de videojuegos", en el cual cada alumno trabajó en la creación de un juego original, tratando cada etapa desde la historia y el concept art, hasta la importación de modelos 3D a Unity.',
+                tags: ['Photoshop','Maya','Unity'],
                 urls: [
-                    { code: 'https://github.com/carla-ng/web-development-practice/tree/main/space-tourism-website', demo: 'https://carla-ng-space-tourism.netlify.app/' }
+                    { code: 'https://github.com/carla-ng/bosque-de-meigas-game-design', demo: 'https://carla-ng.github.io/bosque-de-meigas-game-design/' }
                 ],
-                repo: 'web-development-practice',
-                subrepo: 'space-tourism-website'
+                repo: 'bosque-de-meigas-game-design'
             },
             {
                 title: '50 JS Projects',
@@ -195,14 +194,14 @@ export default {
                 repo: '50-javascript-projects'
             },
             {
-                title: 'Who is that Pokémon?',
-                intro: 'Mini juego de adivinar qué Pokémon se muestra en base a su silueta.',
-                description: 'Juego sencillo para adivinar el Pokémon que se muestra en pantalla, se podrá seleccionar su nombre de entre un listado de opciones.',
-                tags: ['Vue','JavaScript','CSS','API', 'PokéAPI','Jest'],
+                title: 'Dungeon Mini Game',
+                intro: 'Mini juego de un nivel de una mazmorra.',
+                description: 'Juego donde se deberá obtener la llave y llegar a la puerta para escapar de los enemigos.',
+                tags: ['JavaScript','SCSS'],
                 urls: [
-                    { code: 'https://github.com/carla-ng/who-is-that-pokemon/', demo: 'https://carla-ng.github.io/who-is-that-pokemon/' }
+                    { code: 'https://github.com/carla-ng/dungeon-mini-game-js/', demo: 'https://carla-ng.github.io/dungeon-mini-game-js/' }
                 ],
-                repo: 'who-is-that-pokemon'
+                repo: 'dungeon-mini-game-js'
             },
             {
                 title: 'Web Development',
@@ -214,27 +213,15 @@ export default {
                 ],
                 repo: 'web-development-practice'
             },
-            /*
             {
-                title: 'Rock Paper Scissors',
-                intro: 'Mini juego de piedra, papel o tijeras.',
-                description: 'Juego sencillo de una persona para jugar contra el ordenador. Lleva recuento de partidas ganadas, perdidas y empatadas.',
-                tags: ['Vue','JavaScript','SCSS','TailwindCSS'],
+                title: 'Who is that Pokémon?',
+                intro: 'Mini juego de adivinar qué Pokémon se muestra en base a su silueta.',
+                description: 'Juego sencillo para adivinar el Pokémon que se muestra en pantalla, se podrá seleccionar su nombre de entre un listado de opciones.',
+                tags: ['Vue','JavaScript','CSS','API', 'PokéAPI','Jest'],
                 urls: [
-                    { code: 'https://github.com/carla-ng/vue-rock-paper-scissors/', demo: 'https://carla-ng.github.io/vue-rock-paper-scissors/' }
+                    { code: 'https://github.com/carla-ng/who-is-that-pokemon/', demo: 'https://carla-ng.github.io/who-is-that-pokemon/' }
                 ],
-                repo: 'vue-rock-paper-scissors'
-            },
-            */
-            {
-                title: 'Dungeon Mini Game',
-                intro: 'Mini juego de un nivel de una mazmorra.',
-                description: 'Juego donde se deberá obtener la llave y llegar a la puerta para escapar de los enemigos.',
-                tags: ['JavaScript','SCSS'],
-                urls: [
-                    { code: 'https://github.com/carla-ng/dungeon-mini-game-js/', demo: 'https://carla-ng.github.io/dungeon-mini-game-js/' }
-                ],
-                repo: 'dungeon-mini-game-js'
+                repo: 'who-is-that-pokemon'
             },
         ])
 

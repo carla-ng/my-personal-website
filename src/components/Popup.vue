@@ -80,8 +80,6 @@ export default {
 
 
 <style lang="scss">
-@import '@/assets/styles/global.scss';
-
 .popup__container {
     display: flex;
     align-items: center;
@@ -169,7 +167,11 @@ export default {
 
                 h1 { margin: 0.5rem 0 1.5rem 0; }
 
-                h3 { margin: 1.5rem 0 1.5rem 0; }
+                h3 {
+                    margin: 1.5rem 0 1.5rem 0;
+
+                    &:has(> a) { text-shadow: none; }
+                }
             }
         }
     }

@@ -261,25 +261,6 @@
                 </div>
             </article>
 
-
-            <article>
-                <div class="resume__download">
-                    <div class="resume__download-title secondary-text">Si lo deseas, puedes <b>descargar mi currículum</b> tanto en
-                        <div class="os-button" @click="downloadCVSpanish">
-                            <button class="os-button__button">
-                                <span>español</span>
-                            </button>
-                        </div>
-                        como en
-                        <div class="os-button" @click="downloadCVEnglish">
-                            <button class="os-button__button">
-                                <span>inglés</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
         </section>
 
     </main>
@@ -288,8 +269,6 @@
 
 
 <script>
-import { ref } from 'vue';
-
 import AlertBox from '@/components/AlertBox.vue';
 
 export default {
@@ -447,32 +426,11 @@ export default {
         ]
 
 
-        // Download resume in spanish
-        const downloadCVSpanish = () => {
-            const pdfPath = ref('assets/docs/resume/CV_CarlaNardone.pdf');
-            const fullURL = process.env.BASE_URL + pdfPath.value;
-
-            window.open(fullURL, '_blank');
-        }
-
-
-        // Download resume in english
-        const downloadCVEnglish = () => {
-            const pdfPath = ref('assets/docs/resume/EN_CV_CarlaNardone.pdf');
-            const fullURL = process.env.BASE_URL + pdfPath.value;
-
-            window.open(fullURL, '_blank');
-        }
-
-
         return {
             in_person_courses_history,
             job_history,
             online_courses_history,
             studies_history,
-
-            downloadCVEnglish,
-            downloadCVSpanish,
         }
     }
 }

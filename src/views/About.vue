@@ -99,7 +99,7 @@ export default {
                         <br>
                         <p>Además de la programación, me interesa mucho la <strong>gestión de proyectos</strong>, soy una persona muy <strong>organizada</strong> y <strong>atenta</strong>. Estoy acostumbrada a trabajar con la metodología ágil de <strong>Scrum</strong>.</p>
                         <br>
-                        <p>También me gusta el <strong>desarrollo de videojuegos</strong> y me encuentro actualmente aprendiendo sobre ello (diseño con <strong>Photoshop</strong> y <strong>Maya</strong>, conceptualización y desarrollo en <strong>Unity</strong>).</p>
+                        <p>También me gusta el <strong>desarrollo de videojuegos</strong> y me encuentro actualmente aprendiendo sobre ello (conceptualización y diseño con <strong>Photoshop</strong> y <strong>Maya</strong>, y desarrollo en <strong>Unity</strong>).</p>
                       `,
                 imageSrc: 'assets/images/about/setup.webp',
             },
