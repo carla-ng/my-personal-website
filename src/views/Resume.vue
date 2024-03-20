@@ -335,7 +335,7 @@ export default {
                         time: 'Abril 2016 - Junio 2016',
                         description: `
                                         <p>
-                                            Desarrollo web responsive para el Departamento de Marketing de la empresa. Creación del sitio web del famoso juego <i>Apensar</i>
+                                            Desarrollo web responsive para el Departamento de Marketing de la empresa. Creación del sitio web del famoso juego <i>Apensar</i> y del demo del juego.
                                         </p>
                                     `,
                         languages: 'HTML . CSS . JavaScript . jQuery . GSAP . Wordpress . PHP . MySQL',
@@ -346,7 +346,7 @@ export default {
                         description: `
                                         <p>
                                             Pasantía de 20 semanas de duración en el Departamento de Marketing de la empresa, donde se adquirieron conocimientos en distintas
-                                            tecnologías de desarrollo web
+                                            tecnologías de desarrollo web.
                                         </p>
                                     `,
                         languages: 'HTML . CSS . JavaScript . jQuery . GSAP . Wordpress . PHP . MySQL',
