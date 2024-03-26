@@ -5,15 +5,13 @@
 <br>
 
 # My Personal Website
+
 Personal website and portfolio as a web developer.
 
 <br>
 
-![status badge](https://img.shields.io/badge/status-in%20progress-yellow)
-
-<br>
-
 ## :globe_with_meridians: Demo
+
 [https://carla-nardone.netlify.app/](https://carla-nardone.netlify.app/)
 
 <br>
@@ -23,18 +21,20 @@ Personal website and portfolio as a web developer.
 <br>
 
 ## :hammer_and_pick: Built With
-* Vue
-* JavaScript
-* SCSS
+
+- Vue
+- JavaScript
+- SCSS
 
 <br>
 
 ## To Do List / Possible Future Improvements and Features
-* Perform all relevant tests
-* English version (it's only available in Spanish at the moment)
+
+- Perform all relevant tests
+- English version (it's only available in Spanish at the moment)
 
 <br>
 
 ## :clap: Acknowledgments
-* [Iconify](https://iconify.design/) for skills icons
 
+- [Iconify](https://iconify.design/) for skills icons
