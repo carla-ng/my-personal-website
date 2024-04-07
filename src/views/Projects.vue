@@ -243,7 +243,7 @@ export default {
                 title: 'Sitio Web Apensar',
                 intro: 'Web oficial del juego de Apensar.',
                 description: 'Desarrollada para el departamento de Marketing de la empresa para promocionar y publicar noticias sobre el exitoso juego.',
-                tags: ['JavaScript','CSS','Bootstrap','Wordpress','PHP','MySQL'],
+                tags: ['jQuery','CSS','Bootstrap','Wordpress','PHP','MySQL'],
                 urls: [
                     { demo: 'https://carla-ng.github.io/my-portfolio/subrepositories/apensar-website/apensar-website.html' }
                 ],
