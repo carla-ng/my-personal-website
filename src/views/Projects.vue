@@ -184,6 +184,16 @@ export default {
                 repo: 'bosque-de-meigas-game-design'
             },
             {
+                title: 'Web Development',
+                intro: 'De todo un poco.',
+                description: 'En este repositorio incluyo mini-proyectos, no relacionados entre sí, para practicar distintas tecnologías de forma rápida y sencilla.',
+                tags: ['Vue','React','JavaScript', 'SCSS'],
+                urls: [
+                    { code: 'https://github.com/carla-ng/web-development-practice/', demo: 'https://carla-ng.github.io/web-development-practice/'  }
+                ],
+                repo: 'web-development-practice'
+            },
+            {
                 title: '50 JS Projects',
                 intro: 'Listado de 50 mini proyectos de JavaScript.',
                 description: 'Reto de proyectos de distintos niveles de dificultad para practicar JavaScript. Algunos de ellos realizados con APIs.',
@@ -202,16 +212,6 @@ export default {
                     { code: 'https://github.com/carla-ng/dungeon-mini-game-js/', demo: 'https://carla-ng.github.io/dungeon-mini-game-js/' }
                 ],
                 repo: 'dungeon-mini-game-js'
-            },
-            {
-                title: 'Web Development',
-                intro: 'De todo un poco.',
-                description: 'En este repositorio incluyo mini-proyectos, no relacionados entre sí, para practicar distintas tecnologías de forma rápida y sencilla.',
-                tags: ['SCSS','Vue','React','JavaScript'],
-                urls: [
-                    { code: 'https://github.com/carla-ng/web-development-practice/' }
-                ],
-                repo: 'web-development-practice'
             },
             {
                 title: 'Who is that Pokémon?',
