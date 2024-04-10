@@ -334,7 +334,7 @@ export default {
                 logo: '/assets/images/resume/icogroup.png',
                 positions: [
                     {
-                        title: 'Junior Web Developer',
+                        title: 'Desarrolladora Web Jr. de Marketing',
                         time: 'Abril 2016 - Junio 2016',
                         description: `
                                         <p>
@@ -344,12 +344,11 @@ export default {
                         languages: 'HTML . CSS . JavaScript . jQuery . GSAP . Wordpress . PHP . MySQL',
                     },
                     {
-                        title: 'Pasante de Development',
+                        title: 'Becaria/Pasante de Development',
                         time: 'Noviembre 2015 - Marzo 2016',
                         description: `
                                         <p>
-                                            Pasantía de 20 semanas de duración en el Departamento de Marketing de la empresa, donde se adquirieron conocimientos en distintas
-                                            tecnologías de desarrollo web.
+                                            Beca universitaria de 20 semanas de duración en el Departamento de Marketing de la empresa, donde se adquirieron conocimientos en distintas tecnologías de desarrollo web.
                                         </p>
                                     `,
                         languages: 'HTML . CSS . JavaScript . jQuery . GSAP . Wordpress . PHP . MySQL',
