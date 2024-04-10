@@ -344,7 +344,7 @@ export default {
                         languages: 'HTML . CSS . JavaScript . jQuery . GSAP . Wordpress . PHP . MySQL',
                     },
                     {
-                        title: 'Becaria/Pasante de Development',
+                        title: 'Becaria/Pasante de Web Development',
                         time: 'Noviembre 2015 - Marzo 2016',
                         description: `
                                         <p>
