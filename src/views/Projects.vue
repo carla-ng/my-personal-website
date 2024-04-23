@@ -154,6 +154,16 @@ export default {
                 repo: 'coding-challenges'
             },
             {
+                title: 'Web Development',
+                intro: 'De todo un poco.',
+                description: 'En este repositorio incluyo mini-proyectos, no relacionados entre sí, para practicar distintas tecnologías de forma rápida y sencilla.',
+                tags: ['Vue','React','JavaScript', 'CSS', 'SCSS'],
+                urls: [
+                    { code: 'https://github.com/carla-ng/web-development-practice/', demo: 'https://carla-ng.github.io/web-development-practice/'  }
+                ],
+                repo: 'web-development-practice'
+            },
+            {
                 title: 'My Pokémon Project',
                 intro: 'Proyecto basado en el mundo Pokémon.',
                 description: 'Se listan los distintos Pokémon obtenidos de la PokéAPI, mostrando sus descripciones y sus características. Además incluye un apartado extra con un listado de ítems que pueden ser utilizados por los entrenadores del mundo Pokémon.',
@@ -182,16 +192,6 @@ export default {
                     { code: 'https://github.com/carla-ng/bosque-de-meigas-game-design', demo: 'https://carla-ng.github.io/bosque-de-meigas-game-design/' }
                 ],
                 repo: 'bosque-de-meigas-game-design'
-            },
-            {
-                title: 'Web Development',
-                intro: 'De todo un poco.',
-                description: 'En este repositorio incluyo mini-proyectos, no relacionados entre sí, para practicar distintas tecnologías de forma rápida y sencilla.',
-                tags: ['Vue','React','JavaScript', 'SCSS'],
-                urls: [
-                    { code: 'https://github.com/carla-ng/web-development-practice/', demo: 'https://carla-ng.github.io/web-development-practice/'  }
-                ],
-                repo: 'web-development-practice'
             },
             {
                 title: '50 JS Projects',
