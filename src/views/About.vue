@@ -95,7 +95,7 @@ export default {
                 text: `
                         <p class="font-family-02 fs-24">¡Hola!</p>
                         <br>
-                        <p>Mi nombre es <strong>Carla</strong>, y soy <strong>Ingeniera de Software especializada en desarrollo Front-end</strong>. Las tecnologías que suelo utilizar son <strong>JavaScript</strong>, <strong>Vue</strong>, <strong>jQuery</strong> y <strong>CSS/SCSS</strong> (y actualmente me encuentro aprendiendo <strong>React</strong>). También tengo un poco de experiencia trabajando con Back-end y BBDD, especialmente con <strong>PHP</strong> y <strong>MySQL</strong>. Tengo mucho interés en aprender nuevas tecnologías.</p>
+                        <p>Mi nombre es <strong>Carla</strong>, y soy <strong>Ingeniera de Software especializada en desarrollo Front-end</strong>. Las tecnologías que suelo utilizar son <strong>JavaScript</strong>, <strong>jQuery</strong>, <strong>Vue</strong> y <strong>CSS/SCSS</strong> (y actualmente me encuentro aprendiendo <strong>React</strong>). También tengo un poco de experiencia trabajando con Back-end y BBDD, especialmente con <strong>PHP</strong> y <strong>MySQL</strong>. Tengo mucho interés en aprender nuevas tecnologías.</p>
                         <br>
                         <p>Además de la programación, me interesa mucho la <strong>gestión de proyectos</strong>, soy una persona muy <strong>organizada</strong> y <strong>atenta</strong>. Estoy acostumbrada a trabajar con la metodología ágil de <strong>Scrum</strong>.</p>
                         <br>
@@ -105,7 +105,7 @@ export default {
             },
             {
                 text: `
-                        <p>En mi tiempo libre, si no me encuentro programando o siguiendo algún live stream de programación en <i>Twitch</i>, lo más probable es que me encuentre <b>leyendo, dibujando</b> o <b>jugando videojuegos</b>.</p>
+                        <p>En mi tiempo libre, si no me encuentro programando, lo más probable es que me encuentre <b>leyendo, dibujando</b> o <b>jugando videojuegos</b>.</p>
                         <br>
                         <p>Gracias al <strong>dibujo</strong> y la <strong>pintura</strong>, he tenido la oportunidad de hacer un montón de nuevos amigos, y he podido participar en <strong>concursos de pintura rápida</strong> y hacer <strong>exposiciones colectivas</strong> en centros culturales.</p>
                         <br>
