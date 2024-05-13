@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li class="contact__list--instagram">
-                    <a href="https://www.instagram.com/carla11ng/" target="_blank">
+                    <a href="https://www.instagram.com/carla11ng_art/" target="_blank">
                         <span>Instagram</span>
                     </a>
                 </li>

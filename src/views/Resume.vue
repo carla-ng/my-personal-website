@@ -297,17 +297,20 @@ export default {
                                     <br>
                                     <b>Desarrollo</b>
                                         <ul>
-                                            <li>Desarrollo de componentes para la creación de numerosos portales (ej. de componentes: Cards, Video Player, Header).</li>
-                                            <li>Hacer configurables los componentes creados para tener múltiples opciones de diseño, y para que puedan adaptarse a cualquier tipo de contenido aportado por distintos proveedores.</li>
+                                            <li>Desarrollo y mantenimiento de componentes para la creación de diversos portales.</li>
+                                            <li>Configuración de componentes para múltiples opciones de diseño y adaptabilidad a distintos proveedores de contenido.</li>
                                             <li>Mantenimiento de editor de componentes y portales.</li>
-                                            <li>Creación de funcionalidades dentro de los portales haciendo uso de los componentes para que interactúen entre ellos.</li>
+                                            <li>Implementación de funcionalidades en los portales.</li>
+                                            <li>Validación de componentes y portales.</li>
                                         </ul>
                                     <b>Gestión</b>
                                         <ul>
-                                            <li>Planificación y estimación de tareas (metodología ágil Scrum, organización con herramienta JIRA), además de realizar seguimiento de las tareas del sprint y el backlog.</li>
+                                            <li>Planificación y estimación de tareas (metodología ágil <i>Scrum</i>, herramienta <i>Jira</i>) junto con Product Owner, además de realizar seguimiento de las tareas del sprint y el backlog.</li>
                                             <li>Comunicación interdepartamental.</li>
-                                            <li>Soporte al mánager, además de asumir sus responsabilidades en su ausencia.</li>
-                                            <li>Documentación en Confluence.</li>
+                                            <li>Toma de requerimientos.</li>
+                                            <li>Soporte al mánager del equipo y asumir sus responsabilidades en su ausencia.</li>
+                                            <li>Documentación en <i>Confluence</i>.</li>
+                                            <li>Participación en dailies y reuniones de sprint.</li>
                                             <li>Validación de diseños y flujos proporcionados por equipo de UX.</li>
                                         </ul>
                                     `,
