@@ -95,11 +95,11 @@ export default {
                 text: `
                         <p class="font-family-02 fs-24">¡Hola!</p>
                         <br>
-                        <p>Mi nombre es <strong>Carla</strong>, y soy <strong>Ingeniera de Software especializada en desarrollo Front-end</strong>. Las tecnologías que suelo utilizar son <strong>JavaScript</strong>, <strong>jQuery</strong>, <strong>Vue</strong> y <strong>CSS/SCSS</strong> (y actualmente me encuentro aprendiendo <strong>React</strong>). También tengo un poco de experiencia trabajando con Back-end y BBDD, especialmente con <strong>PHP</strong> y <strong>MySQL</strong>. Tengo mucho interés en aprender nuevas tecnologías.</p>
+                        <p>Mi nombre es <strong>Carla</strong>, y soy <strong>Ingeniera de Software especializada en desarrollo Front-end</strong>. Las tecnologías que suelo utilizar son <strong>JavaScript</strong>, <strong>jQuery</strong>, <strong>Vue</strong> y <strong>CSS/SCSS</strong> (y actualmente me encuentro aprendiendo <strong>React</strong>). También tengo un poco de experiencia trabajando con Back-end y BBDD, especialmente con <strong>PHP</strong> y <strong>MySQL</strong>.</p>
                         <br>
                         <p>Además de la programación, me interesa mucho la <strong>gestión de proyectos</strong>, soy una persona muy <strong>organizada</strong> y <strong>atenta</strong>. Estoy acostumbrada a trabajar con la metodología ágil de <strong>Scrum</strong>.</p>
                         <br>
-                        <p>También me gusta el <strong>diseño de videojuegos</strong> y he estudiado un poco sobre el tema (<strong>Photoshop</strong>, <strong>Maya</strong> y <strong>Unity</strong>).</p>
+                        <p>También me gusta el diseño y actualmente me estoy formando en <strong>Diseño UX/UI</strong>.</p>
                       `,
                 imageSrc: 'assets/images/about/setup.webp',
             },

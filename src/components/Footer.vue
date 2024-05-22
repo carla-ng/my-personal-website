@@ -4,7 +4,7 @@
 
     <footer class="footer">
         <a class="footer__link" href="https://github.com/carla-ng/my-personal-website" target="_blank">
-            Hecho con <span class="footer__link--heart"></span> por Carla Nardone
+            Diseñado y desarrollado con <span class="footer__link--heart"></span> por Carla Nardone
         </a>
     </footer>
 
@@ -43,6 +43,9 @@ export default {
         align-items: center;
         justify-content: center;
         flex-direction: row;
+        
+        @media (max-width: $breakpoint-max-tablet) { font-size: $font-size-12px; }
+        @media (max-width: $breakpoint-max-mobile) { font-size: $font-size-10px; }
 
         .footer__link--heart {
             margin: 0 0.3rem;
