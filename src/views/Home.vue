@@ -29,8 +29,8 @@
             <div class="home__intro">
                 <h1 class="home__intro-welcome typewriter-effect">¡Bienvenid@!</h1>
                 <p>
-                    <span>Soy Carla</span>, una apasionada <strong class="accent-01">Desarrolladora Web especializada en Front-end</strong>. Me encanta dar vida a proyectos creativos y diseñar experiencias únicas.
-                    Explorar el arte de la programación es mi pasión, y aquí compartiré contigo mis creaciones y aventuras en el universo del desarrollo web.
+                    <span>Soy Carla</span>, una apasionada <strong class="accent-01">Desarrolladora Web especializada en Frontend</strong>.  Me encanta dar vida a proyectos creativos, diseñar experiencias únicas y explorar el <strong class="accent-01">diseño UX/UI</strong>. 
+                    El arte de la programación es mi pasión, y aquí compartiré contigo mis creaciones y aventuras en el universo del desarrollo web.
                 </p>
             </div>
             

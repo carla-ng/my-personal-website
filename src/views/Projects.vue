@@ -3,7 +3,7 @@
   <main class="projects-page page-container">
 
     <header>
-        <h1 class="typewriter-effect">Proyectos</h1>
+        <h1 class="typewriter-effect">Portafolio</h1>
 
         <p class="primary-text">
             En esta página se encuentran algunos de los proyectos en los que me encuentro trabajando actualmente o en los que he trabajado en el pasado.
@@ -146,7 +146,7 @@ export default {
             {
                 title: 'Coding Challenges',
                 intro: 'Colección de componentes y páginas web.',
-                description: 'Para aprender y crecer hay que practicar. Es por eso que participo en retos de código front-end para traer a la vida desde componentes reutilizables hasta sitios web completos.',
+                description: 'Para aprender y crecer hay que practicar. Es por eso que participo en retos de código frontend para traer a la vida desde componentes reutilizables hasta sitios web completos.',
                 tags: ['Vue','JavaScript','API','SCSS'],
                 urls: [
                     { code: 'https://github.com/carla-ng/coding-challenges/', demo: 'https://carla-ng.github.io/coding-challenges/' }
@@ -156,7 +156,7 @@ export default {
             {
                 title: 'Web Development',
                 intro: 'De todo un poco.',
-                description: 'En este repositorio incluyo mini-proyectos, no relacionados entre sí, para practicar distintas tecnologías de forma rápida y sencilla.',
+                description: 'En este repositorio incluyo mini proyectos, no relacionados entre sí, para practicar distintas tecnologías de forma rápida y sencilla.',
                 tags: ['Vue','React','JavaScript', 'CSS', 'SCSS'],
                 urls: [
                     { code: 'https://github.com/carla-ng/web-development-practice/', demo: 'https://carla-ng.github.io/web-development-practice/'  }

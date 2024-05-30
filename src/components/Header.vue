@@ -29,7 +29,7 @@
                 </li>
                 <li>
                     <span class="nav__container--divider"></span>
-                    <router-link  @click="toggleNavVisibility" to="/proyectos">Proyectos</router-link>
+                    <router-link  @click="toggleNavVisibility" to="/portafolio">Portafolio</router-link>
                 </li>
                 <li>
                     <span class="nav__container--divider"></span>

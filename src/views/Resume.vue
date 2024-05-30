@@ -294,29 +294,27 @@ export default {
                         time: 'Junio 2017 - Junio 2023',
                         description: `
                                     <br>
-                                    <b>Desarrollo</b>
-                                        <ul>
-                                            <li>Desarrollo y mantenimiento de componentes para la creación de diversos portales.</li>
-                                            <li>Configuración de componentes para múltiples opciones de diseño y adaptabilidad a distintos proveedores de contenido.</li>
-                                            <li>Mantenimiento de editor de componentes y portales.</li>
-                                            <li>Implementación de funcionalidades en los portales.</li>
-                                            <li>Validación de componentes y portales.</li>
-                                        </ul>
-                                    <b>Gestión</b>
-                                        <ul>
-                                            <li>Validación de diseños y flujos proporcionados por equipo de UX/UI.</li>
-                                            <li>Planificación y estimación de tareas (metodología ágil <i>Scrum</i>, herramienta <i>Jira</i>) junto con Product Owner, además de realizar seguimiento de las tareas del sprint y el backlog.</li>
-                                            <li>Comunicación interdepartamental.</li>
-                                            <li>Toma de requerimientos.</li>
-                                            <li>Soporte al mánager del equipo y asumir sus responsabilidades en su ausencia.</li>
-                                            <li>Documentación en <i>Confluence</i>.</li>
-                                            <li>Participación en dailies y reuniones de sprint.</li>
-                                        </ul>
+                                    <ul>
+                                        <li>Toma de requerimientos.</li>
+                                        <li>Definición de proyectos junto al equipo de UX/UI y Product Owners.</li>
+                                        <li>Diseño de componentes.</li>
+                                        <li>Validación de diseños y flujos proporcionados por equipo de UX/UI.</li>
+                                        <li>Desarrollo y mantenimiento de componentes para la creación de diversos portales.</li>
+                                        <li>Configuración de componentes para múltiples opciones de diseño y adaptabilidad a distintos proveedores de contenido.</li>
+                                        <li>Mantenimiento de editor de componentes y portales.</li>
+                                        <li>Implementación de funcionalidades en los portales.</li>
+                                        <li>Validación de componentes y portales.</li>
+                                        <li>Planificación y estimación de tareas (metodología ágil <i>Scrum</i>, herramienta <i>Jira</i>) junto con Product Owner, además de realizar seguimiento de las tareas del sprint y el backlog.</li>
+                                        <li>Comunicación interdepartamental.</li>
+                                        <li>Soporte al mánager del equipo y asumir sus responsabilidades en su ausencia.</li>
+                                        <li>Participación en dailies y reuniones de sprint.</li>
+                                        <li>Documentación en <i>Confluence</i> y <i>Figma</i>.</li>
+                                    </ul>
                                     `,
                         languages: 'HTML . CSS . SCSS . JavaScript . jQuery . Vue . Smarty . PHP . MySQL',
                     },
                     {
-                        title: 'Front-end Development Intern',
+                        title: 'Frontend Development Intern',
                         time: 'Noviembre 2016 - Mayo 2017',
                         description: `
                                         <ul>
@@ -387,7 +385,7 @@ export default {
         // In person courses
         const in_person_courses_history = [
             {
-                name: 'Diseño de Videojuegos y Conceptualización',
+                name: 'Diseño y Conceptualización de Videojuegos',
                 logo: '/assets/images/portfolio/bosque-de-meigas.webp',
                 time: 'oct. 2023 - ene. 2024',
                 description: 'Durante el curso el alumno diseñará un videojuego original desde cero, empezando por la creación de la historia y el concept art. Empleará herramientas de diseño como <b>Photoshop</b> y <b>Maya</b> para la creación de un personaje principal, elementos del juego y un escenario. Finalmente, deberá importar los modelos 3D creados a la plataforma <b>Unity</b>. Al finalizar el curso se deberá haber preparado el correspondiente <b>GDD</b> (Game Design Document / Documento de Diseño de Videojuego), el cual incluirá toda la documentación sobre el juego, además de un demo reel con los modelos 3D creados.'

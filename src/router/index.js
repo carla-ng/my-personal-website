@@ -26,7 +26,7 @@ const routes = [
         import(/* webpackChunkName: "resume" */ "../views/Resume.vue"),
   },
   {
-    path: "/proyectos",
+    path: "/portafolio",
     name: "Projects",
     // route level code-splitting
     // this generates a separate chunk (projects.[hash].js) for this route
