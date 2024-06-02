@@ -23,12 +23,12 @@
                     </a>
                 </li>
                 <li class="contact__list--instagram">
-                    <a href="https://www.instagram.com/carla11ng_art/" target="_blank">
+                    <a href="https://www.instagram.com/carlanargon/" target="_blank">
                         <span>Instagram</span>
                     </a>
                 </li>
                 <li class="contact__list--tiktok">
-                    <a href="https://www.tiktok.com/@carla11ng/" target="_blank">
+                    <a href="https://www.tiktok.com/@carlanargon/" target="_blank">
                         <span>TikTok</span>
                     </a>
                 </li>
