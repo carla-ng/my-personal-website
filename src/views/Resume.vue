@@ -395,15 +395,16 @@ export default {
         
         // Online courses
         const online_courses_history = [
-        {
-                name: 'Complete Web & Mobile Designer: UI/UX, Figma, +more',
-                time: 'actualidad',
-                where: 'Udemy',
-            },
             {
                 name: 'React - The Complete Guide (incl. Next.js, Redux)',
                 time: 'actualidad',
                 where: 'Udemy',
+            },
+            {
+                name: 'Complete Web & Mobile Designer: UI/UX, Figma, +more',
+                time: 'jun. 2024',
+                where: 'Udemy',
+                certificate: 'https://www.udemy.com/certificate/UC-30d002ea-6883-425d-8953-deb767c2171f/'
             },
             {
                 name: 'Vue.js: De cero a experto',
