@@ -173,6 +173,7 @@ export default {
                 ],
                 repo: 'my-pokemon-project'
             },
+            /*
             {
                 title: 'CSS Animations',
                 intro: 'Repertorio de animaciones CSS.',
@@ -183,6 +184,7 @@ export default {
                 ],
                 repo: 'css-animations'
             },
+            */
             {
                 title: 'Bosque de Meigas',
                 intro: 'Diseño del videojuego.',
@@ -213,6 +215,7 @@ export default {
                 ],
                 repo: 'dungeon-mini-game-js'
             },
+            /*
             {
                 title: 'Who is that Pokémon?',
                 intro: 'Mini juego de adivinar qué Pokémon se muestra en base a su silueta.',
@@ -223,6 +226,7 @@ export default {
                 ],
                 repo: 'who-is-that-pokemon'
             },
+            */
         ])
 
 
