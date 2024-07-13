@@ -95,17 +95,19 @@ export default {
                 text: `
                         <p class="font-family-02 fs-24">¡Hola!</p>
                         <br>
-                        <p>Mi nombre es <strong>Carla</strong>, y soy <strong>Ingeniera de Software especializada en desarrollo Frontend</strong>. Las tecnologías que suelo utilizar son <strong>JavaScript</strong>, <strong>jQuery</strong>, <strong>Vue</strong> y <strong>CSS/SCSS</strong> (y actualmente me encuentro aprendiendo <strong>React</strong>). También tengo un poco de experiencia trabajando con Backend y BBDD, especialmente con <strong>PHP</strong> y <strong>MySQL</strong>.</p>
+                        <p>Mi nombre es <strong>Carla</strong>, y soy <strong>Ingeniera de Software especializada en desarrollo Frontend</strong>. Las tecnologías que suelo utilizar son <strong>JavaScript</strong>, <strong>jQuery</strong>, <strong>React</strong>, <strong>Vue</strong> y <strong>CSS/SCSS</strong>. También tengo un poco de experiencia trabajando con Backend y BBDD, especialmente con <strong>PHP</strong> y <strong>MySQL</strong>.</p>
                         <br>
-                        <p>Además de la programación, me interesa mucho la <strong>gestión de proyectos</strong>, soy una persona muy <strong>organizada</strong> y <strong>atenta</strong>. Estoy acostumbrada a trabajar con la metodología ágil de <strong>Scrum</strong>.</p>
+                        <p>Además me gusta el diseño y tengo experiencia en <strong>Diseño UX/UI</strong>.</p>
                         <br>
-                        <p>También me gusta el diseño y tengo un poco de experiencia en <strong>Diseño UX/UI</strong>. Actualmente, me estoy formando para profundizar más en este campo.</p>
+                        <p>También me interesa mucho la <strong>gestión de proyectos</strong>, soy una persona muy <strong>organizada</strong> y <strong>atenta</strong>. Estoy acostumbrada a trabajar con la metodología ágil de <strong>Scrum</strong>.</p>
+                        <br>
+                        <p>¡Y un dato más sobre mí! Estoy a punto de comenzar un <strong>Máster en Concept Art</strong>.</p>
                       `,
                 imageSrc: 'assets/images/about/setup.webp',
             },
             {
                 text: `
-                        <p>En mi tiempo libre, si no me encuentro programando, lo más probable es que me encuentre <b>leyendo, dibujando</b> o <b>jugando videojuegos</b>.</p>
+                        <p>En mi tiempo libre, si no me encuentro programando o diseñando, lo más probable es que me encuentre <b>leyendo, dibujando</b> o <b>jugando videojuegos</b>.</p>
                         <br>
                         <p>Gracias al <strong>dibujo</strong> y la <strong>pintura</strong>, he tenido la oportunidad de hacer un montón de nuevos amigos, y he podido participar en <strong>concursos de pintura rápida</strong> y hacer <strong>exposiciones colectivas</strong> en centros culturales.</p>
                         <br>

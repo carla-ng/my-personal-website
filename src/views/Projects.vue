@@ -31,7 +31,7 @@
                     <h2 class="project-group__heading">Proyectos personales y de aprendizaje</h2>
 
                     <p class="secondary-text">
-                        Desarrollados en mi tiempo libre para crecer como programadora. La mayoría de estos proyectos se encuentran <span class="text-bold text-underlined">en progreso</span>,
+                        Desarrollados en mi tiempo libre para crecer como programadora y diseñadora. La mayoría de estos proyectos se encuentran <span class="text-bold text-underlined">en progreso</span>,
                         ya que los utilizo para aprender y practicar cuando puedo.
                     </p>
                 </div>
@@ -157,7 +157,7 @@ export default {
                 title: 'Web Development',
                 intro: 'De todo un poco.',
                 description: 'En este repositorio incluyo mini proyectos, no relacionados entre sí, para practicar distintas tecnologías de forma rápida y sencilla.',
-                tags: ['Vue','React','JavaScript', 'CSS', 'SCSS'],
+                tags: ['React','Vue','JavaScript', 'CSS', 'SCSS'],
                 urls: [
                     { code: 'https://github.com/carla-ng/web-development-practice/', demo: 'https://carla-ng.github.io/web-development-practice/'  }
                 ],
