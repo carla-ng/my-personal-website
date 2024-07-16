@@ -296,7 +296,7 @@ export default {
                         description: `
                                     <br>
                                     <ul>
-                                        <li>Toma de requerimientos y UX research.</li>
+                                        <li>Toma de requerimientos.</li>
                                         <li>Definición de proyectos junto al equipo de Diseño UX/UI y Product Owners.</li>
                                         <li>Diseño de componentes.</li>
                                         <li>Validación de diseños y flujos proporcionados por equipo de Diseño UX/UI.</li>
