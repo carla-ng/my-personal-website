@@ -261,7 +261,7 @@ export default {
                     &.photoshop { background-color: #2fa3f7; }
                     &.maya { background-color: #36687f; }
                     &.unity { background-color: #000; }
-                   
+                    &.figma { background-color: #ff7262; }
                 }
             }
 

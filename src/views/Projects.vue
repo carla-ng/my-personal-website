@@ -144,6 +144,16 @@ export default {
         // Personal projects list
         const personal_projects = ref([
             {
+                title: 'UX/UI Design',
+                intro: 'Mi trabajo como diseñadora.',
+                description: 'Además de mi experiencia en programación, tengo una gran pasión por el diseño. Cuento con experiencia en esta área, la cual he recopilado en mi portafolio, donde se refleja mi dedicación y creatividad en cada proyecto.',
+                tags: ['Figma','UX/UI'],
+                urls: [
+                    { code: 'https://github.com/carla-ng/my-design-portfolio/', demo: 'https://carla-nardone-designs.netlify.app/' }
+                ],
+                repo: 'my-design-portfolio'
+            },
+            {
                 title: 'Coding Challenges',
                 intro: 'Colección de componentes y páginas web.',
                 description: 'Para aprender y crecer hay que practicar. Es por eso que participo en retos de código frontend para traer a la vida desde componentes reutilizables hasta sitios web completos.',
