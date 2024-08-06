@@ -48,6 +48,7 @@ export default {
         @media (max-width: $breakpoint-max-mobile) { font-size: $font-size-10px; }
 
         .footer__link--heart {
+            display: flex;
             margin: 0 0.3rem;
 
             &::before {
