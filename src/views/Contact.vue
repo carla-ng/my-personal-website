@@ -27,9 +27,9 @@
                         <span>Instagram</span>
                     </a>
                 </li>
-                <li class="contact__list--tiktok">
-                    <a href="https://www.tiktok.com/@carlanargon/" target="_blank">
-                        <span>TikTok</span>
+                <li class="contact__list--artstation">
+                    <a href="https://www.artstation.com/carlanargon/" target="_blank">
+                        <span><span>ART</span>STATION</span>
                     </a>
                 </li>
             </ul>
@@ -134,6 +134,22 @@ export default {
                                 color: $contact-linkedin-color;
                                 margin: 0 0.3rem;
                                 padding: 0.4rem 0.2rem;
+                            }
+                        }
+                    }
+                }
+
+                &.contact__list--artstation {
+                    background: $contact-artstation-color;
+
+                    a {
+                        & > span {
+                            color: $black;
+                            letter-spacing: 1px;
+
+                            span {
+                                font-weight: bold;
+                                margin-right: 0.3rem;
                             }
                         }
                     }

@@ -105,6 +105,37 @@
                         </div>
                     </div>
 
+                    <div class="window">
+                        <div class="window__inner-container">
+
+                            <header class="window__bar">
+                                <div class="window__bar-title">{{ studies_history[1].university }}</div>
+                                <div class="window__bar-buttons disabled-button">
+                                    <span>X</span>
+                                </div>
+                            </header>
+
+                            <div class="window__main">
+                                <div class="window__image-container">
+                                    <div class="window__image">
+                                        <img :src="studies_history[1].logo" :alt="studies_history[1].title">
+                                    </div>
+                                    <p class="window__place">{{ studies_history[1].place }}</p>
+                                </div>
+
+                                <div class="window__text">
+                                    <div>
+                                        <p class="window__text-title">{{ studies_history[1].title }}</p>
+                                        <p class="window__text-time" v-html="studies_history[1].time"></p>
+                                        <div class="window__text-description" v-html="studies_history[1].major"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </article>
 
@@ -365,11 +396,29 @@ export default {
         // Studies list
         const studies_history = [
             {
+                university: 'Voxel School',
+                title: 'Máster en Concept Art',
+                place: 'Madrid, España',
+                logo: '/assets/images/resume/voxel.png',
+                time: '<span>Año de egresada:</span> 2025 (Septiembre)',
+                major: `
+                            <p>
+                                
+                            </p>
+                            <p>
+                                <b>Delegada de curso</b>
+                            </p>
+                            <p>
+                                En el máster se aprende a crear y diseñar mundos, personajes, props y escenas visuales para proyectos de entretenimiento, dominando técnicas digitales avanzadas y el uso de herramientas profesionales.
+                            </p>
+                        `,
+            },
+            {
                 university: 'Universidad Simón Bolívar',
                 title: 'Ingeniería de la Computación',
                 place: 'Caracas, Venezuela',
                 logo: '/assets/images/resume/usb.png',
-                time: '<span>Año de egresado:</span> 2016',
+                time: '<span>Año de egresada:</span> 2016',
                 major: `
                             <p>
                                 
