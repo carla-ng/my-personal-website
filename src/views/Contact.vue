@@ -17,11 +17,6 @@
                         <span>Linked<span>in</span></span>
                     </a>
                 </li>
-                <li class="contact__list--github">
-                    <a href="https://github.com/carla-ng/" target="_blank">
-                        <span>GitHub</span>
-                    </a>
-                </li>
                 <li class="contact__list--instagram">
                     <a href="https://www.instagram.com/carlanargon/" target="_blank">
                         <span>Instagram</span>
@@ -41,6 +36,14 @@
 
 
 <script>
+/*
+<li class="contact__list--github">
+    <a href="https://github.com/carla-ng/" target="_blank">
+        <span>GitHub</span>
+    </a>
+</li>
+*/
+
 export default {
     name: 'Contact',
 }

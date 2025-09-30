@@ -101,13 +101,13 @@ export default {
                         <br>
                         <p>También me interesa mucho la <strong>gestión de proyectos</strong>, soy una persona muy <strong>organizada</strong> y <strong>atenta</strong>. Estoy acostumbrada a trabajar con la metodología ágil de <strong>Scrum</strong>.</p>
                         <br>
-                        <p>¡Y un dato más sobre mí! Estoy cursando actualmente un <strong>Máster en Concept Art</strong>.</p>
+                        <p>¡Y un dato más sobre mí! He completado un <strong>Máster en Concept Art</strong>.</p>
                       `,
                 imageSrc: 'assets/images/about/setup.webp',
             },
             {
                 text: `
-                        <p>En mi tiempo libre, si no me encuentro programando o diseñando, lo más probable es que me encuentre <b>leyendo, dibujando</b> o <b>jugando videojuegos</b>.</p>
+                        <p>En mi tiempo libre, lo más probable es que me encuentre <b>leyendo, dibujando</b> o <b>jugando videojuegos</b>.</p>
                         <br>
                         <p>Gracias al <strong>dibujo</strong> y la <strong>pintura</strong>, he tenido la oportunidad de hacer un montón de nuevos amigos, y he podido participar en <strong>concursos de pintura rápida</strong> y hacer <strong>exposiciones colectivas</strong> en centros culturales.</p>
                         <br>
