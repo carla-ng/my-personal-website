@@ -22,6 +22,11 @@
                         <span>Instagram</span>
                     </a>
                 </li>
+                <li class="contact__list--tiktok">
+                    <a href="https://www.tiktok.com/@carlanargon/" target="_blank">
+                        <span>TikTok</span>
+                    </a>
+                </li>
                 <li class="contact__list--artstation">
                     <a href="https://www.artstation.com/carlanargon/" target="_blank">
                         <span><span>ART</span>STATION</span>
