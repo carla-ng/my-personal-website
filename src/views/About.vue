@@ -149,8 +149,8 @@ export default {
                 alt: 'Dibujo de un hada'
             },
             {
-                url: '/assets/images/about/drawing_jonghyun.webp',
-                alt: 'Dibujo de Jonghyun'
+                url: '/assets/images/about/drawing_avatar.webp',
+                alt: 'Dibujo de mi avatar'
             },
             {
                 url: '/assets/images/about/drawing_fairy2.webp',
