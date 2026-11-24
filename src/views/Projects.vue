@@ -25,6 +25,38 @@
 
         <article class="project-group">
 
+            <header class="project-group__header-professional secondary-title">
+
+                <div class="project-group__info">
+                    <h2 class="project-group__heading">Proyectos a nivel profesional</h2>
+
+                    <p class="secondary-text">
+                        Algunos desarrollos destacados de las empresas donde he trabajado.
+                    </p>
+                </div>
+
+                <div class="project-group__img">
+                    <div class="pixelart__super-nintendo-controller"></div>
+                </div>
+
+            </header>
+
+            <div class="projects__list">
+                <SmallWindow v-for="(project, index) in professional_projects" :key="index"
+                            :title="project.title"
+                            :intro="project.intro"
+                            :description="project.description"
+                            :tags="project.tags"
+                            :urls="project.urls"
+                            :repo="project.repo"
+                            :subrepo="project.subrepo"
+                ></SmallWindow>
+            </div>
+        </article>
+
+
+        <article class="project-group">
+
             <header class="project-group__header">
 
                 <div class="project-group__info">
@@ -56,38 +88,6 @@
 
             <div class="projects__github-profile">
                 <AlertBox alert_text='También podrás encontrar más proyectos en <a href="https://github.com/carla-ng" target="_blank">mi perfil de Github</a>.' />
-            </div>
-        </article>
-
-
-        <article class="project-group">
-
-            <header class="project-group__header-professional secondary-title">
-
-                <div class="project-group__info">
-                    <h2 class="project-group__heading">Proyectos a nivel profesional</h2>
-
-                    <p class="secondary-text">
-                        Algunos desarrollos destacados de las empresas donde he trabajado.
-                    </p>
-                </div>
-
-                <div class="project-group__img">
-                    <div class="pixelart__super-nintendo-controller"></div>
-                </div>
-
-            </header>
-
-            <div class="projects__list">
-                <SmallWindow v-for="(project, index) in professional_projects" :key="index"
-                            :title="project.title"
-                            :intro="project.intro"
-                            :description="project.description"
-                            :tags="project.tags"
-                            :urls="project.urls"
-                            :repo="project.repo"
-                            :subrepo="project.subrepo"
-                ></SmallWindow>
             </div>
         </article>
 
@@ -327,7 +327,6 @@ export default {
             .project-group__info {
                 @media (min-width: $breakpoint-min-desktop) {
                     margin: 0 auto;
-                    max-width: 90%;
                 }
 
                 @media (max-width: $breakpoint-max-tablet) {
